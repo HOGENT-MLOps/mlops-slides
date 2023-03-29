@@ -29,17 +29,17 @@ jobs:
 
       - name: Generate slides
         run: |
-          rm -rf gh-pages/*
           make clean
           make all
           make gh-pages/voorbeeld.html
           cp index.md gh-pages/README.md
 
       - name: Push changes to gh-pages
+        if: ${{ steps.has-changes.outputs.changes }}
         run: |
           cd gh-pages
           git add --all
-          git commit -m "Publishing to gh-pages at $(date --utc --iso-8601=seconds)"
+          git commit -m --allow-empty "Publishing to gh-pages at $(date --utc --iso-8601=seconds)"
           git push origin gh-pages
 
       # - name: Publish Site
