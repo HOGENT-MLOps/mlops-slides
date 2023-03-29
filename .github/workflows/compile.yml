@@ -41,7 +41,7 @@ jobs:
         run: |
           cd gh-pages
           git add --all \
-          git commit -m "Publishing to gh-pages (${{ GITHUB_JOB }}) at ${{ TIMESTAMP }}"
+          git commit -m "Publishing to gh-pages at ${{ TIMESTAMP }}"
           git push origin gh-pages
 
       # - name: Publish Site
