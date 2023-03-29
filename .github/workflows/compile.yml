@@ -29,6 +29,7 @@ jobs:
 
       - name: Generate slides
         run: |
+          rm -rf gh-pages/*
           make clean
           make all
           make gh-pages/voorbeeld.html
