@@ -8,9 +8,6 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-22.04
     steps:
-      - name: Set current date as env variable
-        run: echo "TIMESTAMP=$(date --utc --iso-8601=seconds)" >> $GITHUB_ENV
-
       - name: Configure Git for GitHub
         run: |
           git config --global user.name "${GITHUB_ACTOR}"
@@ -41,7 +38,7 @@ jobs:
         run: |
           cd gh-pages
           git add --all \
-          git commit -m "Publishing to gh-pages at ${{ TIMESTAMP }}"
+          git commit -m "Publishing to gh-pages at $(date --utc --iso-8601=seconds)"
           git push origin gh-pages
 
       # - name: Publish Site
