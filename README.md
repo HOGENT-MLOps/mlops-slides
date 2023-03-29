@@ -5,7 +5,7 @@ In deze repository vind je de slides die gebruikt wordt in de lessen van het olo
 Gerelateerde repositories:
 
 - Slides van de lessen: <https://github.com/HOGENT-MLOps/mlops-slides>
-  - Te bekijken op: <mark>TODO</mark>
+  - Te bekijken op: <https://hogent-mlops.github.io/mlops-slides/>
 - Vagrant demo-omgeving: <mark>TODO</mark>
 - Opgave labo-opdrachten: <mark>TODO</mark>
 
