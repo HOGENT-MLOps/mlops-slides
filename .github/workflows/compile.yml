@@ -37,7 +37,7 @@ jobs:
       - name: Push changes to gh-pages
         run: |
           cd gh-pages
-          git add --all \
+          git add --all
           git commit -m "Publishing to gh-pages at $(date --utc --iso-8601=seconds)"
           git push origin gh-pages
 
