@@ -15,7 +15,7 @@
 SOURCE_FILES := $(wildcard [0-9][0-9]-*.md)
 
 # Target directory for the reveal.js presentation
-OUTPUT := docs
+OUTPUT := gh-pages
 
 # Web pages for the presentations
 PRESENTATION_FILES := $(patsubst %.md,$(OUTPUT)/%.html,$(SOURCE_FILES))
