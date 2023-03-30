@@ -3,66 +3,102 @@
 
 /**
  * White theme for reveal.js, adapted for HOGENT (www.hogent.be) by Bert Van Vreckem
+ * Made more reusable by Thomas Aelbrecht
  *
  * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
  */
-section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
-  color: #fff; }
+
+:root {
+  /* Colors */
+  --hogent-white: #fff;
+  --hogent-blue: rgb(76, 162, 213);
+  --hogent-orange: rgb(239, 135, 103);
+  --hogent-purple: rgb(187, 144, 189);
+
+  /* Fonts */
+  --hogent-font-family: 'Montserrat', sans-serif;
+}
+
+section.has-dark-background,
+section.has-dark-background h1,
+section.has-dark-background h2,
+section.has-dark-background h3,
+section.has-dark-background h4,
+section.has-dark-background h5,
+section.has-dark-background h6 {
+  color: var(--hogent-white);
+}
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #fff;
-  background-color: #fff;
-  background:url("../../../assets/HOGENT.png"); 
-  background-position: 95% 90%; 
-  background-size: 3cm; 
-  background-repeat: no-repeat; }
+  background: var(--hogent-white);
+  background-color: var(--hogent-white);
+  background: url("../../../assets/HOGENT.png");
+  background-position: 95% 90%;
+  background-size: 3cm;
+  background-repeat: no-repeat;
+}
 
 .reveal {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--hogent-font-family);
   font-size: 38px;
   font-weight: normal;
-  color: #222; }
+  color: #222;
+}
 
 ::selection {
-  color: #fff;
-  background: rgb(76, 162, 213); /* HOGENT blue */
-  text-shadow: none; }
+  color: var(--hogent-white);
+  background: var(--hogent-blue);
+  text-shadow: none;
+}
 
-.reveal .slides > section, .reveal .slides > section > section {
+.reveal .slides>section,
+.reveal .slides>section>section {
   line-height: 1.3;
-  font-weight: inherit; }
+  font-weight: inherit;
+}
 
 /*********************************************
  * HEADERS
  *********************************************/
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
   /*margin: 0 0 20px 0;*/
   margin: 0 0 10px 0;
-  color: rgb(76, 162, 213); /* HOGENT blue */
-  font-family: 'Montserrat', sans-serif;
+  color: var(--hogent-blue);
+  font-family: var(--hogent-font-family);
   font-weight: bolder;
   text-align: left;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: none; /* was uppercase */
+  text-transform: none;
+  /* was uppercase */
   text-shadow: none;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+}
 
 .reveal h1 {
   font-size: 1.9em;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 .reveal h2 {
-  font-size: 1.6em; }
+  font-size: 1.6em;
+}
 
 .reveal h3 {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+}
 
 .reveal h4 {
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 /*********************************************
  * OTHER
@@ -71,54 +107,82 @@ body {
   margin: 20px 0;
   line-height: 1.2;
   text-align: left;
-  }
+}
+
+.reveal p.subtitle {
+  font-size: 0.8em;
+}
+
+.reveal p.author,
+.reveal p.date {
+  font-size: 0.6em;
+}
 
 /* Ensure certain elements are never larger than the slide itself */
-.reveal img, .reveal video, .reveal iframe {
+.reveal img,
+.reveal video,
+.reveal iframe {
   max-width: 95%;
-  max-height: 95%; }
+  max-height: 95%;
+}
 
-.reveal strong, .reveal b {
+.reveal strong,
+.reveal b {
   font-weight: bold;
-  color: rgb(239, 135, 103);/* HOGENT orange */
+  color: var(--hogent-orange);
 }
 
 .reveal em {
   font-style: italic;
-  /* color: rgb(22,176,165); */ /* HOGENT green */
+  /* color: rgb(22,176,165); */
+  /* HOGENT green */
 }
 
-.reveal ol, .reveal dl, .reveal ul {
+.reveal ol,
+.reveal dl,
+.reveal ul {
   display: inline-block;
   text-align: left;
 
-  margin: 0 0 0 1em; }
+  margin: 0 0 0 1em;
+}
 
 .reveal ol {
-  list-style-type: decimal; }
+  list-style-type: decimal;
+}
 
 .reveal ul {
   list-style-type: disc;
-  }
+}
 
 .reveal ul ul {
-  list-style-type: square; }
+  list-style-type: square;
+}
 
 .reveal ul ul ul {
-  list-style-type: circle; }
+  list-style-type: circle;
+}
 
-.reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
   display: block;
-  margin-left: 40px; }
+  margin-left: 40px;
+}
 
 .reveal dt {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .reveal dd {
-  margin-left: 40px; }
+  margin-left: 40px;
+}
 
-.reveal q, .reveal blockquote {
-  quotes: none; }
+.reveal q,
+.reveal blockquote {
+  quotes: none;
+}
 
 .reveal blockquote {
   display: block;
@@ -128,13 +192,18 @@ body {
   padding: 5px;
   font-style: italic;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 6px rgb(195,187,175); /* HOGENT grey */ }
+  box-shadow: 0px 0px 6px rgb(195, 187, 175);
+  /* HOGENT grey */
+}
 
-.reveal blockquote p:first-child, .reveal blockquote p:last-child {
-  display: inline-block; }
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
 
 .reveal q {
-  font-style: italic; }
+  font-style: italic;
+}
 
 .reveal pre {
   display: block;
@@ -146,11 +215,14 @@ body {
   font-family: 'Inconsolata', monospace;
   line-height: 1.2em;
   word-wrap: break-word;
-  box-shadow: 0px 0px 6px rgba(195,187,175,.4); /* HOGENT grey */ }
+  box-shadow: 0px 0px 6px rgba(195, 187, 175, .4);
+  /* HOGENT grey */
+}
 
 .reveal code {
-  color: rgb(76, 162, 213); /* HOGENT blue */
-  font-family: 'Inconsolata', monospace; }
+  color: var(--hogent-blue);
+  font-family: 'Inconsolata', monospace;
+}
 
 .reveal pre code {
   display: block;
@@ -158,67 +230,84 @@ body {
   overflow: auto;
   max-height: 550 px;
   word-wrap: normal;
-  background: rgba(195,187,175,.4); /* HOGENT grey */
+  background: rgba(195, 187, 175, .4);
+  /* HOGENT grey */
   color: #000000;
-  }
+}
 
 .reveal table {
   max-width: 90%;
   font-size: 0.75em;
   margin: auto;
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 .reveal table th {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
-.reveal table th, .reveal table td {
+.reveal table th,
+.reveal table td {
   text-align: left;
   padding: 0.2em 0.5em 0.2em 0.5em;
-  border-bottom: 1px solid; }
+  border-bottom: 1px solid;
+}
 
-.reveal table th[align="center"], .reveal table td[align="center"] {
-  text-align: center; }
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center;
+}
 
-.reveal table th[align="right"], .reveal table td[align="right"] {
-  text-align: right; }
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right;
+}
 
 .reveal table tr:last-child td {
-  border-bottom: none; }
+  border-bottom: none;
+}
 
 .reveal sup {
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 .reveal sub {
-  vertical-align: sub; }
+  vertical-align: sub;
+}
 
 .reveal small {
   display: inline-block;
   font-size: 0.6em;
   line-height: 1.2em;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 .reveal small * {
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 /*********************************************
  * LINKS
  *********************************************/
 .reveal a {
-  color: rgb(76, 162, 213); /* HOGENT blue */
+  color: var(--hogent-blue);
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
-  transition: color 0.15s ease; }
+  transition: color 0.15s ease;
+}
 
 .reveal a:hover {
   color: rgb(136, 183, 211);
   text-shadow: none;
-  border: none; }
+  border: none;
+}
 
 .reveal .roll span:after {
-  color: #fff;
-  background: rgb(76, 162, 213); /* HOGENT blue */ }
+  color: var(--hogent-white);
+  background: var(--hogent-blue);
+}
 
 /*********************************************
  * IMAGES
@@ -227,59 +316,77 @@ body {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
   border: 0px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
 
 .reveal a img {
   -webkit-transition: all 0.15s linear;
   -moz-transition: all 0.15s linear;
-  transition: all 0.15s linear; }
+  transition: all 0.15s linear;
+}
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: rgb(76, 162, 213); /* HOGENT blue */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+  border-color: var(--hogent-blue);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
-  border-right-color: rgb(187,144,189); /* HOGENT purple */ }
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: var(--hogent-purple);
+}
 
-.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
-  border-left-color: rgb(187,144,189); /* HOGENT purple */ }
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: var(--hogent-purple);
+}
 
-.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: rgb(187,144,189); /* HOGENT purple */ }
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: var(--hogent-purple);
+}
 
-.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
-  border-top-color: rgb(187,144,189); /* HOGENT purple */ }
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: var(--hogent-purple);
+}
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: rgb(187,144,189); /* HOGENT purple */ }
+  border-right-color: var(--hogent-purple);
+}
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: rgb(187,144,189); /* HOGENT purple */ }
+  border-left-color: var(--hogent-purple);
+}
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: rgb(187,144,189); /* HOGENT purple */ }
+  border-bottom-color: var(--hogent-purple);
+}
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: rgb(187,144,189); /* HOGENT purple */ }
+  border-top-color: var(--hogent-purple);
+}
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(0, 0, 0, 0.2);
+}
 
 .reveal .progress span {
-  background: rgb(76, 162, 213); /* HOGENT blue */
+  background: var(--hogent-blue);
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
 
 /*********************************************
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: rgb(76, 162, 213); /* HOGENT blue */ }
+  color: var(--hogent-blue);
+}
