@@ -13,4 +13,4 @@ Learning Operations (3e jaar bachelor Toegepaste Informatica aan [HOGENT](https:
 
 ---
 
-Published: 
+Laatste update: TIMESTAMP

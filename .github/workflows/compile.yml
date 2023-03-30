@@ -33,6 +33,7 @@ jobs:
           make all
           make gh-pages/voorbeeld.html
           cp index.md gh-pages/README.md
+          sed -ie "s#TIMESTAMP#$(date +'%d/%m/%Y %H:%M:%S')#" gh-pages/README.md
 
       - name: Push changes to gh-pages
         if: ${{ steps.has-changes.outputs.changes }}
