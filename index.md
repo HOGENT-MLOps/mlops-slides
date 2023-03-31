@@ -1,16 +1,17 @@
 # Slides Machine Learning Operations
 
-Hieronder vind je een overzicht van de slides die gebruikt worden in de lessen van het olod Machine
-Learning Operations (3e jaar bachelor Toegepaste Informatica aan [HOGENT](https://www.hogent.be/)).
+This is an overview of the lecture slides for the Machine Learning Operations course,
+which is part of the study programme professional bachelor applied computer science
+at [HOGENT](https://www.hogent.be/) (Ghent University of Applied Sciences).
 
-## Inhoud van het olod
+## Table of contents
 
 <mark>TODO</mark>
 
-## Extra materiaal
+## Extra references
 
 <mark>TODO</mark>
 
 ---
 
-Laatste update: TIMESTAMP
+Latest update: TIMESTAMP
