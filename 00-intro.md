@@ -1,6 +1,6 @@
 ---
 title: Introduction
-subtitle: Machine Learning Operations
+subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
 author: Thomas Aelbrecht
 date: 2023-2024
 ---
@@ -9,7 +9,7 @@ date: 2023-2024
 
 ## Why MLOps?
 
-![](./assets/00-intro/mlops-google-trends.png)
+![MLOps only became popular fairly recently](./assets/00-intro/mlops-google-trends.png)
 
 ::: notes
 
@@ -80,7 +80,21 @@ Source: <https://ml-ops.org/content/motivation>
 
 :::
 
+## ML Engineering
+
+![](assets/00-intro/ml-engineering.jpg)
+
 TODO: nog verder aanvullen met intro MLOps
+
+::: notes
+
+This is the complete machine learning life cycle. It includes the entire process from data
+collection to model deployment.
+
+In this course, we focus on the last part: model deployment. In the image above, this consists of
+model packaging, model versioning and the blue parts.
+
+:::
 
 # Study Guide
 
@@ -92,3 +106,84 @@ See Chamilo course for detailed information.
 
 TODO: afbeeldingen curriculum of evt. een klein diagram maken
 
+## Learning goals and competences
+
+- **CI/CD principles** in the context of ML
+- Bring a ML model into **production** and **monitor** it using CI/CD principles
+- Describes the challenges and possible solutions for running a ML model on devices with
+limited computing power
+- Run a ML model on a device with **limited computing power**, e.g. using Tensorflow Lite
+
+<br/>
+<br/>
+<center>**Remark: this is a new course**</center>
+
+## Course contents
+
+- CI/CD pipelines
+- Configuration management
+- Docker, Kubernetes, Kubeflow
+- TensorFlow Extended, Lite, Serving...
+- Monitoring and feedback loop
+- Model governance
+- Metadata and artifact store
+
+## Learning materials
+
+- Start with the overview in the Chamilo course
+- Github: [lecture slides](https://hogent-mlops.github.io/mlops-slides/),
+[demo environment](TODO), [lab assignments](TODO)
+- Online manuals of software used
+- Video recordings of classroom instruction (Dutch)
+- (Books - see study guide on Chamilo)
+
+## Software needed
+
+```console
+PS> choco install git
+PS> choco install vscode
+PS> choco install virtualbox
+PS> choco install vagrant
+```
+
+(Mac, Linux: see study guide on Chamilo)
+
+## Software (continuation)
+
+- VSCode: install recommended plugins (see study guide)
+- VirtualBox: Extension Pack!
+- Git client: also install Git Bash!
+
+## Teaching methods
+
+- Classroom instruction, demonstration
+- Lab assignments
+- Guest lecture?
+
+## Tutoring
+
+- Individual guidance for lab assignments
+- Ask questions *during class sessions*
+- Outside class: *general Teams channel*
+- Only for personal questions: *e-mail/Teams chat*
+
+## Semester schedule
+
+TODO: write schedule here
+
+## Assessment
+
+- **Portfolio**:
+  - Github repo with source code and reports
+- **Demonstrations**:
+  - During the semester (at least 3x)
+  - End result (exam period or W13)
+
+## Resit
+
+Personal assignment, no support
+
+- finish lab assignments
+- extra assignment
+
+## Questions?

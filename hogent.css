@@ -125,8 +125,8 @@ body {
 .reveal img,
 .reveal video,
 .reveal iframe {
-  max-width: 95%;
-  max-height: 95%;
+  max-width: 60%;
+  max-height: 60%;
 }
 
 .reveal strong,
@@ -334,6 +334,10 @@ body {
   background: rgba(255, 255, 255, 0.12);
   border: 0px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal p:has(img) {
+  text-align: center;
 }
 
 .reveal a img {
