@@ -10,10 +10,13 @@
 
 :root {
   /* Colors */
-  --hogent-white: #fff;
   --hogent-blue: rgb(76, 162, 213);
+  --hogent-grey: rgb(195, 187, 175);
   --hogent-orange: rgb(239, 135, 103);
   --hogent-purple: rgb(187, 144, 189);
+  --hogent-white: #fff;
+
+  --blockquote-border-color: var(--hogent-blue);
 
   /* Fonts */
   --hogent-font-family: 'Montserrat', sans-serif;
@@ -188,12 +191,26 @@ body {
   display: block;
   position: relative;
   width: 75%;
-  margin: 20px auto;
-  padding: 5px;
+  margin: .5em auto;
+  padding: 0 1em;
   font-style: italic;
+  font-size: 0.8em;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 6px rgb(195, 187, 175);
-  /* HOGENT grey */
+  /* box-shadow: 0px 0px 6px var(--hogent-grey); */
+  /* border-bottom: 4px solid var(--hogent-blue); */
+
+  background:
+    linear-gradient(to right, var(--blockquote-border-color) 4px, transparent 4px) 0 0,
+    linear-gradient(to right, var(--blockquote-border-color) 4px, transparent 4px) 0 100%,
+    linear-gradient(to left, var(--blockquote-border-color) 4px, transparent 4px) 100% 0,
+    linear-gradient(to left, var(--blockquote-border-color) 4px, transparent 4px) 100% 100%,
+    linear-gradient(to bottom, var(--blockquote-border-color) 4px, transparent 4px) 0 0,
+    linear-gradient(to bottom, var(--blockquote-border-color) 4px, transparent 4px) 100% 0,
+    linear-gradient(to top, var(--blockquote-border-color) 4px, transparent 4px) 0 100%,
+    linear-gradient(to top, var(--blockquote-border-color) 4px, transparent 4px) 100% 100%;
+
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
 }
 
 .reveal blockquote p:first-child,

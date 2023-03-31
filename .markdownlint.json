@@ -1,7 +1,10 @@
 {
+  "no-inline-html": false,
   "line-length": {
     "line_length": 100
   },
   "single-h1": false,
+  "no-alt-text": false,
+  "no-duplicate-heading": false,
   "no-trailing-punctuation": false
 }

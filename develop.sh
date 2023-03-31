@@ -20,6 +20,7 @@ inotifywait -m -e modify *.md *.css |
 
       # generate slides
       echo -e "${YELLOW}Generating slides..."
+      make clean
       make "gh-pages/$output_file_path"
       echo -e "${RESET}"
     fi

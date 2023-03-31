@@ -6,7 +6,7 @@ at [HOGENT](https://www.hogent.be/) (Ghent University of Applied Sciences).
 
 ## Table of contents
 
-<mark>TODO</mark>
+- [Course intro](00-intro.html)
 
 ## Extra references
 
