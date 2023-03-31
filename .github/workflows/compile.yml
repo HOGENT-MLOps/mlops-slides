@@ -39,7 +39,7 @@ jobs:
         run: |
           cd gh-pages
           git add --all
-          git commit -m --allow-empty "Publishing to gh-pages at $(date --utc --iso-8601=seconds)"
+          git commit --allow-empty -m "Publishing to gh-pages at $(date --utc --iso-8601=seconds)"
           git push origin gh-pages
 
       # - name: Publish Site
