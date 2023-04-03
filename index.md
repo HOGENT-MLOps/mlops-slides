@@ -7,6 +7,7 @@ at [HOGENT](https://www.hogent.be/) (Ghent University of Applied Sciences).
 ## Table of contents
 
 - [Course intro](00-intro.html)
+- [1. CI/CD](01-ci-cd.html)
 
 ## Extra references
 
