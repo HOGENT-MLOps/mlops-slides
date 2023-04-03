@@ -12,7 +12,15 @@ Gerelateerde repositories:
 
 ## Slides genereren
 
-<mark>TODO:</mark> stappenplan om slides te genereren toevoegen.
+Om zelf de slides te genereren heb je een Linux (of UN*X) omgeving nodig, met (GNU) make en [Pandoc (v2.19.x)](https://pandoc.org/).
+
+Haal deze repository binnen en genereer vervolgens de slides a.d.h.v. de `Makefile`:
+
+```console
+make all
+```
+
+Je kan nu de slides bekijken door de .html-bestanden in de `gh-pages` directory te openen in een webbrowser.
 
 ## Bijdragen
 
