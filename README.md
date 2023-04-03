@@ -7,7 +7,7 @@ at [HOGENT](https://www.hogent.be/) (Ghent University of Applied Sciences).
 ## Table of contents
 
 - [Course intro](00-intro.html)
-- [1. CI/CD](01-ci-cd.html)
+- [1. Continuous Integration/Deployment](01-ci-cd.html)
 
 ## Extra references
 
@@ -15,4 +15,4 @@ at [HOGENT](https://www.hogent.be/) (Ghent University of Applied Sciences).
 
 ---
 
-Latest update: 03/04/2023 15:04:51
+Latest update: 03/04/2023 15:07:29
