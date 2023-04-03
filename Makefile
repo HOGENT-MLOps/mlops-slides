@@ -74,8 +74,6 @@ $(OUTPUT)/%.html: %.md $(REVEAL_JS_DIR) $(STYLE_FILE) $(OUTPUT)/$(ASSETS_DIR)
 		--template=default.revealjs \
 		--variable=revealjs-url:reveal.js \
 		--variable=theme:hogent \
-		--variable=width:'"75%"' \
-		--variable=height:'"90%"' \
 		--output $@ $<
 
 ##---------- Dependent files and directories ----------------------------------

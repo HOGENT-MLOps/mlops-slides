@@ -24,6 +24,4 @@ inotifywait -m -e modify *.md *.css |
       make "gh-pages/$output_file_path"
       echo -e "${RESET}"
     fi
-
-    
   done
