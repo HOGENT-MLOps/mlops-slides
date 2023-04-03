@@ -1,5 +1,5 @@
 ---
-title: "1. Continuous Integration / Deployment"
+title: "1. Continuous Integration/Deployment"
 subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
 author: Thomas Aelbrecht
 date: 2022-2023
