@@ -199,3 +199,5 @@ Jenkins UI resides at <http://192.168.56.20:8080/>
 - [canary deployment](https://martinfowler.com/bliki/CanaryRelease.html)
 - [blue/green deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html)
 - [trunk-based development](https://martinfowler.com/articles/branching-patterns.html)
+
+<!-- TODO: link met TFX pipelines leggen? -->
