@@ -35,9 +35,40 @@ is becoming a critical component of successful ML projects.
 
 ## Why MLOps?
 
-- **New** field, daily evolution
+![If Elon says so, it's true...](./assets/00-intro/tweet-elon.webp)
+
+::: notes
+
+[Tweet](https://twitter.com/chipro/status/1315678863347920896?lang=en) from
+[Chip Huyen](https://twitter.com/chipro) on Machine Learning Engineering
+
+:::
+
+## Why MLOps?
+
+- **New field**, daily evolution
 - ML model design is *relatively* easy
 - ML model in production is *much* harder, time-consuming
+
+## Why MLOps?
+
+> Mitigate risks and increase the value of ML models in production.
+
+## More than delpoying models
+
+- Prevent bad models from being deployed
+- Monitoring performance
+  - Model regression, data drift, model drift...
+- Availability
+- ...
+
+## Best practices
+
+- Modularity of ML steps
+- Containerization
+- Versioning (data and models)
+- Mixed, autonomous teams (~ DevOps)
+- Peer reviews, peer reviews, peer reviews...
 
 ## References
 
@@ -45,6 +76,7 @@ is becoming a critical component of successful ML projects.
 - Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., ... & Dennison, D. (2015).
 [Hidden technical debt in machine learning systems](https://proceedings.neurips.cc/paper_files/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html).
 Advances in neural information processing systems, 28.
+- Degroote, S. (2021). [MLOps 101 - What, why and how to get started today](https://blog.ml6.eu/mlops-101-what-why-and-how-to-get-started-today-1f2d4038662c)
 
 # Machine Learning Operations
 
@@ -80,11 +112,9 @@ Source: <https://ml-ops.org/content/motivation>
 
 :::
 
-## ML Engineering
+## End-to-end MLOps lifecycle
 
-![](assets/00-intro/ml-engineering.jpg)
-
-TODO: nog verder aanvullen met intro MLOps
+![](./assets/00-intro/ml-engineering.jpg)
 
 ::: notes
 
@@ -95,6 +125,16 @@ In this course, we focus on the last part: model deployment. In the image above,
 model packaging, model versioning and the blue parts.
 
 :::
+
+## End-to-end MLOps lifecycle
+
+We focus on the following subjects:
+
+- versioning
+- build & deployment
+- monitoring & logging
+
+With automation always in mind.
 
 # Study Guide
 
