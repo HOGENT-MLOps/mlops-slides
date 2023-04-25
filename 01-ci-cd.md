@@ -200,4 +200,16 @@ Jenkins UI resides at <http://192.168.56.20:8080/>
 - [blue/green deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html)
 - [trunk-based development](https://martinfowler.com/articles/branching-patterns.html)
 
-<!-- TODO: link met TFX pipelines leggen? -->
+<!--
+
+TODO: lab assignment, mogelijks:
+- https://learn.microsoft.com/en-us/azure/machine-learning/how-to-github-actions-machine-learning?view=azureml-api-2&tabs=userlevel
+- https://github.com/machine-learning-apps/actions-ml-cicd
+- https://towardsdatascience.com/automate-machine-learning-deployment-with-github-actions-f752766981b1
+
+TODO: extra referenties:
+- https://www.youtube.com/watch?v=Ll50l3fsoYs
+
+TODO: link met TFX pipelines leggen?
+
+-->
