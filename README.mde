@@ -7,7 +7,7 @@ at [HOGENT](https://www.hogent.be/) (Ghent University of Applied Sciences).
 ## Table of contents
 
 - [Course intro](00-intro.html)
-- [1. Preparing for production](01-prep-prod.html)
+- [1. Tensorflow Extended](01-tfx-pipelines.html)
   - Chapter 5 van Introducing MLOps
   - Ook deeltje rond TensorFlow Exteded (pipeline, metadata, model analysis, model validation)
   - Hier moet model versioning ook nog bij
