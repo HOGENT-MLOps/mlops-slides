@@ -1,5 +1,5 @@
 ---
-title: "1. Preparing for production"
+title: "1. Tensorflow Extended"
 subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
 author: Thomas Aelbrecht
 date: 2022-2023
@@ -19,7 +19,7 @@ Mogelijke inhoud:
 
 -->
 
-# Preparing for production
+# TensorFlow Extended
 
 ## Introduction
 
