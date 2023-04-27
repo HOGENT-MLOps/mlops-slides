@@ -1,5 +1,5 @@
 ---
-title: "1. Continuous Integration/Deployment"
+title: "3. Continuous Integration/Deployment"
 subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
 author: Thomas Aelbrecht
 date: 2022-2023
@@ -24,17 +24,17 @@ date: 2022-2023
 
 ## How e.g. Facebook does it (2)
 
-![](assets/01-ci-cd/facebook-cd-at-scale.jpg)
+![](assets/03-ci-cd/facebook-cd-at-scale.jpg)
 
 Read more: [Rapid release at massive scale](https://engineering.fb.com/2017/08/31/web/rapid-release-at-massive-scale/)
 
 ## Continuous Integration/Delivery
 
-![](./assets/01-ci-cd/ci-cd-flow.png)
+![](./assets/03-ci-cd/ci-cd-flow.png)
 
 ## Continuous Delivery/Deployment
 
-![](./assets/01-ci-cd/cd-cd-flow.png)
+![](./assets/03-ci-cd/cd-cd-flow.png)
 
 ## Typical tasks for CI
 
@@ -87,7 +87,7 @@ Read more: [Rapid release at massive scale](https://engineering.fb.com/2017/08/3
 
 ---
 
-![](assets/01-ci-cd/jenkins-view.png)
+![](assets/03-ci-cd/jenkins-view.png)
 
 ## GitHub Actions
 
@@ -160,7 +160,7 @@ jobs:
 
 ## Feature branches
 
-![](assets/01-ci-cd/feature-branch.png)
+![](assets/03-ci-cd/feature-branch.png)
 
 # Get started with the lab assignment!
 
