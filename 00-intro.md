@@ -218,11 +218,11 @@ PS> choco install vagrant
 ## Semester schedule
 
 <!-- markdownlint-disable ol-prefix -->
-7. M4. Monitoring & feedback loop
-8. (continued)
-9. M5. ML on edge devices
-10. M6. CI/CD pipelines
-11. (continued)
+7. M4. Monitoring
+8. M5. CI/CD pipelines
+9. (continued)
+10. (continued)
+11. M6. ML on edge devices
 12. (continued)
 13. Optional: catch-up session
 <!-- markdownlint-enable ol-prefix -->
