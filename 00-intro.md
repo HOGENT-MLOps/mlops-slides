@@ -161,7 +161,6 @@ limited computing power
 ## Course contents
 
 - CI/CD pipelines
-- Configuration management
 - Docker, Kubernetes, Kubeflow
 - TensorFlow Extended, Lite, Serving...
 - Monitoring and feedback loop
@@ -209,7 +208,24 @@ PS> choco install vagrant
 
 ## Semester schedule
 
-TODO: write schedule here
+1. intro, software install, M1. TFX Pipelines
+2. (continued)
+3. M2. Containerizing ML models
+4. (continued)
+5. M3. Kubernetes & Kubeflow
+6. (continued)
+
+## Semester schedule
+
+<!-- markdownlint-disable ol-prefix -->
+7. M4. Monitoring & feedback loop
+8. (continued)
+9. M5. ML on edge devices
+10. M6. CI/CD pipelines
+11. (continued)
+12. (continued)
+13. Optional: catch-up session
+<!-- markdownlint-enable ol-prefix -->
 
 ## Assessment
 
