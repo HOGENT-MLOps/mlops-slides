@@ -142,14 +142,6 @@ Adversarial attacks:
 - consistent and configurable partitioning
 - shuffles dataset
 
-## ExampleGen
-
-```mermaid
-graph LR
-    A[Data source] --> B[ExampleGen]
-    B --> C[Examples]
-```
-
 ## StatisticsGen
 
 ## SchemaGen
@@ -163,7 +155,6 @@ graph LR
 ## Pusher
 
 ## Model Server
-
 
 ## References
 
