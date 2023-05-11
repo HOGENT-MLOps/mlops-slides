@@ -6,15 +6,15 @@ GREEN="\033[1;32m"
 
 inotifywait -m -e modify *.md *.css |
   while read file_path file_event; do
-    echo -e "${GREEN}File ${file_path} changed, regenerating...${RESET}"
-
     # copy css file
     if [[ $file_path == *.css ]]; then
       echo -e "${YELLOW}CSS file changed, generating all slides"
       make clean
       make all
       echo -e "${RESET}"
-    else
+    # if file_path starts with number, it's a slide deck
+    elif [[ $file_path =~ ^[0-9] ]]; then
+      echo -e "${GREEN}File ${file_path} changed, regenerating...${RESET}"
       # replace md with html in file_path
       output_file_path=${file_path/\.md/\.html}
 

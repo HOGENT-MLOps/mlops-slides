@@ -43,7 +43,7 @@ STYLE_FILE := $(REVEAL_JS_DIR)/dist/theme/$(STYLE).css
 help: ## Show this help message (default)
 	@printf 'The following build targets are available:\n'
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
-	@printf "\033[34mIndividual presentations:\033[0m\n"
+	@printf "\033[34m\nIndividual presentations:\033[0m\n"
 	@printf "\033[36m%-20s\033[0m\n" $(PRESENTATION_FILES)
 
 all: $(STYLE_FILE) $(PRESENTATION_FILES) ## Build the presentation (but not the handouts)
@@ -56,13 +56,10 @@ clean: ## Deletes the presentation and handouts (not reveal.js)
 mrproper: clean ## Thorough cleanup (also removes reveal.js)
 	rm -rf $(REVEAL_JS_DIR)
 
-watch:
-	while : ; do \
-		inotifywait -qr -e modify -e create -e delete -e move *.md assets/ ; \
-		make all --silent ; \
-	done
+watch: ## Watch for changes and rebuild the presentations if necessary
+	./watch.sh
 
-.PHONY: clean mrproper help watch
+.PHONY: clean mrproper help watch install
 
 ##---------- Actual build targets ---------------------------------------------
 

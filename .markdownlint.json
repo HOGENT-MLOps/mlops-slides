@@ -1,8 +1,6 @@
 {
   "no-inline-html": false,
-  "line-length": {
-    "line_length": 100
-  },
+  "line-length": false,
   "single-h1": false,
   "no-alt-text": false,
   "no-duplicate-heading": false,
