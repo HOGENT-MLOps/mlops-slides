@@ -18,8 +18,9 @@ at [HOGENT](https://www.hogent.be/) (Ghent University of Applied Sciences).
 - 6. TensorFlow Serving, TensorFlow Lite
 - 7. Configuration management
 - 8. Monitoring en feedback loop
-- 9. Model governance
 - Gastcollege?
+
+TODO: ergens link leggen met Web Services? Een eigen web service maken voor een model?
 
 ## Extra references
 
