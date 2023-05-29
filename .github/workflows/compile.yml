@@ -41,8 +41,3 @@ jobs:
           git add --all
           git commit --allow-empty -m "Publishing to gh-pages at $(date --utc --iso-8601=seconds)"
           git push origin gh-pages
-
-      # - name: Publish Site
-      #   env:
-      #     REPOSITORY: "https://${{ secrets.GITHUB_PAT }}@github.com/${{ github.repository }}.git"
-      #   run: ./publish.sh
