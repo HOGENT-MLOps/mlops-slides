@@ -178,7 +178,7 @@ Jenkins UI resides at <http://192.168.56.20:8080/>
 
 ## Setup
 
-- Docker and Jenkins running on the MV
+- Docker and Jenkins running on the VM
 - Default installation, minimal configuration required
 - Launch demo application in Docker container
 - Make change, rebuild & deploy!
