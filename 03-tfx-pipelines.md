@@ -142,13 +142,72 @@ Adversarial attacks:
 - consistent and configurable partitioning
 - shuffles dataset
 
+## ExampleGen
+
+- consumes: external data sources (csv, `TFRecord`, BigQuery...)
+- emits: `tf.Example` records, proto format...
+
 ## StatisticsGen
+
+- computes statistics over data
+  - both training and serving data
+- uses [Apache Beam](https://beam.apache.org) to scale to large datasets
+
+## StatisticsGen
+
+- consumes: ExampleGen
+- emits: dataset statistics
 
 ## SchemaGen
 
+- uses statistics to generate a schema
+- schema = description of the data
+  - instance of [schema.proto](https://github.com/tensorflow/metadata/blob/master/tensorflow_metadata/proto/v0/schema.proto)
+- infers types, ranges, categories...
+
+> Always heck if the generated schema makes sense and change if necessary!
+
+## SchemaGen
+
+- consumes: StaticsGen
+- emits: a schema
+
 ## ExampleValidator
 
+- identifies anomalies in the data
+  - both training and serving data
+- can detect:
+  - divergence from schema
+  - training skew
+  - data drift
+  - custom validation logic (SQL-based config)
+
+## ExampleValidator
+
+- consumes: StatisticsGen & SchemaGen
+- emits: validation results
+
 ## Transform
+
+- feature engineering
+- data preprocessing
+
+## Transform
+
+- consumes: ExampleGen & SchemaGen
+- emits: `SavedModel` for Trainer & pre-/post-transform statistics
+
+## Trainer
+
+- trains the model
+- requires
+  - a file with the model code
+  - protobuf definition of the train and eval args
+- optionally
+  - a schema
+  - a transform graph (from Transform)
+  - pre-trained models
+  - hyperparameters (from Tuner)
 
 ## Evaluator
 

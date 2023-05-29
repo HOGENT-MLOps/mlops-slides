@@ -208,22 +208,22 @@ PS> choco install vagrant
 
 ## Semester schedule
 
-1. intro, software install, M1. TFX Pipelines
-2. (continued)
-3. M2. Containerizing ML models
-4. (continued)
-5. M3. Kubernetes & Kubeflow
-6. (continued)
+1. intro, software install, M1. Docker
+2. M2. CI/CD pipelines
+3. (continued)
+4. M3. Kubernetes
+5. (continued)
+6. M4. TFX Pipelines
 
 ## Semester schedule
 
 <!-- markdownlint-disable ol-prefix -->
-7. M4. Monitoring
-8. M5. CI/CD pipelines
-9. (continued)
+7. (continued)
+8. M4. Containerizing ML models
+9. M5. Kubeflow
 10. (continued)
-11. M6. ML on edge devices
-12. (continued)
+11. (continued)
+12. M6. ML on edge devices
 13. Optional: catch-up session
 <!-- markdownlint-enable ol-prefix -->
 
