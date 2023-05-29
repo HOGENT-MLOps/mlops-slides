@@ -229,21 +229,108 @@ data-src="./assets/01-tfx-pipelines/tfx_components_flow.png" /></p>
 </section>
 <section id="examplegen-1" class="slide level2">
 <h2>ExampleGen</h2>
-<pre class="mermaid"><code>graph LR
-    A[Data source] --&gt; B[ExampleGen]
-    B --&gt; C[Examples]</code></pre>
+<ul>
+<li>consumes: external data sources (csv, <code>TFRecord</code>,
+BigQuery…)</li>
+<li>emits: <code>tf.Example</code> records, proto format…</li>
+</ul>
 </section>
 <section id="statisticsgen" class="slide level2">
 <h2>StatisticsGen</h2>
+<ul>
+<li>computes statistics over data
+<ul>
+<li>both training and serving data</li>
+</ul></li>
+<li>uses <a href="https://beam.apache.org">Apache Beam</a> to scale to
+large datasets</li>
+</ul>
+</section>
+<section id="statisticsgen-1" class="slide level2">
+<h2>StatisticsGen</h2>
+<ul>
+<li>consumes: ExampleGen</li>
+<li>emits: dataset statistics</li>
+</ul>
 </section>
 <section id="schemagen" class="slide level2">
 <h2>SchemaGen</h2>
+<ul>
+<li>uses statistics to generate a schema</li>
+<li>schema = description of the data
+<ul>
+<li>instance of <a
+href="https://github.com/tensorflow/metadata/blob/master/tensorflow_metadata/proto/v0/schema.proto">schema.proto</a></li>
+</ul></li>
+<li>infers types, ranges, categories…</li>
+</ul>
+<blockquote>
+<p>Always heck if the generated schema makes sense and change if
+necessary!</p>
+</blockquote>
+</section>
+<section id="schemagen-1" class="slide level2">
+<h2>SchemaGen</h2>
+<ul>
+<li>consumes: StaticsGen</li>
+<li>emits: a schema</li>
+</ul>
 </section>
 <section id="examplevalidator" class="slide level2">
 <h2>ExampleValidator</h2>
+<ul>
+<li>identifies anomalies in the data
+<ul>
+<li>both training and serving data</li>
+</ul></li>
+<li>can detect:
+<ul>
+<li>divergence from schema</li>
+<li>training skew</li>
+<li>data drift</li>
+<li>custom validation logic (SQL-based config)</li>
+</ul></li>
+</ul>
+</section>
+<section id="examplevalidator-1" class="slide level2">
+<h2>ExampleValidator</h2>
+<ul>
+<li>consumes: StatisticsGen &amp; SchemaGen</li>
+<li>emits: validation results</li>
+</ul>
 </section>
 <section id="transform" class="slide level2">
 <h2>Transform</h2>
+<ul>
+<li>feature engineering</li>
+<li>data preprocessing</li>
+</ul>
+</section>
+<section id="transform-1" class="slide level2">
+<h2>Transform</h2>
+<ul>
+<li>consumes: ExampleGen &amp; SchemaGen</li>
+<li>emits: <code>SavedModel</code> for Trainer &amp; pre-/post-transform
+statistics</li>
+</ul>
+</section>
+<section id="trainer" class="slide level2">
+<h2>Trainer</h2>
+<ul>
+<li>trains the model</li>
+<li>requires
+<ul>
+<li>a file with the model code</li>
+<li>protobuf definition of the train and eval args</li>
+</ul></li>
+<li>optionally
+<ul>
+<li>a schema</li>
+<li>a transform graph (from Transform)</li>
+<li>pre-trained models</li>
+<li>hyperparameters (from Tuner)</li>
+</ul></li>
+</ul>
 </section>
 <section id="evaluator" class="slide level2">
 <h2>Evaluator</h2>
