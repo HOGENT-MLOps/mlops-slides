@@ -5,6 +5,13 @@ author: Thomas Aelbrecht
 date: 2022-2023
 ---
 
+# CI/CD
+
+## Learning goals
+
+- Creating simple jobs and build pipelines
+- Running the pipeline to build and test an application, and to deploy changes in the application
+
 # Intro
 
 ## Traditional release

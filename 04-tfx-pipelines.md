@@ -21,6 +21,12 @@ Mogelijke inhoud:
 
 # TensorFlow Extended
 
+## Learning goals
+
+TODO: add learning goals
+
+# Intro
+
 ## Introduction
 
 - Development &ne; production
