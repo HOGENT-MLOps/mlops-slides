@@ -128,6 +128,16 @@ environment variables…</li>
 <h1>Docker</h1>
 
 </section>
+<section id="deployment-revolution" class="slide level2">
+<h2>Deployment (r)evolution</h2>
+<figure>
+<img data-src="assets/03-kubernetes/container_evolution.svg"
+alt="Source: https://kubernetes.io/docs/concepts/overview/" />
+<figcaption aria-hidden="true"><small><em>Source: <a
+href="https://kubernetes.io/docs/concepts/overview/"
+class="uri">https://kubernetes.io/docs/concepts/overview/</a></em></small></figcaption>
+</figure>
+</section>
 <section id="what-is-docker" class="slide level2">
 <h2>What is Docker?</h2>
 <ul>
@@ -167,14 +177,16 @@ environment variables…</li>
 </ul></li>
 </ul>
 </section>
-<section id="why-containers" class="slide level2">
-<h2>Why containers?</h2>
+<section id="why-are-containers-so-popular" class="slide level2">
+<h2>Why are containers so popular?</h2>
 <ul>
-<li>Lightweight: no need for a full OS</li>
-<li>Portable: image is easily shared</li>
-<li>Repeatable: same environment everywhere</li>
-<li>Isolation: no interference between containers</li>
 <li>CI/CD: easy to switch to previous versions (= images)</li>
+<li>decouple application from infrastructure</li>
+<li>environmental consistency: runs the same on your pc as in the
+cloud</li>
+<li>resource isolation: predictable application performance</li>
+<li>resource utilization: high efficiency and density</li>
+<li>…</li>
 </ul>
 </section></section>
 <section>
@@ -200,9 +212,9 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 <img
 data-src="https://docs.docker.com/storage/images/types-of-mounts-volume.png"
 alt="Source: https://docs.docker.com/storage/volumes/" />
-<figcaption aria-hidden="true"><small>Source: <a
+<figcaption aria-hidden="true"><small><em>Source: <a
 href="https://docs.docker.com/storage/volumes/"
-class="uri">https://docs.docker.com/storage/volumes/</a></small></figcaption>
+class="uri">https://docs.docker.com/storage/volumes/</a></em></small></figcaption>
 </figure>
 </section>
 <section id="volumes-volume" class="slide level2">
@@ -256,6 +268,7 @@ href="https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/1-docker.m
 class="uri">https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/1-docker.md</a></p>
 <p>Portainer UI resides at <a href="https://192.168.56.20:9443/"
 class="uri">https://192.168.56.20:9443/</a></p>
+<p>Also keep a cheat sheet of important commands!</p>
 </section>
 <section id="setup" class="slide level2">
 <h2>Setup</h2>
