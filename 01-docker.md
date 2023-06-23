@@ -18,6 +18,10 @@ date: 2022-2023
 
 # Docker
 
+## Deployment (r)evolution
+
+![<small><em>Source: <https://kubernetes.io/docs/concepts/overview/></em></small>](assets/03-kubernetes/container_evolution.svg)
+
 ## What is Docker?
 
 - Open source
@@ -43,13 +47,14 @@ date: 2022-2023
 - Contains metadata:
   - Name, version, environment variables...
 
-## Why containers?
+## Why are containers so popular?
 
-- Lightweight: no need for a full OS
-- Portable: image is easily shared
-- Repeatable: same environment everywhere
-- Isolation: no interference between containers
 - CI/CD: easy to switch to previous versions (= images)
+- decouple application from infrastructure
+- environmental consistency: runs the same on your pc as in the cloud
+- resource isolation: predictable application performance
+- resource utilization: high efficiency and density
+- ...
 
 # Docker building blocks
 
@@ -65,7 +70,7 @@ docker run -p 8080:80 nginx
 
 ## Volumes
 
-![<small>Source: <https://docs.docker.com/storage/volumes/></small>](https://docs.docker.com/storage/images/types-of-mounts-volume.png)
+![<small><em>Source: <https://docs.docker.com/storage/volumes/></em></small>](https://docs.docker.com/storage/images/types-of-mounts-volume.png)
 
 ## Volumes: volume
 
@@ -113,6 +118,8 @@ vagrant ssh
 Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/1-docker.md>
 
 Portainer UI resides at <https://192.168.56.20:9443/>
+
+Also keep a cheat sheet of important commands!
 
 ## Setup
 
