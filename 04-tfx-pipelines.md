@@ -1,5 +1,5 @@
 ---
-title: "1. Tensorflow Extended"
+title: "4. TensorFlow Extended"
 subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
 author: Thomas Aelbrecht
 date: 2022-2023
@@ -128,11 +128,11 @@ Adversarial attacks:
 
 ## TFX components
 
-![](./assets/10-tfx-pipelines/tfx_components.png)
+![](./assets/04-tfx-pipelines/tfx_components.png)
 
 ## Flow between components
 
-![](./assets/10-tfx-pipelines/tfx_components_flow.png)
+![](./assets/04-tfx-pipelines/tfx_components_flow.png)
 
 ## ExampleGen
 

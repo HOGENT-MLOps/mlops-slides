@@ -9,8 +9,8 @@ at [HOGENT](https://www.hogent.be/) (Ghent University of Applied Sciences).
 - [Course intro](00-intro.html)
 - [1. Docker](01-docker.html)
 - [2. Continuous Integration/Deployment](02-ci-cd.html)
-- [3. Kubernetes](02-kubernetes.html)
-- [4. Tensorflow Extended](03-tfx-pipelines.html)
+- [3. Kubernetes](03-kubernetes.html)
+- [4. Tensorflow Extended](04-tfx-pipelines.html)
   - Chapter 5 van Introducing MLOps
   - Ook deeltje rond TensorFlow Exteded (pipeline, metadata, model analysis, model validation)
   - Hier moet model versioning ook nog bij
