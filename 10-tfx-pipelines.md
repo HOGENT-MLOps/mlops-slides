@@ -128,11 +128,11 @@ Adversarial attacks:
 
 ## TFX components
 
-![](./assets/01-tfx-pipelines/tfx_components.png)
+![](./assets/10-tfx-pipelines/tfx_components.png)
 
 ## Flow between components
 
-![](./assets/01-tfx-pipelines/tfx_components_flow.png)
+![](./assets/10-tfx-pipelines/tfx_components_flow.png)
 
 ## ExampleGen
 

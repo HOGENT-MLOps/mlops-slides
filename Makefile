@@ -51,7 +51,8 @@ all: $(STYLE_FILE) $(PRESENTATION_FILES) ## Build the presentation (but not the 
 clean: ## Deletes the presentation and handouts (not reveal.js)
 	rm -f $(OUTPUT)/*.html
 	rm -rf $(OUTPUT)/$(ASSETS_DIR)
-#	rm -f $(OUTPUT)/*.pdf
+	rm -rf $(REVEAL_JS_DIR)
+	rm -f $(OUTPUT)/*
 
 mrproper: clean ## Thorough cleanup (also removes reveal.js)
 	rm -rf $(REVEAL_JS_DIR)
