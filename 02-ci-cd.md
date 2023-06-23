@@ -176,6 +176,8 @@ Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/b
 
 Jenkins UI resides at <http://192.168.56.20:8080/>
 
+Also keep a cheat sheet of important commands!
+
 ## Setup
 
 - Docker and Jenkins running on the VM
