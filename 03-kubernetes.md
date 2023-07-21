@@ -102,7 +102,7 @@ date: 2022-2023
 - Pods
 - Controllers:
   - Deployments, ReplicaSets, Services
-  - DaemonSets, Jobs
+  - Jobs, CronJobs
 - Organise applications:
   - Labels, Selectors, Namespaces
 
@@ -159,13 +159,14 @@ date: 2022-2023
 
 - Supervisor process for pods carrying out batch jobs
 - Individual processes that run once and complete successfully
-- Compare with cron job
+- Creates a pod to do the work
 
-## Controllers: DaemonSets
+## Controllers: CronJobs
 
-- Ensure that all nodes run a copy of a specific pod
-- E.g. when adding/removing nodes to the cluster
-- E.g. run single logging/monitoring agent on each node
+- Perform scheduled tasks
+- Runs a job periodically on a given schedule
+- Creates a job to do the work (which creates a pod)
+- E.g. backup, sending emails, report generation, etc.
 
 ## Organising applications: labels
 
@@ -189,6 +190,7 @@ date: 2022-2023
 
 ## Setup
 
+- Install VirtualBox (if not already installed)
 - Install `minikube` on your physical system
   - Use VirtualBox as the driver
 - Install `kubectl`
@@ -198,7 +200,7 @@ date: 2022-2023
 
 ## Kubernetes lab assignment
 
-Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/3-kubernetes.md>
+Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/03-kubernetes.md>
 
 Also keep a cheat sheet of important commands!
 
@@ -219,3 +221,12 @@ Also keep a cheat sheet of important commands!
 - Team organisation
   - DevOps!
   - CI/CD!
+
+## kubeflow
+
+- Open source
+- Machine learning toolkit for k8s
+- Deploy ML workflows on k8s
+- Supports Jupyter notebooks, TensorFlow, PyTorch, etc.
+
+**More on this in a later chapter!**
