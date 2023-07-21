@@ -188,7 +188,7 @@ replicated controllers</li>
 <li>Controllers:
 <ul>
 <li>Deployments, ReplicaSets, Services</li>
-<li>DaemonSets, Jobs</li>
+<li>Jobs, CronJobs</li>
 </ul></li>
 <li>Organise applications:
 <ul>
@@ -272,15 +272,16 @@ over</li>
 <ul>
 <li>Supervisor process for pods carrying out batch jobs</li>
 <li>Individual processes that run once and complete successfully</li>
-<li>Compare with cron job</li>
+<li>Creates a pod to do the work</li>
 </ul>
 </section>
-<section id="controllers-daemonsets" class="slide level2">
-<h2>Controllers: DaemonSets</h2>
+<section id="controllers-cronjobs" class="slide level2">
+<h2>Controllers: CronJobs</h2>
 <ul>
-<li>Ensure that all nodes run a copy of a specific pod</li>
-<li>E.g. when adding/removing nodes to the cluster</li>
-<li>E.g. run single logging/monitoring agent on each node</li>
+<li>Perform scheduled tasks</li>
+<li>Runs a job periodically on a given schedule</li>
+<li>Creates a job to do the work (which creates a pod)</li>
+<li>E.g. backup, sending emails, report generation, etc.</li>
 </ul>
 </section>
 <section id="organising-applications-labels" class="slide level2">
@@ -320,6 +321,7 @@ class="title-slide slide level1">
 <section id="setup" class="slide level2">
 <h2>Setup</h2>
 <ul>
+<li>Install VirtualBox (if not already installed)</li>
 <li>Install <code>minikube</code> on your physical system
 <ul>
 <li>Use VirtualBox as the driver</li>
@@ -335,8 +337,8 @@ class="title-slide slide level1">
 <section id="kubernetes-lab-assignment" class="slide level2">
 <h2>Kubernetes lab assignment</h2>
 <p>Follow the steps in the assignment <a
-href="https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/3-kubernetes.md"
-class="uri">https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/3-kubernetes.md</a></p>
+href="https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/03-kubernetes.md"
+class="uri">https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/03-kubernetes.md</a></p>
 <p>Also keep a cheat sheet of important commands!</p>
 </section></section>
 <section>
@@ -369,6 +371,16 @@ class="uri">https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/3-ku
 <li>CI/CD!</li>
 </ul></li>
 </ul>
+</section>
+<section id="kubeflow" class="slide level2">
+<h2>kubeflow</h2>
+<ul>
+<li>Open source</li>
+<li>Machine learning toolkit for k8s</li>
+<li>Deploy ML workflows on k8s</li>
+<li>Supports Jupyter notebooks, TensorFlow, PyTorch, etc.</li>
+</ul>
+<p><strong>More on this in a later chapter!</strong></p>
 </section></section>
     </div>
   </div>
