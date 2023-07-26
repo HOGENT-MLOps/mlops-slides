@@ -41,22 +41,6 @@ computer science</p>
   <p class="date">2022-2023</p>
 </section>
 
-<section class="slide level2">
-
-<!--
-
-Mogelijke inhoud:
-
-- Intro
-- Opbouw van een TFX-pipeline (ExampleGen, StatisticsGen, ...)
-- Model analysis
-- Model validation
-- Model versioning
-- Artifact, metadata store
-- Services die TFX gebruiken (in de cloud?)
-
--->
-</section>
 <section>
 <section id="tensorflow-extended" class="title-slide slide level1">
 <h1>TensorFlow Extended</h1>
@@ -64,7 +48,18 @@ Mogelijke inhoud:
 </section>
 <section id="learning-goals" class="slide level2">
 <h2>Learning goals</h2>
-<p>TODO: add learning goals</p>
+<ul>
+<li>Understanding the concept of ML pipelines</li>
+<li>Understanding the components of TensorFlow Extended</li>
+<li>Understanding the basic architecture of ML metadata stores</li>
+<li>Being able to create an ML pipeline</li>
+<li>Being able to manipulate TFX components
+<ul>
+<li>ExampleGen, SchemaGen, StatisticsGen, ExampleValidator</li>
+<li>Transform, Trainer, Evaluator, Pusher</li>
+</ul></li>
+<li>Being able to interpret the outputs of an ML pipeline</li>
+</ul>
 </section></section>
 <section>
 <section id="intro" class="title-slide slide level1">
@@ -85,13 +80,16 @@ Mogelijke inhoud:
 <li>Sometimes not possible</li>
 </ul></li>
 </ul>
+</section>
+<section class="slide level2">
+
 <blockquote>
 <p>Think about your tools even before you start coding! A good toolset
 can save you a lot of time and effort.</p>
 </blockquote>
 </section>
-<section id="considerations" class="slide level2">
-<h2>Considerations</h2>
+<section id="considerations-13" class="slide level2">
+<h2>Considerations (1/3)</h2>
 <ul>
 <li>Tooling
 <ul>
@@ -107,8 +105,8 @@ can save you a lot of time and effort.</p>
 </ul></li>
 </ul>
 </section>
-<section id="considerations-1" class="slide level2">
-<h2>Considerations</h2>
+<section id="considerations-23" class="slide level2">
+<h2>Considerations (2/3)</h2>
 <ul>
 <li>Data access
 <ul>
@@ -116,6 +114,11 @@ can save you a lot of time and effort.</p>
 <li>database, cloud storage… (= dynamic data)</li>
 <li>prod env should have access, correct drivers…</li>
 </ul></li>
+</ul>
+</section>
+<section id="considerations-33" class="slide level2">
+<h2>Considerations (3/3)</h2>
+<ul>
 <li>Training vs inference
 <ul>
 <li>training: most expensive step in ML lifecycle</li>
@@ -145,11 +148,10 @@ value of the average.</p>
 <li>Malfunctions or malicious attacks can cause harm</li>
 </ul>
 </section>
-<section id="questions-to-ask" class="slide level2">
-<h2>Questions to ask</h2>
-<p>Questions to ask before deploying a model:</p>
+<section id="questions-to-ask-before-deploy" class="slide level2">
+<h2>Questions to ask before deploy</h2>
 <ul>
-<li>What is the model acts in the worst imaginable way?</li>
+<li>What if the model acts in the worst imaginable way?</li>
 <li>What if a user manages to extract the training data or the internal
 logic of the model?</li>
 <li>What are the financial, business, legal, safety, and reputational
@@ -198,20 +200,22 @@ pipelines)</li>
 <section id="tensorflow-extended-tfx" class="slide level2">
 <h2>TensorFlow Extended (TFX)</h2>
 <ul>
-<li>end-to-end platform for deploying production ML pipelines</li>
-<li>manages the entire ML workflow</li>
-<li>create pipelines via Python API</li>
-<li>see: <a href="https://www.tensorflow.org/tfx"
+<li>End-to-end platform for deploying production ML pipelines</li>
+<li>Manages the entire ML workflow</li>
+<li>Create pipelines via Python API</li>
+<li><a href="https://www.tensorflow.org/tfx"
 class="uri">https://www.tensorflow.org/tfx</a></li>
 </ul>
 </section>
 <section id="tensorflow-extended-tfx-1" class="slide level2">
 <h2>TensorFlow Extended (TFX)</h2>
 <ul>
-<li>either on-premise or in the cloud
+<li>Either on-premise or in the cloud
 <ul>
 <li>Local orchestrator</li>
 <li>Vertex AI Pipelines (Google Cloud)</li>
+<li>Amazon SageMaker (AWS)</li>
+<li>Azure Machine Learning</li>
 <li>Apache Airflow (open source)</li>
 <li>Kubeflow Pipelines (open source)</li>
 </ul></li>
@@ -219,80 +223,60 @@ class="uri">https://www.tensorflow.org/tfx</a></li>
 </section>
 <section id="tfx-components" class="slide level2">
 <h2>TFX components</h2>
-<p><img data-src="./assets/04-tfx-pipelines/tfx_components.png" /></p>
+<p><img data-src="./assets/04-tfx/tfx_components.png" /></p>
 </section>
 <section id="flow-between-components" class="slide level2">
 <h2>Flow between components</h2>
-<p><img
-data-src="./assets/04-tfx-pipelines/tfx_components_flow.png" /></p>
+<p><img data-src="./assets/04-tfx/tfx_components_flow.png" /></p>
 </section>
 <section id="examplegen" class="slide level2">
 <h2>ExampleGen</h2>
 <ul>
-<li>ingests data</li>
-<li>various data sources</li>
-<li>generates examples</li>
-<li>consistent and configurable partitioning</li>
-<li>shuffles dataset</li>
-</ul>
-</section>
-<section id="examplegen-1" class="slide level2">
-<h2>ExampleGen</h2>
+<li>Ingests data from various data sources
 <ul>
-<li>consumes: external data sources (csv, <code>TFRecord</code>,
-BigQuery…)</li>
-<li>emits: <code>tf.Example</code> records, proto format…</li>
+<li>csv, <code>TFRecord</code>, BigQuery…</li>
+</ul></li>
+<li>Shuffles dataset</li>
+<li>Generates examples</li>
+<li>Consistent and configurable partitioning</li>
+<li>Emits: <code>tf.Example</code> records, proto format…</li>
 </ul>
 </section>
 <section id="statisticsgen" class="slide level2">
 <h2>StatisticsGen</h2>
 <ul>
-<li>computes statistics over data
+<li>Computes statistics over data
 <ul>
 <li>both training and serving data</li>
 </ul></li>
-<li>uses <a href="https://beam.apache.org">Apache Beam</a> to scale to
+<li>Uses <a href="https://beam.apache.org">Apache Beam</a> to scale to
 large datasets</li>
-</ul>
-</section>
-<section id="statisticsgen-1" class="slide level2">
-<h2>StatisticsGen</h2>
-<ul>
-<li>consumes: ExampleGen</li>
-<li>emits: dataset statistics</li>
 </ul>
 </section>
 <section id="schemagen" class="slide level2">
 <h2>SchemaGen</h2>
 <ul>
-<li>uses statistics to generate a schema</li>
-<li>schema = description of the data
+<li>Uses statistics to generate a schema</li>
+<li>Schema = description of the data
 <ul>
 <li>instance of <a
 href="https://github.com/tensorflow/metadata/blob/master/tensorflow_metadata/proto/v0/schema.proto">schema.proto</a></li>
 </ul></li>
-<li>infers types, ranges, categories…</li>
+<li>Infers types, ranges, categories…</li>
 </ul>
 <blockquote>
 <p>Always heck if the generated schema makes sense and change if
 necessary!</p>
 </blockquote>
 </section>
-<section id="schemagen-1" class="slide level2">
-<h2>SchemaGen</h2>
-<ul>
-<li>consumes: StaticsGen</li>
-<li>emits: a schema</li>
-</ul>
-</section>
 <section id="examplevalidator" class="slide level2">
 <h2>ExampleValidator</h2>
 <ul>
-<li>identifies anomalies in the data
+<li>Identifies anomalies in the data
 <ul>
 <li>both training and serving data</li>
 </ul></li>
-<li>can detect:
+<li>Can detect:
 <ul>
 <li>divergence from schema</li>
 <li>training skew</li>
@@ -301,38 +285,25 @@ necessary!</p>
 </ul></li>
 </ul>
 </section>
-<section id="examplevalidator-1" class="slide level2">
-<h2>ExampleValidator</h2>
-<ul>
-<li>consumes: StatisticsGen &amp; SchemaGen</li>
-<li>emits: validation results</li>
-</ul>
-</section>
 <section id="transform" class="slide level2">
 <h2>Transform</h2>
 <ul>
-<li>feature engineering</li>
-<li>data preprocessing</li>
-</ul>
-</section>
-<section id="transform-1" class="slide level2">
-<h2>Transform</h2>
-<ul>
-<li>consumes: ExampleGen &amp; SchemaGen</li>
-<li>emits: <code>SavedModel</code> for Trainer &amp; pre-/post-transform
+<li>Feature engineering</li>
+<li>Data preprocessing</li>
+<li>Emits: <code>SavedModel</code> for Trainer &amp; pre-/post-transform
 statistics</li>
 </ul>
 </section>
 <section id="trainer" class="slide level2">
 <h2>Trainer</h2>
 <ul>
-<li>trains the model</li>
-<li>requires
+<li>Trains the model</li>
+<li>Requires
 <ul>
 <li>a file with the model code</li>
 <li>protobuf definition of the train and eval args</li>
 </ul></li>
-<li>optionally
+<li>Optionally
 <ul>
 <li>a schema</li>
 <li>a transform graph (from Transform)</li>
@@ -343,12 +314,38 @@ statistics</li>
 </section>
 <section id="evaluator" class="slide level2">
 <h2>Evaluator</h2>
+<ul>
+<li>Evaluates the model</li>
+<li>Ensures the model is “good enough” to deploy</li>
+<li>Requires a baseline
+<ul>
+<li>first time: no baseline</li>
+</ul></li>
+<li>Allows to configure metrics, slices…</li>
+<li>Emits: ML metadata with results</li>
+</ul>
 </section>
 <section id="pusher" class="slide level2">
 <h2>Pusher</h2>
+<ul>
+<li>Push a validated model to a deployment target</li>
+<li>Relies on blessings from validation components
+<ul>
+<li>Not blessed? No push!</li>
+</ul></li>
+<li>Consumes: <code>SavedModel</code> format</li>
+<li>Emits: same <code>SavedModel</code> format with versioning
+metadata</li>
+</ul>
 </section>
-<section id="model-server" class="slide level2">
-<h2>Model Server</h2>
+<section id="and-more" class="slide level2">
+<h2>And more…</h2>
+<ul>
+<li>Tuner</li>
+<li>InfraValidator</li>
+<li>BulkInferrer</li>
+<li>Custom components</li>
+</ul>
 </section>
 <section id="references" class="slide level2">
 <h2>References</h2>
@@ -357,6 +354,99 @@ statistics</li>
 href="https://www.tensorflow.org/tfx/guide"
 class="uri">https://www.tensorflow.org/tfx/guide</a></li>
 </ul>
+</section></section>
+<section>
+<section id="versioning" class="title-slide slide level1">
+<h1>Versioning</h1>
+
+</section>
+<section id="data-versioning" class="slide level2">
+<h2>Data versioning</h2>
+<ul>
+<li>Versioning is important!</li>
+<li>Keep track of
+<ul>
+<li>training data</li>
+<li>model code</li>
+<li>hyperparameters</li>
+<li>model weights</li>
+<li>…</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-versioning-tools" class="slide level2">
+<h2>Data versioning tools</h2>
+<div class="twocolumns">
+<div class="col">
+<ul>
+<li><a href="https://www.tensorflow.org/tfx/guide/mlmd">ML metadata
+(TFX)</a></li>
+<li><a
+href="https://docs.neptune.ai/tutorials/data_versioning/">Neptune</a></li>
+<li><a href="https://www.pachyderm.com/">Pachyderm</a></li>
+<li><a href="https://delta.io/">Delta Lake</a></li>
+</ul>
+</div>
+<div class="col">
+<ul>
+<li><a href="https://git-lfs.com/">Git LFS</a></li>
+<li><a href="https://github.com/dolthub/dolt">Dolt</a></li>
+<li><a href="https://lakefs.io/blog/data-versioning/">lakeFS</a></li>
+<li><a href="https://dvc.org/">DVC</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ml-metadata" class="slide level2">
+<h2>ML metadata</h2>
+<ul>
+<li>Helps to track and manage ML artifacts
+<ul>
+<li>dataset, hyperparameters used</li>
+<li>pipeline, model version</li>
+<li>…</li>
+</ul></li>
+</ul>
+</section>
+<section id="metadata-store" class="slide level2">
+<h2>Metadata store</h2>
+<ul>
+<li>Stores metadata
+<ul>
+<li>about ML artifacts</li>
+<li>about executions of pipeline steps</li>
+<li>about the pipeline itself (e.g. lineage information)</li>
+</ul></li>
+<li>e.g. models, datasets, training runs…</li>
+<li>See: <a href="https://www.tensorflow.org/tfx/guide/mlmd"
+class="uri">https://www.tensorflow.org/tfx/guide/mlmd</a></li>
+</ul>
+</section>
+<section id="metadata-store-1" class="slide level2">
+<h2>Metadata Store</h2>
+<p><img data-src="assets/04-tfx/ml-metadata.png" /></p>
+</section></section>
+<section>
+<section id="get-started-with-the-lab-assignment"
+class="title-slide slide level1">
+<h1>Get started with the lab assignment!</h1>
+
+</section>
+<section id="setup" class="slide level2">
+<h2>Setup</h2>
+<ul>
+<li>No local setup required</li>
+<li>Follow tutorials from TFX docs</li>
+</ul>
+</section>
+<section id="tfx-lab-assignment" class="slide level2">
+<h2>TFX lab assignment</h2>
+<p>Follow the steps in the assignment <a
+href="https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/04-tfx.md"
+class="uri">https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/04-tfx.md</a></p>
+<p>Download every notebook when you’re done and commit them to your
+repository in a directory named <code>tflab</code>.</p>
+<p>Also keep a cheat sheet of important code snippets!</p>
 </section></section>
     </div>
   </div>
