@@ -10,7 +10,7 @@ at [HOGENT](https://www.hogent.be/) (Ghent University of Applied Sciences).
 - [1. Docker](01-docker.html)
 - [2. Continuous Integration/Deployment](02-ci-cd.html)
 - [3. Kubernetes](03-kubernetes.html)
-- [4. Tensorflow Extended](04-tfx-pipelines.html)
+- [4. Tensorflow Extended](04-tfx.html)
 - 5. Docker + containerizing ML models + Kubeflow
 - 6. TensorFlow Serving, TensorFlow Lite
   - Data versioning staat nu bij TFX, misschien beter hier?
