@@ -267,9 +267,27 @@ Adversarial attacks:
 - e.g. models, datasets, training runs...
 - See: <https://www.tensorflow.org/tfx/guide/mlmd>
 
-## Metadata Store
+## Metadata store
 
 ![](assets/04-tfx/ml-metadata.png)
+
+::: notes
+
+- `ArtifactType`: defines the type of an artifact
+  - e.g. `Model`, `Schema`, `HyperParameters`
+- `Artifact`: instance of an `ArtifactType`
+- `ExecutionType`: component or step in a workflow
+  - e.g. `Trainer`, `Evaluator`
+- `Execution`: instance of an `ExecutionType`, recorded when pipeline/step is run
+- `Event`: records the relationship between an `Artifact` and an `Execution`
+  - = input and output
+- `ContextType`: conceptual group of artifacts and executions
+  - e.g. project, pipeline runs...
+- `Context`: instance of a `ContextType`
+- `Attribution`: records the relationship between an `Artifact` and a `Context`
+- `Association`: records the relationship between an `Execution` and a `Context`
+
+:::
 
 # Get started with the lab assignment!
 
