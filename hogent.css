@@ -411,3 +411,14 @@ body {
 .reveal .slide-number {
   color: var(--hogent-blue);
 }
+
+/*********************************************
+ * TWO COLUMN SLIDES
+ *********************************************/
+.reveal .twocolumns {
+  display: flex;
+}
+
+.reveal .twocolumns>.col {
+  flex: 1;
+}

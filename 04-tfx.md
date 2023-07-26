@@ -5,25 +5,18 @@ author: Thomas Aelbrecht
 date: 2022-2023
 ---
 
-<!--
-
-Mogelijke inhoud:
-
-- Intro
-- Opbouw van een TFX-pipeline (ExampleGen, StatisticsGen, ...)
-- Model analysis
-- Model validation
-- Model versioning
-- Artifact, metadata store
-- Services die TFX gebruiken (in de cloud?)
-
--->
-
 # TensorFlow Extended
 
 ## Learning goals
 
-TODO: add learning goals
+- Understanding the concept of ML pipelines
+- Understanding the components of TensorFlow Extended
+- Understanding the basic architecture of ML metadata stores
+- Being able to create an ML pipeline
+- Being able to manipulate TFX components
+  - ExampleGen, SchemaGen, StatisticsGen, ExampleValidator
+  - Transform, Trainer, Evaluator, Pusher
+- Being able to interpret the outputs of an ML pipeline
 
 # Intro
 
@@ -36,10 +29,12 @@ TODO: add learning goals
   - Sometimes same vendor, same cloud, same tools
   - Sometimes not possible
 
+---
+
 > Think about your tools even before you start coding!
 > A good toolset can save you a lot of time and effort.
 
-## Considerations
+## Considerations (1/3)
 
 - Tooling
   - impact on model
@@ -50,12 +45,15 @@ TODO: add learning goals
   - Python vs C++
   - must run on a low end device vs high end server
 
-## Considerations
+## Considerations (2/3)
 
 - Data access
   - bundled with model (= frozen data)
   - database, cloud storage... (= dynamic data)
   - prod env should have access, correct drivers...
+
+## Considerations (3/3)
+
 - Training vs inference
   - training: most expensive step in ML lifecycle
   - inference: most of time spent here in prod
@@ -80,11 +78,9 @@ to fetch the value of the average.
 - Model mimics reality, but is imperfect
 - Malfunctions or malicious attacks can cause harm
 
-## Questions to ask
+## Questions to ask before deploy
 
-Questions to ask before deploying a model:
-
-- What is the model acts in the worst imaginable way?
+- What if the model acts in the worst imaginable way?
 - What if a user manages to extract the training data or the internal logic of the model?
 - What are the financial, business, legal, safety, and reputational risks?
 
@@ -119,97 +115,76 @@ Adversarial attacks:
 
 ## TensorFlow Extended (TFX)
 
-- end-to-end platform for deploying production ML pipelines
-- manages the entire ML workflow
-- create pipelines via Python API
-- see: <https://www.tensorflow.org/tfx>
+- End-to-end platform for deploying production ML pipelines
+- Manages the entire ML workflow
+- Create pipelines via Python API
+- <https://www.tensorflow.org/tfx>
 
 ## TensorFlow Extended (TFX)
 
-- either on-premise or in the cloud
+- Either on-premise or in the cloud
   - Local orchestrator
   - Vertex AI Pipelines (Google Cloud)
+  - Amazon SageMaker (AWS)
+  - Azure Machine Learning
   - Apache Airflow (open source)
   - Kubeflow Pipelines (open source)
 
 ## TFX components
 
-![](./assets/04-tfx-pipelines/tfx_components.png)
+![](./assets/04-tfx/tfx_components.png)
 
 ## Flow between components
 
-![](./assets/04-tfx-pipelines/tfx_components_flow.png)
+![](./assets/04-tfx/tfx_components_flow.png)
 
 ## ExampleGen
 
-- ingests data
-- various data sources
-- generates examples
-- consistent and configurable partitioning
-- shuffles dataset
-
-## ExampleGen
-
-- consumes: external data sources (csv, `TFRecord`, BigQuery...)
-- emits: `tf.Example` records, proto format...
+- Ingests data from various data sources
+  - csv, `TFRecord`, BigQuery...
+- Shuffles dataset
+- Generates examples
+- Consistent and configurable partitioning
+- Emits: `tf.Example` records, proto format...
 
 ## StatisticsGen
 
-- computes statistics over data
+- Computes statistics over data
   - both training and serving data
-- uses [Apache Beam](https://beam.apache.org) to scale to large datasets
-
-## StatisticsGen
-
-- consumes: ExampleGen
-- emits: dataset statistics
+- Uses [Apache Beam](https://beam.apache.org) to scale to large datasets
 
 ## SchemaGen
 
-- uses statistics to generate a schema
-- schema = description of the data
+- Uses statistics to generate a schema
+- Schema = description of the data
   - instance of [schema.proto](https://github.com/tensorflow/metadata/blob/master/tensorflow_metadata/proto/v0/schema.proto)
-- infers types, ranges, categories...
+- Infers types, ranges, categories...
 
 > Always heck if the generated schema makes sense and change if necessary!
 
-## SchemaGen
-
-- consumes: StaticsGen
-- emits: a schema
-
 ## ExampleValidator
 
-- identifies anomalies in the data
+- Identifies anomalies in the data
   - both training and serving data
-- can detect:
+- Can detect:
   - divergence from schema
   - training skew
   - data drift
   - custom validation logic (SQL-based config)
 
-## ExampleValidator
-
-- consumes: StatisticsGen & SchemaGen
-- emits: validation results
-
 ## Transform
 
-- feature engineering
-- data preprocessing
-
-## Transform
-
-- consumes: ExampleGen & SchemaGen
-- emits: `SavedModel` for Trainer & pre-/post-transform statistics
+- Feature engineering
+- Data preprocessing
+- Emits: `SavedModel` for Trainer & pre-/post-transform statistics
 
 ## Trainer
 
-- trains the model
-- requires
+- Trains the model
+- Requires
   - a file with the model code
   - protobuf definition of the train and eval args
-- optionally
+- Optionally
   - a schema
   - a transform graph (from Transform)
   - pre-trained models
@@ -217,10 +192,96 @@ Adversarial attacks:
 
 ## Evaluator
 
+- Evaluates the model
+- Ensures the model is "good enough" to deploy
+- Requires a baseline
+  - first time: no baseline
+- Allows to configure metrics, slices...
+- Emits: ML metadata with results
+
 ## Pusher
 
-## Model Server
+- Push a validated model to a deployment target
+- Relies on blessings from validation components
+  - Not blessed? No push!
+- Consumes: `SavedModel` format
+- Emits: same `SavedModel` format with versioning metadata
+
+## And more...
+
+- Tuner
+- InfraValidator
+- BulkInferrer
+- Custom components
 
 ## References
 
 - TensorFlow Extended Guide: <https://www.tensorflow.org/tfx/guide>
+
+# Versioning
+
+## Data versioning
+
+- Versioning is important!
+- Keep track of
+  - training data
+  - model code
+  - hyperparameters
+  - model weights
+  - ...
+
+## Data versioning tools
+
+::: {.twocolumns}
+:::: {.col}
+
+- [ML metadata (TFX)](https://www.tensorflow.org/tfx/guide/mlmd)
+- [Neptune](https://docs.neptune.ai/tutorials/data_versioning/)
+- [Pachyderm](https://www.pachyderm.com/)
+- [Delta Lake](https://delta.io/)
+
+::::
+:::: {.col}
+
+- [Git LFS](https://git-lfs.com/)
+- [Dolt](https://github.com/dolthub/dolt)
+- [lakeFS](https://lakefs.io/blog/data-versioning/)
+- [DVC](https://dvc.org/)
+
+::::
+:::
+
+## ML metadata
+
+- Helps to track and manage ML artifacts
+  - dataset, hyperparameters used
+  - pipeline, model version
+  - ...
+
+## Metadata store
+
+- Stores metadata
+  - about ML artifacts
+  - about executions of pipeline steps
+  - about the pipeline itself (e.g. lineage information)
+- e.g. models, datasets, training runs...
+- See: <https://www.tensorflow.org/tfx/guide/mlmd>
+
+## Metadata Store
+
+![](assets/04-tfx/ml-metadata.png)
+
+# Get started with the lab assignment!
+
+## Setup
+
+- No local setup required
+- Follow tutorials from TFX docs
+
+## TFX lab assignment
+
+Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/04-tfx.md>
+
+Download every notebook when you're done and commit them to your repository in a directory named `tflab`.
+
+Also keep a cheat sheet of important code snippets!
