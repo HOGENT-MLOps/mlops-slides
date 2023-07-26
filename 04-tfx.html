@@ -423,8 +423,39 @@ class="uri">https://www.tensorflow.org/tfx/guide/mlmd</a></li>
 </ul>
 </section>
 <section id="metadata-store-1" class="slide level2">
-<h2>Metadata Store</h2>
+<h2>Metadata store</h2>
 <p><img data-src="assets/04-tfx/ml-metadata.png" /></p>
+<aside class="notes">
+<ul>
+<li><code>ArtifactType</code>: defines the type of an artifact
+<ul>
+<li>e.g. <code>Model</code>, <code>Schema</code>,
+<code>HyperParameters</code></li>
+</ul></li>
+<li><code>Artifact</code>: instance of an <code>ArtifactType</code></li>
+<li><code>ExecutionType</code>: component or step in a workflow
+<ul>
+<li>e.g. <code>Trainer</code>, <code>Evaluator</code></li>
+</ul></li>
+<li><code>Execution</code>: instance of an <code>ExecutionType</code>,
+recorded when pipeline/step is run</li>
+<li><code>Event</code>: records the relationship between an
+<code>Artifact</code> and an <code>Execution</code>
+<ul>
+<li>= input and output</li>
+</ul></li>
+<li><code>ContextType</code>: conceptual group of artifacts and
+executions
+<ul>
+<li>e.g. project, pipeline runs…</li>
+</ul></li>
+<li><code>Context</code>: instance of a <code>ContextType</code></li>
+<li><code>Attribution</code>: records the relationship between an
+<code>Artifact</code> and a <code>Context</code></li>
+<li><code>Association</code>: records the relationship between an
+<code>Execution</code> and a <code>Context</code></li>
+</ul>
+</aside>
 </section></section>
 <section>
 <section id="get-started-with-the-lab-assignment"
