@@ -54,8 +54,9 @@ is becoming a critical component of successful ML projects.
 
 > Mitigate risks and increase the value of ML models in production.
 
-## More than delpoying models
+## More than deploying models
 
+- Data versioning
 - Prevent bad models from being deployed
 - Monitoring performance
   - Model regression, data drift, model drift...
@@ -77,6 +78,87 @@ is becoming a critical component of successful ML projects.
 [Hidden technical debt in machine learning systems](https://proceedings.neurips.cc/paper_files/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html).
 Advances in neural information processing systems, 28.
 - Degroote, S. (2021). [MLOps 101 - What, why and how to get started today](https://blog.ml6.eu/mlops-101-what-why-and-how-to-get-started-today-1f2d4038662c)
+
+# ML lifecycle
+
+## ML lifecycle
+
+![<small><em>Source: <https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html></em></small>](./assets/00-intro/ml-lifecycle-aws.png)
+
+## Business goal
+
+- Solve a real problem
+- Goal: create real (business) value
+
+## ML problem framing
+
+How could ML help? Is ML needed at all?
+
+- No? Don't use ML!
+- Yes? What kind of ML problem is it?
+  - Structured data problem?
+  - NLP problem?
+  - Computer vision problem?
+  - Multi-modal problem?
+  - ...
+
+## Data processing
+
+We need data, but
+
+- How do we get the data?
+- How do we store the data?
+- Where do we store the data?
+- How long do we store the data for?
+- ...
+
+Once we have the data, we need to think about what we'll do with it (exploration, annotation...)
+
+## Model development
+
+- What model do we use?
+  - What are the requirements?
+- Where do we get the model from?
+  - Are we allowed to use the model? (licensing)
+- How do we train the model?
+- How do we keep track of the parameters used?
+- How do we store the model?
+
+**The model is only a small part of the ML system!**
+
+## Deployment
+
+We have a model, now what? Let's deploy it!
+
+- Who needs access?
+- What do we need?
+  - Batch?
+  - Real-time?
+  - Serverless?
+- What usage do we expect?
+- ...
+
+## Monitoring
+
+The model is deployed, but we're not done yet!
+
+- Is the infra still running?
+- How do we know if the model is performing well?
+  - Model drift
+  - Data drift
+  - ...
+- How do we know if the model is used correctly?
+- Does the model solve the business problem?
+
+## Conclusion
+
+- It is complex
+- Requires some organization & automation
+  - Multiple people involved
+  - Multiple datasets
+  - Multiple models
+  - All used at the same time
+- = **MLOps**
 
 # Machine Learning Operations
 
@@ -101,40 +183,6 @@ Advances in neural information processing systems, 28.
   - e.g. predict network problems so that a DevOps team can act faster or even before the problem occurs
 
 :::
-
-## Three levels of change
-
-![](./assets/00-intro/three-levels-of-change.jpg)
-
-::: notes
-
-Source: <https://ml-ops.org/content/motivation>
-
-:::
-
-## End-to-end MLOps lifecycle
-
-![](./assets/00-intro/ml-engineering.jpg)
-
-::: notes
-
-This is the complete machine learning life cycle. It includes the entire process from data
-collection to model deployment.
-
-In this course, we focus on the last part: model deployment. In the image above, this consists of
-model packaging, model versioning and the blue parts.
-
-:::
-
-## End-to-end MLOps lifecycle
-
-We focus on the following subjects:
-
-- versioning
-- build & deployment
-- monitoring & logging
-
-With automation always in mind.
 
 # Study Guide
 
