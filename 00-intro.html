@@ -107,9 +107,10 @@ Learning Engineering</p>
 <p>Mitigate risks and increase the value of ML models in production.</p>
 </blockquote>
 </section>
-<section id="more-than-delpoying-models" class="slide level2">
-<h2>More than delpoying models</h2>
+<section id="more-than-deploying-models" class="slide level2">
+<h2>More than deploying models</h2>
 <ul>
+<li>Data versioning</li>
 <li>Prevent bad models from being deployed</li>
 <li>Monitoring performance
 <ul>
@@ -145,6 +146,117 @@ href="https://blog.ml6.eu/mlops-101-what-why-and-how-to-get-started-today-1f2d40
 </ul>
 </section></section>
 <section>
+<section id="ml-lifecycle" class="title-slide slide level1">
+<h1>ML lifecycle</h1>
+
+</section>
+<section id="ml-lifecycle-1" class="slide level2">
+<h2>ML lifecycle</h2>
+<figure>
+<img data-src="./assets/00-intro/ml-lifecycle-aws.png"
+alt="Source: https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html" />
+<figcaption aria-hidden="true"><small><em>Source: <a
+href="https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html"
+class="uri">https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html</a></em></small></figcaption>
+</figure>
+</section>
+<section id="business-goal" class="slide level2">
+<h2>Business goal</h2>
+<ul>
+<li>Solve a real problem</li>
+<li>Goal: create real (business) value</li>
+</ul>
+</section>
+<section id="ml-problem-framing" class="slide level2">
+<h2>ML problem framing</h2>
+<p>How could ML help? Is ML needed at all?</p>
+<ul>
+<li>No? Don’t use ML!</li>
+<li>Yes? What kind of ML problem is it?
+<ul>
+<li>Structured data problem?</li>
+<li>NLP problem?</li>
+<li>Computer vision problem?</li>
+<li>Multi-modal problem?</li>
+<li>…</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-processing" class="slide level2">
+<h2>Data processing</h2>
+<p>We need data, but</p>
+<ul>
+<li>How do we get the data?</li>
+<li>How do we store the data?</li>
+<li>Where do we store the data?</li>
+<li>How long do we store the data for?</li>
+<li>…</li>
+</ul>
+<p>Once we have the data, we need to think about what we’ll do with it
+(exploration, annotation…)</p>
+</section>
+<section id="model-development" class="slide level2">
+<h2>Model development</h2>
+<ul>
+<li>What model do we use?
+<ul>
+<li>What are the requirements?</li>
+</ul></li>
+<li>Where do we get the model from?
+<ul>
+<li>Are we allowed to use the model? (licensing)</li>
+</ul></li>
+<li>How do we train the model?</li>
+<li>How do we keep track of the parameters used?</li>
+<li>How do we store the model?</li>
+</ul>
+<p><strong>The model is only a small part of the ML system!</strong></p>
+</section>
+<section id="deployment" class="slide level2">
+<h2>Deployment</h2>
+<p>We have a model, now what? Let’s deploy it!</p>
+<ul>
+<li>Who needs access?</li>
+<li>What do we need?
+<ul>
+<li>Batch?</li>
+<li>Real-time?</li>
+<li>Serverless?</li>
+</ul></li>
+<li>What usage do we expect?</li>
+<li>…</li>
+</ul>
+</section>
+<section id="monitoring" class="slide level2">
+<h2>Monitoring</h2>
+<p>The model is deployed, but we’re not done yet!</p>
+<ul>
+<li>Is the infra still running?</li>
+<li>How do we know if the model is performing well?
+<ul>
+<li>Model drift</li>
+<li>Data drift</li>
+<li>…</li>
+</ul></li>
+<li>How do we know if the model is used correctly?</li>
+<li>Does the model solve the business problem?</li>
+</ul>
+</section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<ul>
+<li>It is complex</li>
+<li>Requires some organization &amp; automation
+<ul>
+<li>Multiple people involved</li>
+<li>Multiple datasets</li>
+<li>Multiple models</li>
+<li>All used at the same time</li>
+</ul></li>
+<li>= <strong>MLOps</strong></li>
+</ul>
+</section></section>
+<section>
 <section id="machine-learning-operations"
 class="title-slide slide level1">
 <h1>Machine Learning Operations</h1>
@@ -177,35 +289,6 @@ or even before the problem occurs</li>
 </ul></li>
 </ul>
 </aside>
-</section>
-<section id="three-levels-of-change" class="slide level2">
-<h2>Three levels of change</h2>
-<p><img data-src="./assets/00-intro/three-levels-of-change.jpg" /></p>
-<aside class="notes">
-<p>Source: <a href="https://ml-ops.org/content/motivation"
-class="uri">https://ml-ops.org/content/motivation</a></p>
-</aside>
-</section>
-<section id="end-to-end-mlops-lifecycle" class="slide level2">
-<h2>End-to-end MLOps lifecycle</h2>
-<p><img data-src="./assets/00-intro/ml-engineering.jpg" /></p>
-<aside class="notes">
-<p>This is the complete machine learning life cycle. It includes the
-entire process from data collection to model deployment.</p>
-<p>In this course, we focus on the last part: model deployment. In the
-image above, this consists of model packaging, model versioning and the
-blue parts.</p>
-</aside>
-</section>
-<section id="end-to-end-mlops-lifecycle-1" class="slide level2">
-<h2>End-to-end MLOps lifecycle</h2>
-<p>We focus on the following subjects:</p>
-<ul>
-<li>versioning</li>
-<li>build &amp; deployment</li>
-<li>monitoring &amp; logging</li>
-</ul>
-<p>With automation always in mind.</p>
 </section></section>
 <section>
 <section id="study-guide" class="title-slide slide level1">

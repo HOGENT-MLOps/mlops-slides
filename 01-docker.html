@@ -121,6 +121,7 @@ containers</li>
 <li>Being able to use Docker features like port bindings, volumes,
 environment variables…</li>
 <li>Being able to manage multiple containers using Docker Compose</li>
+<li>Being able to push Docker images to a Docker registry</li>
 </ul>
 </section></section>
 <section>
@@ -251,6 +252,26 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <li>Define and run multi-container Docker applications</li>
 <li>Config: <code>docker-compose.yml</code></li>
 </ul>
+</section>
+<section id="example-docker-compose.yml" class="slide level2">
+<h2>Example: <code>docker-compose.yml</code></h2>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">redis</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> redis:alpine</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&#39;6379:6379&#39;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">ml-app</span><span class="kw">:</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">build</span><span class="kw">:</span><span class="at"> .</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">&#39;8501:8501&#39;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">depends_on</span><span class="kw">:</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> redis</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./app.py:/code/app.py</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./data.py:/code/data.py</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./models.py:/code/models.py</span></span></code></pre></div>
 </section></section>
 <section>
 <section id="get-started-with-the-lab-assignment"
@@ -266,19 +287,30 @@ vagrant ssh</code></pre>
 <p>Follow the steps in the assignment <a
 href="https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/1-docker.md"
 class="uri">https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/1-docker.md</a></p>
+<p>Also keep a cheat sheet of important commands!</p>
+</section>
+<section id="portainer" class="slide level2">
+<h2>Portainer</h2>
+<ul>
+<li>Web UI for Docker</li>
+<li>Runs on the VM in a Docker container
+<ul>
+<li>Just like in SELab, remember?</li>
+</ul></li>
+</ul>
 <p>Portainer UI resides at <a href="https://192.168.56.20:9443/"
 class="uri">https://192.168.56.20:9443/</a></p>
-<p>Also keep a cheat sheet of important commands!</p>
 </section>
 <section id="setup" class="slide level2">
 <h2>Setup</h2>
 <ul>
-<li>Docker and Docker Compose are running on the VM</li>
+<li>Docker, Docker Compose and Portainer are running on the VM</li>
 <li>Launch demo application in Docker container</li>
 <li>Expose the application to the host</li>
 <li>Attach a more robust database to the application</li>
 <li>Test the application</li>
 <li>Optimize the Docker image</li>
+<li>Push the Docker image to Docker Hub</li>
 </ul>
 </section></section>
 <section>
