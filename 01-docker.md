@@ -15,6 +15,7 @@ date: 2022-2023
 - Being able to build Docker images and run them as Docker containers
 - Being able to use Docker features like port bindings, volumes, environment variables...
 - Being able to manage multiple containers using Docker Compose
+- Being able to push Docker images to a Docker registry
 
 # Docker
 
@@ -105,6 +106,27 @@ docker run --mount type=tmpfs,destination=/path/in/container nginx
 - Define and run multi-container Docker applications
 - Config: `docker-compose.yml`
 
+## Example: `docker-compose.yml`
+
+```yaml
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - '6379:6379'
+
+  ml-app:
+    build: .
+    ports:
+      - '8501:8501'
+    depends_on:
+      - redis
+    volumes:
+      - ./app.py:/code/app.py
+      - ./data.py:/code/data.py
+      - ./models.py:/code/models.py
+```
+
 # Get started with the lab assignment!
 
 ## Docker lab assignment
@@ -117,18 +139,25 @@ vagrant ssh
 
 Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/1-docker.md>
 
-Portainer UI resides at <https://192.168.56.20:9443/>
-
 Also keep a cheat sheet of important commands!
+
+## Portainer
+
+- Web UI for Docker
+- Runs on the VM in a Docker container
+  - Just like in SELab, remember?
+
+Portainer UI resides at <https://192.168.56.20:9443/>
 
 ## Setup
 
-- Docker and Docker Compose are running on the VM
+- Docker, Docker Compose and Portainer are running on the VM
 - Launch demo application in Docker container
 - Expose the application to the host
 - Attach a more robust database to the application
 - Test the application
 - Optimize the Docker image
+- Push the Docker image to Docker Hub
 
 # Reflection
 
