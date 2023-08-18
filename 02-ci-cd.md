@@ -59,6 +59,8 @@ Read more: [Rapid release at massive scale](https://engineering.fb.com/2017/08/3
 - Deploy to production
 - Integration/acceptance/load-tests...
 
+**But sometimes a human gives the final go-ahead!**
+
 # CI/CD tooling
 
 ## Overview
@@ -97,6 +99,8 @@ Read more: [Rapid release at massive scale](https://engineering.fb.com/2017/08/3
 ![](assets/02-ci-cd/jenkins-view.png)
 
 ## GitHub Actions
+
+<https://docs.github.com/en/actions>
 
 - Integrated in GitHub
 - CI/CD code alongside the source code
