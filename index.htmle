@@ -80,7 +80,7 @@
     }
 
     a {
-      color: var(--hogent-blue);
+      color: var(--black);
       text-decoration: none;
     }
 
