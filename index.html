@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Machine Learning Operations
+  </title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <style>
+    :root {
+      /* Colors */
+      --hogent-blue: rgb(76, 162, 213);
+      --grey: #A3A3A3;
+      --light-grey: #F6F6F6;
+      --white: #fff;
+      --black: #333;
+
+      /* Fonts */
+      --hogent-font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      font-family: var(--hogent-font-family);
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-grey);
+      color: var(--black);
+    }
+
+    header {
+      color: var(--hogent-blue);
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    header h1 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    header .subtitle {
+      margin-top: 0;
+      color: var(--grey);
+    }
+
+    main {
+      max-width: 800px;
+      margin-right: auto;
+      margin-left: auto;
+      overflow-y: auto;
+      padding-bottom: 5rem;
+    }
+
+    section {
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      color: var(--hogent-blue);
+      text-decoration: none;
+    }
+
+    a .number {
+      color: var(--hogent-blue);
+      font-weight: bold;
+      margin-right: .75rem;
+    }
+
+    a.text {
+      text-decoration: underline;
+    }
+
+    a:hover .text {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.8rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .partners {
+      display: flex;
+      justify-content: space-between;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    .partner .logo {
+      max-height: 50px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>
+      Machine Learning Operations
+    </h1>
+    <div class="subtitle">
+      Latest update: TIMESTAMP
+    </div>
+  </header>
+
+  <main>
+    <p>
+      This is an overview of the lecture slides for the Machine Learning Operations course,
+      which is part of the study programme professional bachelor applied computer science
+      at
+      <a href="https://www.hogent.be/" target="_blank">
+        HOGENT (Ghent University of Applied Sciences)
+      </a>
+    </p>
+
+    <p>
+      This course is developed in collaboration with
+      <a href="https://www.captic.com/" target="_blank">Captic</a>
+      . Special thanks to Tim De Smet for his contributions to this course.
+    </p>
+
+    <section>
+      <h3>
+        Table of contents
+      </h3>
+
+      <ul id="toc">
+        <!-- TOC will be generated here -->
+      </ul>
+    </section>
+
+    <section>
+      <h3>
+        Extra references
+      </h3>
+
+      <p>
+        <mark>
+          TODO
+        </mark>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="partners">
+      <div class="partner">
+        <a href="https://www.hogent.be/" target="_blank">
+          <img class="logo" src="assets/HOGENT.png" alt="Logo HOGENT" />
+        </a>
+      </div>
+      <div class="partner">
+        <a href="https://www.captic.com/" target="_blank">
+          <img class="logo" src="assets/Captic.png" alt="Logo Captic" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    const chapters = [
+      {
+        title: 'Course intro',
+        url: '00-intro.html'
+      },
+      {
+        title: 'Docker',
+        url: '01-docker.html'
+      },
+      {
+        title: 'CI/CD',
+        url: '02-cicd.html'
+      }
+    ];
+
+    const toc = document.getElementById('toc');
+
+    const listItems = chapters.map(({ title, url }, index) => {
+      const li = document.createElement('li');
+      const number = document.createElement('span');
+      number.classList.add('number');
+      number.innerText = index;
+
+      const text = document.createElement('span');
+      text.classList.add('text');
+      text.innerText = title;
+
+      const link = document.createElement('a');
+      link.href = url;
+
+      link.appendChild(number);
+      link.appendChild(text);
+      li.appendChild(link);
+
+      return li;
+    });
+
+    toc.replaceChildren(...listItems);
+  </script>
+</body>
+
+</html>

@@ -31,8 +31,8 @@ jobs:
         run: |
           make clean
           make all
-          cp index.md gh-pages/README.md
-          sed -ie "s#TIMESTAMP#$(date +'%d/%m/%Y %H:%M:%S')#" gh-pages/README.md
+          cp index.html gh-pages/index.html
+          sed -ie "s#TIMESTAMP#$(date +'%d/%m/%Y %H:%M:%S')#" gh-pages/index.html
 
       - name: Push changes to gh-pages
         run: |
