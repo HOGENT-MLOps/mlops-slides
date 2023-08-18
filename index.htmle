@@ -61,8 +61,9 @@
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    h3 {
+    h2 {
       margin: 0;
+      font-size: 1.2em;
     }
 
     ul {
@@ -80,21 +81,15 @@
     }
 
     a {
-      color: var(--black);
+      color: var(--hogent-blue);
       text-decoration: none;
     }
 
-    a .number {
-      color: var(--hogent-blue);
-      font-weight: bold;
-      margin-right: .75rem;
+    li a {
+      color: var(--black);
     }
 
-    a.text {
-      text-decoration: underline;
-    }
-
-    a:hover .text {
+    a:hover {
       text-decoration: underline;
     }
 
@@ -118,7 +113,7 @@
     }
 
     .partner .logo {
-      max-height: 50px;
+      max-height: 2.5rem;
       margin: 0 10px;
     }
   </style>
@@ -139,21 +134,19 @@
       This is an overview of the lecture slides for the Machine Learning Operations course,
       which is part of the study programme professional bachelor applied computer science
       at
-      <a href="https://www.hogent.be/" target="_blank">
-        HOGENT (Ghent University of Applied Sciences)
-      </a>
+      <a href="https://www.hogent.be/" target="_blank">HOGENT (Ghent University of Applied Sciences)</a>.
     </p>
 
     <p>
       This course is developed in collaboration with
-      <a href="https://www.captic.com/" target="_blank">Captic</a>
-      . Special thanks to Tim De Smet for his contributions to this course.
+      <a href="https://www.captic.com/" target="_blank">Captic</a>.
+      Special thanks to Tim De Smet for his contributions to this course.
     </p>
 
     <section>
-      <h3>
+      <h2>
         Table of contents
-      </h3>
+      </h2>
 
       <ul id="toc">
         <!-- TOC will be generated here -->
@@ -161,9 +154,9 @@
     </section>
 
     <section>
-      <h3>
+      <h2>
         Extra references
-      </h3>
+      </h2>
 
       <p>
         <mark>
@@ -208,19 +201,11 @@
 
     const listItems = chapters.map(({ title, url }, index) => {
       const li = document.createElement('li');
-      const number = document.createElement('span');
-      number.classList.add('number');
-      number.innerText = index;
-
-      const text = document.createElement('span');
-      text.classList.add('text');
-      text.innerText = title;
 
       const link = document.createElement('a');
       link.href = url;
+      link.innerText = `${index}. ${title}`;
 
-      link.appendChild(number);
-      link.appendChild(text);
       li.appendChild(link);
 
       return li;
