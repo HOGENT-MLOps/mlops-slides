@@ -9,8 +9,8 @@ date: 2022-2023
 
 ## Learning goals
 
-- Creating simple jobs and build pipelines
-- Running the pipeline to build and test an application, and to deploy changes in the application
+- Creating simple actions and workflows
+- Running a pipeline to lint the code, and build and push a Docker image
 
 # Intro
 
