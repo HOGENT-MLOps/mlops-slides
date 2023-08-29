@@ -93,6 +93,10 @@
       text-decoration: underline;
     }
 
+    span.wip {
+      color: var(--grey);
+    }
+
     footer {
       background-color: var(--black);
       color: var(--white);
@@ -105,14 +109,14 @@
       right: 0;
     }
 
-    .partners {
+    footer .partners {
       display: flex;
       justify-content: space-between;
       max-width: 200px;
       margin: 0 auto;
     }
 
-    .partner .logo {
+    footer .partner .logo {
       max-height: 2.5rem;
       margin: 0 10px;
     }
@@ -194,19 +198,43 @@
       {
         title: 'CI/CD',
         url: '02-cicd.html'
+      },
+      {
+        title: 'Kubernetes',
+        url: '03-kubernetes.html'
+      },
+      {
+        title: 'The ML Workflow',
+        wip: true,
+      },
+      {
+        title: 'Deployment and beyond',
+        wip: true,
+      },
+      {
+        title: 'Monitoring and logging',
+        wip: true,
       }
     ];
 
     const toc = document.getElementById('toc');
 
-    const listItems = chapters.map(({ title, url }, index) => {
+    const listItems = chapters.map(({ title, url, wip }, index) => {
       const li = document.createElement('li');
 
-      const link = document.createElement('a');
-      link.href = url;
-      link.innerText = `${index}. ${title}`;
+      if (wip) {
+        const span = document.createElement('span');
+        span.classList.add('wip');
+        span.innerText = `${index}. ${title} (WIP)`;
 
-      li.appendChild(link);
+        li.appendChild(span);
+      } else {
+        const link = document.createElement('a');
+        link.href = url;
+        link.innerText = `${index}. ${title}`;
+
+        li.appendChild(link);
+      }
 
       return li;
     });
