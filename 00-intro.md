@@ -258,20 +258,20 @@ PS> choco install vagrant
 
 1. intro, software install, M1. Docker
 2. M2. CI/CD pipelines
-3. (continued)
-4. M3. Kubernetes
-5. (continued)
-6. M4. TFX Pipelines
+3. M3. Kubernetes
+4. (continued)
+5. Guest lecture
+6. M4. The ML Workflow
 
 ## Semester schedule
 
 <!-- markdownlint-disable ol-prefix -->
 7. (continued)
-8. M4. Containerizing ML models
-9. M5. Kubeflow
-10. (continued)
+8. M5. Deployment and beyond
+9. (continued)
+10. M6. Monitoring and logging
 11. (continued)
-12. M6. ML on edge devices
+12. (continued)
 13. Optional: catch-up session
 <!-- markdownlint-enable ol-prefix -->
 

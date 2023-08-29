@@ -132,11 +132,11 @@ Adversarial attacks:
 
 ## TFX components
 
-![](./assets/04-tfx/tfx_components.png)
+![](./assets/14-tfx/tfx_components.png)
 
 ## Flow between components
 
-![](./assets/04-tfx/tfx_components_flow.png)
+![](./assets/14-tfx/tfx_components_flow.png)
 
 ## ExampleGen
 
@@ -269,7 +269,7 @@ Adversarial attacks:
 
 ## Metadata store
 
-![](assets/04-tfx/ml-metadata.png)
+![](assets/14-tfx/ml-metadata.png)
 
 ::: notes
 
