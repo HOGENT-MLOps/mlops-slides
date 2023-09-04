@@ -28,6 +28,8 @@ jobs:
           path: gh-pages
 
       - name: Generate slides
+        env:
+          TZ: Europe/Brussels # to get the correct date
         run: |
           make clean
           make all
