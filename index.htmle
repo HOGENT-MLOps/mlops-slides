@@ -89,12 +89,12 @@
       color: var(--black);
     }
 
-    a:hover {
-      text-decoration: underline;
+    li span {
+      color: var(--grey);
     }
 
-    span.wip {
-      color: var(--grey);
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -201,18 +201,22 @@
       },
       {
         title: 'Kubernetes',
-        url: '03-kubernetes.html'
+        url: '03-kubernetes.html',
+        wip: true,
       },
       {
         title: 'The ML Workflow',
-        url: '04-ml-workflow.html'
+        url: '04-ml-workflow.html',
+        wip: true,
       },
       {
         title: 'Deployment and beyond',
+        url: '05-deployment.html',
         wip: true,
       },
       {
         title: 'Monitoring and logging',
+        url: '06-monitoring-and-logging.html',
         wip: true,
       }
     ];
@@ -222,19 +226,14 @@
     const listItems = chapters.map(({ title, url, wip }, index) => {
       const li = document.createElement('li');
 
-      if (wip) {
-        const span = document.createElement('span');
-        span.classList.add('wip');
-        span.innerText = `${index}. ${title} (WIP)`;
+      const element = document.createElement(url ? 'a' : 'span');
+      element.innerText = `${index}. ${title}${wip ? ' (WIP)' : ''}`;
 
-        li.appendChild(span);
-      } else {
-        const link = document.createElement('a');
-        link.href = url;
-        link.innerText = `${index}. ${title}`;
-
-        li.appendChild(link);
+      if (url) {
+        element.href = url;
       }
+
+      li.appendChild(element);
 
       return li;
     });
