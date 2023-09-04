@@ -94,6 +94,12 @@
       color: var(--grey);
     }
 
+    li p.subtitle {
+      display: block;
+      margin: 0.25rem 0 0 1rem;
+      color: var(--grey);
+    }
+
     a:hover {
       text-decoration: underline;
     }
@@ -153,8 +159,42 @@
         Table of contents
       </h2>
 
-      <ul id="toc">
-        <!-- TOC will be generated here -->
+      <ul>
+        <li>
+          <a href="00-intro.html">
+            0. Course intro
+          </a>
+        </li>
+        <li>
+          <a href="01-docker.html">
+            1. Docker
+          </a>
+        </li>
+        <li>
+          <a href="02-cicd.html">
+            2. CI/CD
+          </a>
+        </li>
+        <li>
+          <a href="03-kubernetes.html">
+            3. Kubernetes (WIP)
+          </a>
+        </li>
+        <li>
+          <a href="04-ml-workflow.html">
+            4. The ML Workflow (WIP)
+          </a>
+        </li>
+        <li>
+          <a href="05-deployment.html">
+            5. Deployment and beyond (WIP)
+          </a>
+        </li>
+        <li>
+          <a href="06-monitoring-and-logging.html">
+            6. Monitoring and logging (WIP)
+          </a>
+        </li>
       </ul>
     </section>
 
@@ -163,11 +203,32 @@
         Extra references
       </h2>
 
-      <p>
-        <mark>
-          TODO
-        </mark>
-      </p>
+      <ul>
+        <li>
+          <a href="https://www.oreilly.com/library/view/introducing-mlops/9781492083283/">
+            Introducing MLOps - How to Scale Machine Learning in the Enterprise
+          </a>
+        </li>
+        <li>
+          <a href="https://ml-ops.org/">
+            ML Ops: Machine Learning Operations
+          </a>
+        </li>
+        <li>
+          <a href="https://fullstackdeeplearning.com/course/2022/">
+            Full Stack Deep Learning - 2022 Course
+          </a>
+        </li>
+        <li>
+          <a href="https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops">
+            Machine
+            Learning Engineering for Production (MLOps) Specialization
+          </a>
+          <p class="subtitle">
+            Very Google minded, but still a very good course on MLOps
+          </p>
+        </li>
+      </ul>
     </section>
   </main>
 
@@ -185,62 +246,6 @@
       </div>
     </div>
   </footer>
-
-  <script type="text/javascript">
-    const chapters = [
-      {
-        title: 'Course intro',
-        url: '00-intro.html'
-      },
-      {
-        title: 'Docker',
-        url: '01-docker.html'
-      },
-      {
-        title: 'CI/CD',
-        url: '02-cicd.html'
-      },
-      {
-        title: 'Kubernetes',
-        url: '03-kubernetes.html',
-        wip: true,
-      },
-      {
-        title: 'The ML Workflow',
-        url: '04-ml-workflow.html',
-        wip: true,
-      },
-      {
-        title: 'Deployment and beyond',
-        url: '05-deployment.html',
-        wip: true,
-      },
-      {
-        title: 'Monitoring and logging',
-        url: '06-monitoring-and-logging.html',
-        wip: true,
-      }
-    ];
-
-    const toc = document.getElementById('toc');
-
-    const listItems = chapters.map(({ title, url, wip }, index) => {
-      const li = document.createElement('li');
-
-      const element = document.createElement(url ? 'a' : 'span');
-      element.innerText = `${index}. ${title}${wip ? ' (WIP)' : ''}`;
-
-      if (url) {
-        element.href = url;
-      }
-
-      li.appendChild(element);
-
-      return li;
-    });
-
-    toc.replaceChildren(...listItems);
-  </script>
 </body>
 
 </html>
