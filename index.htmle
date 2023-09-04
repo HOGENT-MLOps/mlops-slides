@@ -205,7 +205,7 @@
       },
       {
         title: 'The ML Workflow',
-        wip: true,
+        url: '04-ml-workflow.html'
       },
       {
         title: 'Deployment and beyond',
