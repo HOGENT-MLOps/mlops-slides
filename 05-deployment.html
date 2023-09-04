@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Thomas Aelbrecht">
-  <title>4. The ML Workflow</title>
+  <title>5. Deployment and beyond</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -34,7 +34,7 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">4. The ML Workflow</h1>
+  <h1 class="title">5. Deployment and beyond</h1>
   <p class="subtitle">Machine Learning Operations<br/>HOGENT applied
 computer science</p>
   <p class="author">Thomas Aelbrecht</p>
@@ -42,8 +42,8 @@ computer science</p>
 </section>
 
 <section>
-<section id="the-ml-workflow" class="title-slide slide level1">
-<h1>The ML Workflow</h1>
+<section id="deployment-and-beyond" class="title-slide slide level1">
+<h1>Deployment and beyond</h1>
 
 </section>
 <section id="learning-goals" class="slide level2">
@@ -55,131 +55,202 @@ computer science</p>
 <h1>Intro</h1>
 
 </section>
-<section id="remember-the-ml-lifecycle" class="slide level2">
-<h2>Remember the ML lifecycle?</h2>
-<figure>
-<img data-src="./assets/00-intro/ml-lifecycle-aws.png"
-alt="Source: https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html" />
-<figcaption aria-hidden="true"><small><em>Source: <a
-href="https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html"
-class="uri">https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html</a></em></small></figcaption>
-</figure>
-</section>
-<section id="end-to-end-ml-workflow" class="slide level2">
-<h2>End-to-end ML Workflow</h2>
-<figure>
-<img data-src="./assets/04-ml-workflow/ml-engineering.jpg"
-alt="Source: https://ml-ops.org/content/end-to-end-ml-workflow" />
-<figcaption aria-hidden="true"><small><em>Source: <a
-href="https://ml-ops.org/content/end-to-end-ml-workflow"
-class="uri">https://ml-ops.org/content/end-to-end-ml-workflow</a></em></small></figcaption>
-</figure>
-</section>
-<section id="its-complex" class="slide level2">
-<h2>It’s complex</h2>
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
 <ul>
-<li>Data versioning</li>
-<li>Labelling data</li>
-<li>Using notebooks</li>
-<li>Automating training</li>
-<li>Automating evaluation</li>
-<li>Storing models</li>
-<li>Serving models (i.e. deployment)</li>
-<li>Monitoring and logging</li>
-</ul>
-</section>
-<section id="we-focus-on" class="slide level2">
-<h2>We focus on</h2>
-<p>TODO: aanvullen als er nog extra dingen bij komen</p>
+<li>Development ≠ production
 <ul>
-<li>Using notebooks</li>
-<li>Automating training</li>
-<li>Serving models (i.e. deployment)</li>
-<li>Monitoring and logging</li>
-</ul>
-</section></section>
-<section>
-<section id="ml-pipelines" class="title-slide slide level1">
-<h1>ML pipelines</h1>
-
-</section>
-<section id="what-is-a-pipeline" class="slide level2">
-<h2>What is a pipeline?</h2>
+<li>Dev: scikit-learn, Jupyter…</li>
+<li>Prod: NodeJS, TFX, Kubeflow…</li>
+</ul></li>
+<li>Ideally: same code, different configuration
 <ul>
-<li>A sequence of steps</li>
-<li>Executed in a specific order</li>
-<li>Each step
-<ul>
-<li>has a specific purpose</li>
-<li>has specific inputs and outputs</li>
-<li>can be executed in isolation</li>
+<li>Sometimes same vendor, same cloud, same tools</li>
+<li>Sometimes not possible</li>
 </ul></li>
 </ul>
 </section>
-<section id="ml-pipelines-1" class="slide level2">
-<h2>ML pipelines</h2>
+<section class="slide level2">
+
+<blockquote>
+<p>Think about your tools even before you start coding! A good toolset
+can save you a lot of time and effort.</p>
+</blockquote>
+</section>
+<section id="considerations-13" class="slide level2">
+<h2>Considerations (1/3)</h2>
 <ul>
-<li><a href="https://www.kubeflow.org/">Kubeflow</a></li>
-<li><a href="https://www.tensorflow.org/tfx/">TFX</a></li>
-<li><a href="https://aws.amazon.com/sagemaker/">AWS SageMaker</a></li>
-<li><a
-href="https://azure.microsoft.com/en-us/products/machine-learning">Azure
-Machine Learning</a></li>
-<li><a href="https://cloud.google.com/vertex-ai">Google Vertex
-AI</a></li>
+<li>Tooling
+<ul>
+<li>impact on model</li>
+<li>effort to put in in prod</li>
+<li>output format of ML model (PMML, ONNX…)</li>
+<li>…</li>
+</ul></li>
+<li>Performance
+<ul>
+<li>Python vs C++</li>
+<li>must run on a low end device vs high end server</li>
+</ul></li>
 </ul>
 </section>
-<section id="kubeflow" class="slide level2">
-<h2>Kubeflow</h2>
-<p><a href="https://www.kubeflow.org/"
-class="uri">https://www.kubeflow.org/</a></p>
+<section id="considerations-23" class="slide level2">
+<h2>Considerations (2/3)</h2>
 <ul>
-<li>Open source</li>
-<li>Runs on Kubernetes (likely managed)</li>
-<li>Make ML workflows portable and scalable</li>
-<li>Supports Jupyter notebooks, TensorFlow, PyTorch, etc.</li>
+<li>Data access
+<ul>
+<li>bundled with model (= frozen data)</li>
+<li>database, cloud storage… (= dynamic data)</li>
+<li>prod env should have access, correct drivers…</li>
+</ul></li>
 </ul>
 </section>
-<section id="kubeflow-overview" class="slide level2">
-<h2>Kubeflow overview</h2>
-<figure>
-<img data-src="./assets/04-ml-workflow/kubeflow-overflow.svg"
-alt="Source: https://www.kubeflow.org/docs/started/architecture/" />
-<figcaption aria-hidden="true"><small><em>Source: <a
-href="https://www.kubeflow.org/docs/started/architecture/"
-class="uri">https://www.kubeflow.org/docs/started/architecture/</a></em></small></figcaption>
-</figure>
-</section>
-<section id="tfx" class="slide level2">
-<h2>TFX</h2>
-<p><a href="https://www.tensorflow.org/tfx/"
-class="uri">https://www.tensorflow.org/tfx/</a></p>
+<section id="considerations-33" class="slide level2">
+<h2>Considerations (3/3)</h2>
 <ul>
-<li>End-to-end platform for deploying production ML pipelines</li>
-<li>Manages the entire ML workflow</li>
-<li>Create pipelines via Python API</li>
-<li>Tends to be complex and buggy</li>
-<li>Runs on-premise or in the cloud</li>
+<li>Training vs inference
+<ul>
+<li>training: most expensive step in ML lifecycle</li>
+<li>inference: most of time spent here in prod</li>
+<li>think about how to optimize both</li>
+<li>do not over engineer the model</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p><b><u>Example for data access</u></b></p>
+<p>A model evaluating apartment prices may use the average market price
+in a zip code area. However, the user or the system requesting the
+scoring will probably not provide this average and would most likely
+provide simply the zip code, meaning a lookup is necessary to fetch the
+value of the average.</p>
+</aside>
+</section>
+<section id="model-risk-evaluation" class="slide level2">
+<h2>Model risk evaluation</h2>
+<ul>
+<li>Model mimics reality, but is imperfect</li>
+<li>Malfunctions or malicious attacks can cause harm</li>
 </ul>
 </section>
-<section id="tfx-components" class="slide level2">
-<h2>TFX components</h2>
-<figure>
-<img data-src="./assets/04-ml-workflow/tfx_components.png"
-alt="Source: https://www.tensorflow.org/tfx/guide" />
-<figcaption aria-hidden="true"><small><em>Source: <a
-href="https://www.tensorflow.org/tfx/guide"
-class="uri">https://www.tensorflow.org/tfx/guide</a></em></small></figcaption>
-</figure>
-</section>
-<section id="cloud-ml-services" class="slide level2">
-<h2>Cloud ML services</h2>
+<section id="questions-to-ask-before-deploy" class="slide level2">
+<h2>Questions to ask before deploy</h2>
 <ul>
-<li>AWS SageMaker, Azure Machine Learning, Google Vertex AI</li>
-<li>Fully managed service</li>
-<li>Build, train, and deploy ML models</li>
-<li>Supports Jupyter notebooks, TensorFlow, PyTorch, etc.</li>
-<li>Vendor lock-in</li>
+<li>What if the model acts in the worst imaginable way?</li>
+<li>What if a user manages to extract the training data or the internal
+logic of the model?</li>
+<li>What are the financial, business, legal, safety, and reputational
+risks?</li>
+</ul>
+</section>
+<section id="causes-for-trouble" class="slide level2">
+<h2>Causes for trouble</h2>
+<ul>
+<li>Bugs (your code, runtime framework…)</li>
+<li>Low quality training data</li>
+<li>High difference prod vs training data</li>
+<li>Misuse of model</li>
+<li>Adversarial attacks</li>
+<li>Bias, unethical use</li>
+<li>…</li>
+</ul>
+<aside class="notes">
+<p>Adversarial attacks:</p>
+<ul>
+<li>malicious attacks on the data which may seem okay to a human eye but
+causes misclassification in a machine learning pipeline. These attacks
+are often made in the form of specially designed “noise”, which can
+elicit misclassification.</li>
+<li>See <a
+href="https://www.analyticsvidhya.com/blog/2022/09/machine-learning-adversarial-attacks-and-defense"
+class="uri">https://www.analyticsvidhya.com/blog/2022/09/machine-learning-adversarial-attacks-and-defense</a></li>
+</ul>
+</aside>
+</section>
+<section id="quality-assurance" class="slide level2">
+<h2>Quality assurance</h2>
+<ul>
+<li>Does not only occur at the end of the pipeline</li>
+<li>Occurs at every step of the pipeline</li>
+<li>Can be automated with e.g. <a
+href="https://www.kubeflow.org/">Kubeflow</a>, <a
+href="https://www.tensorflow.org/tfx/">TFX</a> (= pipelines)</li>
+</ul>
+</section></section>
+<section>
+<section id="deployment" class="title-slide slide level1">
+<h1>Deployment</h1>
+
+</section>
+<section id="deployment-approaches" class="slide level2">
+<h2>Deployment approaches</h2>
+<ul>
+<li>Real-time</li>
+<li>Batch</li>
+</ul>
+</section>
+<section id="real-time-serving" class="slide level2">
+<h2>Real-time serving</h2>
+<ul>
+<li>Model deployed as a service</li>
+<li>Called via API (like in Web Services)</li>
+<li>One or a small number of predictions</li>
+<li>Can be deployed on-prem or in cloud</li>
+<li>E.g. ad targeting, recommendation systems</li>
+</ul>
+</section>
+<section id="batch-serving" class="slide level2">
+<h2>Batch serving</h2>
+<ul>
+<li>Whole dataset is scored</li>
+<li>Executed on a schedule (daily, weekly…)</li>
+<li>E.g. fraud detection, churn prediction</li>
+</ul>
+</section>
+<section id="deployment-options" class="slide level2">
+<h2>Deployment options</h2>
+<ul>
+<li>On-premise</li>
+<li>Cloud
+<ul>
+<li>VM, container, serverless, edge…</li>
+</ul></li>
+</ul>
+</section>
+<section id="serverless" class="slide level2">
+<h2>Serverless</h2>
+<ul>
+<li>No need to manage servers</li>
+<li>Pay per use</li>
+<li>E.g. AWS SageMaker, Azure Machine Learning, Google Vertex AI…</li>
+</ul>
+</section>
+<section id="edge-deployments" class="slide level2">
+<h2>Edge deployments</h2>
+<ul>
+<li>Deployed on devices (e.g. mobile phones, IoT devices…)</li>
+<li>Can be used offline</li>
+<li>Limited resources: small models (e.g. TensorFlow Lite)</li>
+<li>E.g. image recognition, speech recognition</li>
+</ul>
+</section>
+<section id="automated-deployment" class="slide level2">
+<h2>Automated deployment?</h2>
+<ul>
+<li>Could be part of CI/CD pipeline</li>
+<li>But often manual</li>
+</ul>
+</section>
+<section id="keep-in-mind" class="slide level2">
+<h2>Keep in mind</h2>
+<ul>
+<li>Deployment is not the end of the ML lifecycle</li>
+<li>Model needs to be monitored
+<ul>
+<li>model drift</li>
+<li>data drift</li>
+<li>concept drift</li>
+<li>…</li>
+</ul></li>
 </ul>
 </section></section>
 <section>
@@ -192,8 +263,8 @@ class="title-slide slide level1">
 <h2>Setup</h2>
 <p>TODO: aanvullen</p>
 </section>
-<section id="kubeflow-lab-assignment" class="slide level2">
-<h2>Kubeflow lab assignment</h2>
+<section id="azure-ml-assignment" class="slide level2">
+<h2>Azure ML assignment</h2>
 <p>TODO: aanvullen</p>
 </section></section>
     </div>
