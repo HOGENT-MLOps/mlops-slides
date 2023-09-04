@@ -6,8 +6,7 @@ Gerelateerde repositories:
 
 - Slides van de lessen: <https://github.com/HOGENT-MLOps/mlops-slides>
   - Te bekijken op: <https://hogent-mlops.github.io/mlops-slides/>
-- Vagrant demo-omgeving: <mark>TODO</mark>
-- Opgave labo-opdrachten: <mark>TODO</mark>
+- Opgave labo-opdrachten: <https://github.com/HOGENT-MLOps/mlops-labs>
 
 ## Slides genereren
 
