@@ -100,6 +100,10 @@
       color: var(--grey);
     }
 
+    li p.subtitle a {
+      color: var(--grey);
+    }
+
     a:hover {
       text-decoration: underline;
     }
@@ -147,6 +151,10 @@
       at
       <a href="https://www.hogent.be/" target="_blank">HOGENT (Ghent University of Applied Sciences)</a>.
     </p>
+    <p>
+      All chapters marked as WIP are still work in progress and will be updated during the semester. Such
+      chapters all display an estimated release date.
+    </p>
 
     <p>
       This course is developed in collaboration with
@@ -176,24 +184,30 @@
           </a>
         </li>
         <li>
-          <a href="03-kubernetes.html">
-            3. Kubernetes (WIP)
-          </a>
+          3. The ML workflow (WIP)
+          <p class="subtitle">
+            Guest lecture by Tim De Smet, Co-founder of <a href="https://www.captic.com/" target="_blank">Captic</a>
+            <br />
+            ETA: <time datetime="2023-10-22">22/10/2023</time>
+          </p>
         </li>
         <li>
-          <a href="04-ml-workflow.html">
-            4. The ML Workflow (WIP)
-          </a>
+          4. Kubernetes (WIP)
+          <p class="subtitle">
+            ETA: <time datetime="2023-11-05">05/11/2023</time>
+          </p>
         </li>
         <li>
-          <a href="05-deployment.html">
-            5. Deployment and beyond (WIP)
-          </a>
+          5. Kubeflow (WIP)
+          <p class="subtitle">
+            ETA: <time datetime="2023-11-19">19/11/2023</time>
+          </p>
         </li>
         <li>
-          <a href="06-monitoring-and-logging.html">
-            6. Monitoring and logging (WIP)
-          </a>
+          6. Monitoring and logging (WIP)
+          <p class="subtitle">
+            ETA: <time datetime="2023-12-03">03/12/2023</time>
+          </p>
         </li>
       </ul>
     </section>
