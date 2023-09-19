@@ -231,13 +231,14 @@ PS> choco install virtualbox
 PS> choco install vagrant
 ```
 
-(Mac, Linux: see study guide on Chamilo)
+(macOS, Linux: see course overview on Chamilo)
 
 ## Software (continuation)
 
-- VSCode: install recommended plugins (see study guide)
+- VSCode: install recommended plugins (see course overview)
 - VirtualBox: Extension Pack!
 - Git client: also install Git Bash!
+- Ansible: only Linux and macOS
 
 ## Azure for Students
 
