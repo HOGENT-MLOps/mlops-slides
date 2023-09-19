@@ -129,6 +129,16 @@ services:
 
 # Get started with the lab assignment!
 
+## Set-up work environment
+
+Walk through the steps in the course overview on Chamilo:
+
+- [Software installation](https://chamilo.hogent.be/index.php?application=Chamilo%5CApplication%5CWeblcms&go=CourseViewer&course=58936&tool=LearningPath&tool_action=ComplexDisplay&publication=2196532&preview_content_object_id=7521644&learning_path_action=Viewer&child_id=357806)
+- [Configuration](https://chamilo.hogent.be/index.php?application=Chamilo%5CApplication%5CWeblcms&go=CourseViewer&course=58936&tool=LearningPath&tool_action=ComplexDisplay&publication=2196532&preview_content_object_id=7521644&learning_path_action=Viewer&child_id=357819)
+- [General guidelines](https://chamilo.hogent.be/index.php?application=Chamilo%5CApplication%5CWeblcms&go=CourseViewer&course=58936&tool=LearningPath&tool_action=ComplexDisplay&publication=2196532&preview_content_object_id=7521644&learning_path_action=Viewer&child_id=357826)
+
+Then move on to the Docker assignment
+
 ## Docker lab assignment
 
 ```console
@@ -137,7 +147,7 @@ vagrant up
 vagrant ssh
 ```
 
-Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/1-docker.md>
+Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/01-docker.md>
 
 Also keep a cheat sheet of important commands!
 
