@@ -296,3 +296,6 @@ Personal assignment, no support
 - extra assignment
 
 ## Questions?
+
+- Ask questions during class hours
+- Use Teams channel
