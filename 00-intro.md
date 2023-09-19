@@ -192,7 +192,7 @@ See Chamilo course for detailed information.
 
 ## Course within the curriculum
 
-TODO: afbeeldingen curriculum of evt. een klein diagram maken
+![](./assets/00-intro/olod-in-curriculum.png)
 
 ## Learning goals and competences
 
@@ -210,16 +210,14 @@ limited computing power
 
 - CI/CD pipelines
 - Docker, Kubernetes, Kubeflow
-- TensorFlow Extended, Lite, Serving...
-- Monitoring and feedback loop
-- Model governance
-- Metadata and artifact store
+- Azure Machine Learning
+- Metadata and artifacts
+- Monitoring and logging
 
 ## Learning materials
 
 - Start with the overview in the Chamilo course
-- Github: [lecture slides](https://hogent-mlops.github.io/mlops-slides/),
-[demo environment](TODO), [lab assignments](TODO)
+- GitHub: [lecture slides](https://hogent-mlops.github.io/mlops-slides/), [lab assignments](https://github.com/HOGENT-MLOps/mlops-labs)
 - Online manuals of software used
 - Video recordings of classroom instruction (Dutch)
 - (Books - see study guide on Chamilo)
@@ -241,11 +239,17 @@ PS> choco install vagrant
 - VirtualBox: Extension Pack!
 - Git client: also install Git Bash!
 
+## Azure for Students
+
+Who still has an Azure for Students subscription?
+
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHZ2bXJnNmY0dWlzYnplYnRnMHFlazViZzE0cXNtYmxjb2ZzOXUyZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VStxBrCyssRPO/giphy.gif)
+
 ## Teaching methods
 
 - Classroom instruction, demonstration
 - Lab assignments
-- Guest lecture?
+- Guest lecture
 
 ## Tutoring
 
@@ -258,19 +262,19 @@ PS> choco install vagrant
 
 1. intro, software install, M1. Docker
 2. M2. CI/CD pipelines
-3. M3. Kubernetes
-4. (continued)
-5. Guest lecture
-6. M4. The ML Workflow
+3. (continued)
+4. M3. The ML Workflow (guest lecture)
+5. (continued)
+6. (continued)
 
 ## Semester schedule
 
 <!-- markdownlint-disable ol-prefix -->
-7. (continued)
-8. M5. Deployment and beyond
-9. (continued)
-10. M6. Monitoring and logging
-11. (continued)
+7. M4. Kubernetes
+8. (continued)
+9. M5. Kubeflow
+10. (continued)
+11. M6. Monitoring and logging
 12. (continued)
 13. Optional: catch-up session
 <!-- markdownlint-enable ol-prefix -->
