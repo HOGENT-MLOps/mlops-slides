@@ -244,7 +244,7 @@ PS> choco install vagrant
 
 Who still has an Azure for Students subscription?
 
-![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHZ2bXJnNmY0dWlzYnplYnRnMHFlazViZzE0cXNtYmxjb2ZzOXUyZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VStxBrCyssRPO/giphy.gif)
+![If not, let us know!](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHZ2bXJnNmY0dWlzYnplYnRnMHFlazViZzE0cXNtYmxjb2ZzOXUyZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VStxBrCyssRPO/giphy.gif)
 
 ## Teaching methods
 
