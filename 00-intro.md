@@ -188,7 +188,7 @@ See Chamilo course for detailed information.
 
 ## Course within the curriculum
 
-![](./assets/00-intro/olod-in-curriculum.png)
+![](./assets/00-intro/olod-in-curriculum.jpg)
 
 ## Learning goals and competences
 
