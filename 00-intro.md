@@ -50,10 +50,6 @@ is becoming a critical component of successful ML projects.
 - ML model design is *relatively* easy
 - ML model in production is *much* harder, time-consuming
 
-## Why MLOps?
-
-> Mitigate risks and increase the value of ML models in production.
-
 ## More than deploying models
 
 - Data versioning
