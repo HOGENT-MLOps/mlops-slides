@@ -142,6 +142,7 @@ Then move on to the Docker assignment
 ## Docker lab assignment
 
 ```console
+bash ./scripts/role-deps.sh ./dockerlab/ansible/site.yml
 cd dockerlab
 vagrant up
 vagrant ssh
