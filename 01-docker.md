@@ -2,7 +2,7 @@
 title: "1. Docker"
 subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
 author: "Thomas Aelbrecht & Martijn Saelens"
-date: 2022-2023
+date: 2023-2024
 ---
 
 # Container virtualization: Docker

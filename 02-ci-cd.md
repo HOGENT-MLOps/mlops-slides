@@ -2,7 +2,7 @@
 title: "2. Continuous Integration/Deployment"
 subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
 author: "Thomas Aelbrecht & Martijn Saelens"
-date: 2022-2023
+date: 2023-2024
 ---
 
 # CI/CD
