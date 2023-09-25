@@ -1,7 +1,7 @@
 ---
 title: "4. TensorFlow Extended"
 subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
-author: Thomas Aelbrecht
+author: "Thomas Aelbrecht & Martijn Saelens"
 date: 2022-2023
 ---
 
