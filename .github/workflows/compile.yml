@@ -22,9 +22,12 @@ jobs:
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
           base-branch: "main"
+          use-quiet-mode: "yes"
 
   convert_via_pandoc:
     runs-on: ubuntu-22.04
+    # ensure that the linting and link checking job is finished before deploying
+    needs: lint_and_check_links
     steps:
       - name: Configure Git for GitHub
         run: |
