@@ -11,12 +11,6 @@ date: 2023-2024
 
 ![MLOps only became popular fairly recently](./assets/00-intro/mlops-google-trends.png)
 
-::: notes
-
-MLOps only became popular fairly recently, as you can see in the Google Trends graph.
-
-:::
-
 ## Why MLOps?
 
 ![ML code is only a fraction of the code in an ML system](./assets/00-intro/hidden-tech-dept-ml.png)
@@ -36,13 +30,6 @@ is becoming a critical component of successful ML projects.
 ## Why MLOps?
 
 ![If Elon says so, it's true...](./assets/00-intro/tweet-elon.webp)
-
-::: notes
-
-[Tweet](https://twitter.com/chipro/status/1315678863347920896?lang=en) from
-[Chip Huyen](https://twitter.com/chipro) on Machine Learning Engineering
-
-:::
 
 ## Why MLOps?
 
@@ -70,6 +57,7 @@ is becoming a critical component of successful ML projects.
 ## References
 
 - Google Trends: [MLOps](https://trends.google.com/trends/explore?date=all&q=MLOps)
+- Tweet: [Chip Huyen](https://twitter.com/chipro/status/1305898767980536832)
 - Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., ... & Dennison, D. (2015).
 [Hidden technical debt in machine learning systems](https://proceedings.neurips.cc/paper_files/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html).
 Advances in neural information processing systems, 28.
