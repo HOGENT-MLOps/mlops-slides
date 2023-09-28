@@ -175,25 +175,17 @@ jobs:
 
 # Get started with the lab assignment!
 
-## Jenkins lab assignment
-
-```console
-cd cicdlab
-vagrant up
-vagrant ssh
-```
+## GitHub actions assignment
 
 Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/02-cicd.md>
-
-Jenkins UI resides at <http://192.168.56.20:8080/>
 
 Also keep a cheat sheet of important commands!
 
 ## Setup
 
-- Docker and Jenkins running on the VM
-- Default installation, minimal configuration required
-- Launch demo application in Docker container
+- Create a new repository with sample app from lab 1
+- Create a new workflow
+- Build and push a Docker image using GitHub Actions
 - Make change, rebuild & deploy!
 
 # Reflection
