@@ -5,6 +5,24 @@ on:
     branches:
       - main
 jobs:
+  lint_and_check_links:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Lint markdown files
+        uses: nosborn/github-action-markdown-cli@v3.3.0
+        with:
+          files: "**/*.md"
+          config_file: .markdownlint.json
+          dot: false
+
+      - name: Check for dead links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          base-branch: "main"
+
   convert_via_pandoc:
     runs-on: ubuntu-22.04
     steps:
