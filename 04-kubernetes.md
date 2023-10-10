@@ -1,5 +1,5 @@
 ---
-title: "3. Container orchestration with Kubernetes"
+title: "4. Container orchestration with Kubernetes"
 subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
 author: "Thomas Aelbrecht & Martijn Saelens"
 date: 2023-2024
