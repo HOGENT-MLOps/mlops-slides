@@ -52,6 +52,7 @@ jobs:
           make clean
           make all
           cp index.html gh-pages/index.html
+          cp 03-ml-workflow.pdf gh-pages/
           sed -ie "s#TIMESTAMP#$(date +'%d/%m/%Y %H:%M:%S')#" gh-pages/index.html
 
       - name: Push changes to gh-pages
