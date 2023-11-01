@@ -1,5 +1,5 @@
 ---
-title: "5. Monitoring and logging"
+title: "6. Monitoring and logging"
 subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
 author: "Thomas Aelbrecht & Martijn Saelens"
 date: 2023-2024
