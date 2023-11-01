@@ -1,14 +1,9 @@
 {
   "cSpell.language": "en-GB",
   "cSpell.words": [
-    "Aelbrecht",
     "Beda",
     "cgroups",
     "cicdlab",
-    "Codeship",
-    "dockerlab",
-    "HOGENT",
-    "Jetbrains",
     "kubeconfig",
     "kubelet",
     "Mesos",
@@ -16,5 +11,18 @@
     "Selfhosted",
     "shellcheck",
     "tmpfs"
+  ],
+  "cSpell.ignoreWords": [
+    "Aelbrecht",
+    "Chamilo",
+    "Codeship",
+    "Colab",
+    "dockerlab",
+    "HOGENT",
+    "ipynb",
+    "Jetbrains",
+    "Kubeflow",
+    "Lite",
+    "Saelens"
   ]
 }
