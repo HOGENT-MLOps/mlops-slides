@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Thomas Aelbrecht &amp; Martijn Saelens">
-  <title>5. Monitoring and logging</title>
+  <title>5. Kubeflow and edge deployments</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -34,7 +34,7 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">5. Monitoring and logging</h1>
+  <h1 class="title">5. Kubeflow and edge deployments</h1>
   <p class="subtitle">Machine Learning Operations<br/>HOGENT applied
 computer science</p>
   <p class="author">Thomas Aelbrecht &amp; Martijn Saelens</p>
@@ -42,13 +42,21 @@ computer science</p>
 </section>
 
 <section>
-<section id="monitoring-and-logging" class="title-slide slide level1">
-<h1>Monitoring and logging</h1>
+<section id="kubeflow-and-edge-deployments"
+class="title-slide slide level1">
+<h1>Kubeflow and edge deployments</h1>
 
 </section>
 <section id="learning-goals" class="slide level2">
 <h2>Learning goals</h2>
 <p>TODO: add learning goals</p>
+<ul>
+<li>Get familiar with the TensorFlow Lite framework</li>
+<li>Convert a TensorFlow model to a TensorFlow Lite model with
+quantization</li>
+<li>Train a quantize aware model</li>
+<li>Perform weight pruning on a model</li>
+</ul>
 </section></section>
 <section>
 <section id="intro" class="title-slide slide level1">
@@ -64,13 +72,15 @@ class="title-slide slide level1">
 <h1>Get started with the lab assignment!</h1>
 
 </section>
-<section id="setup" class="slide level2">
-<h2>Setup</h2>
-<p>TODO: aanvullen</p>
-</section>
-<section id="azure-ml-assignment" class="slide level2">
-<h2>Azure ML assignment</h2>
-<p>TODO: aanvullen</p>
+<section id="quantization-and-pruning" class="slide level2">
+<h2>Quantization and pruning</h2>
+<ul>
+<li>Use Google Colab to run
+<code>ml-workflow/quantization-and-pruning.ipynb</code></li>
+<li>Convert a TF model into a TF Lite model with quantization</li>
+<li>Train a quantize aware model</li>
+<li>Perform weight pruning on a model</li>
+</ul>
 </section></section>
     </div>
   </div>
