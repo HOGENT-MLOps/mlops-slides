@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Thomas Aelbrecht &amp; Martijn Saelens">
-  <title>5. Kubeflow and edge deployments</title>
+  <title>5. Edge deployments</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -34,7 +34,7 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">5. Kubeflow and edge deployments</h1>
+  <h1 class="title">5. Edge deployments</h1>
   <p class="subtitle">Machine Learning Operations<br/>HOGENT applied
 computer science</p>
   <p class="author">Thomas Aelbrecht &amp; Martijn Saelens</p>
@@ -42,14 +42,12 @@ computer science</p>
 </section>
 
 <section>
-<section id="kubeflow-and-edge-deployments"
-class="title-slide slide level1">
-<h1>Kubeflow and edge deployments</h1>
+<section id="edge-deployments" class="title-slide slide level1">
+<h1>Edge deployments</h1>
 
 </section>
 <section id="learning-goals" class="slide level2">
 <h2>Learning goals</h2>
-<p>TODO: add learning goals</p>
 <ul>
 <li>Get familiar with the TensorFlow Lite framework</li>
 <li>Convert a TensorFlow model to a TensorFlow Lite model with
@@ -59,12 +57,196 @@ quantization</li>
 </ul>
 </section></section>
 <section>
-<section id="intro" class="title-slide slide level1">
-<h1>Intro</h1>
+<section id="running-models-on-edge-devices"
+class="title-slide slide level1">
+<h1>Running models on edge devices</h1>
 
 </section>
-<section id="introduction" class="slide level2">
-<h2>Introduction</h2>
+<section id="what-is-edge-computing" class="slide level2">
+<h2>What is edge computing?</h2>
+<ul>
+<li>Bring computers close to
+<ul>
+<li>end user</li>
+<li>data source</li>
+</ul></li>
+<li>Process data locally, instead of sending it to the cloud</li>
+</ul>
+</section>
+<section id="why-edge-computing" class="slide level2">
+<h2>Why edge computing?</h2>
+<ul>
+<li>Faster and more reliable</li>
+<li>Lower latency</li>
+<li>No connection to the Internet needed</li>
+<li>Privacy</li>
+<li>…</li>
+</ul>
+</section>
+<section id="edge-computing-in-ml" class="slide level2">
+<h2>Edge computing in ML</h2>
+<ul>
+<li>Run ML models on edge devices, e.g.
+<ul>
+<li>smartphones</li>
+<li>Raspberry Pi</li>
+<li>NVIDIA Jetson</li>
+<li>…</li>
+</ul></li>
+</ul>
+</section>
+<section id="challenges" class="slide level2">
+<h2>Challenges</h2>
+<ul>
+<li>Everything is limited:
+<ul>
+<li>resources</li>
+<li>power</li>
+<li>storage</li>
+<li>bandwidth</li>
+<li>…</li>
+</ul></li>
+</ul>
+<p><b>Think about model size and resource needs</b></p>
+</section>
+<section id="references" class="slide level2">
+<h2>References</h2>
+<ul>
+<li>Red Hat. (2022, October 22). <a
+href="https://www.redhat.com/en/topics/edge-computing/what-is-edge-machine-learning">What
+is edge machine learning?</a></li>
+</ul>
+</section></section>
+<section>
+<section id="model-compression" class="title-slide slide level1">
+<h1>Model compression</h1>
+
+</section>
+<section id="model-compression-1" class="slide level2">
+<h2>Model compression</h2>
+<p>Some techniques:</p>
+<ul>
+<li>Dimensionality reduction</li>
+<li>Quantization</li>
+<li>Pruning</li>
+<li>Knowledge distillation</li>
+</ul>
+</section>
+<section id="dimensionality-reduction" class="slide level2">
+<h2>Dimensionality reduction</h2>
+<ul>
+<li>Reduce the number of features</li>
+<li>Examples:
+<ul>
+<li>Principal Component Analysis (PCA)</li>
+<li>Singular Value Decomposition (SVD)</li>
+<li>Linear Discriminant Analysis (LDA)</li>
+<li>…</li>
+</ul></li>
+</ul>
+</section>
+<section id="quantization" class="slide level2">
+<h2>Quantization</h2>
+<ul>
+<li>Reduce the number of bits used to represent a number</li>
+<li>i.e. represent weights and activations with fewer bits
+<ul>
+<li>e.g. 8-bit int instead of 32-bit float</li>
+</ul></li>
+<li>Can be done during training or after training</li>
+</ul>
+</section>
+<section id="pruning" class="slide level2">
+<h2>Pruning</h2>
+<ul>
+<li>Remove irrelevant weights</li>
+<li>i.e. remove weights that are close to zero</li>
+<li>Usually done after training</li>
+<li>Followed by retraining to reduce accuracy loss</li>
+<li>Can also be done during training</li>
+</ul>
+</section>
+<section id="pruning-1" class="slide level2">
+<h2>Pruning</h2>
+<figure>
+<img data-src="./assets/05-edge-deployments/pruning.webp"
+alt="Pruning (Souvik, 2020)" />
+<figcaption aria-hidden="true">Pruning (Souvik, 2020)</figcaption>
+</figure>
+</section>
+<section id="knowledge-distillation" class="slide level2">
+<h2>Knowledge distillation</h2>
+<ul>
+<li>Train a smaller model to mimic the behaviour of a larger model</li>
+<li>Student model learns from teacher model</li>
+</ul>
+</section>
+<section id="knowledge-distillation-1" class="slide level2">
+<h2>Knowledge distillation</h2>
+<figure>
+<img data-src="./assets/05-edge-deployments/knowledge-distillation.webp"
+alt="Knowledge distillation (Teki, 2023)" />
+<figcaption aria-hidden="true">Knowledge distillation (Teki,
+2023)</figcaption>
+</figure>
+</section>
+<section id="references-1" class="slide level2">
+<h2>References</h2>
+<ul>
+<li>Barla, N. (2023, August 8). <a
+href="https://neptune.ai/blog/dimensionality-reduction">Dimensionality
+Reduction for Machine Learning</a></li>
+<li>Hugging Face. <a
+href="https://huggingface.co/docs/optimum/concept_guides/quantization">Quantization</a></li>
+<li>Souvik, P. (2020, June 9). <a
+href="https://medium.com/@souvik.paul01/pruning-in-deep-learning-models-1067a19acd89">Pruning
+in Deep Learning Models</a></li>
+<li>Teki, S. (2023, September 23). <a
+href="https://neptune.ai/blog/knowledge-distillation">Knowledge
+Distillation: Principles, Algorithms, Applications</a></li>
+</ul>
+</section></section>
+<section>
+<section id="tensorflow-lite" class="title-slide slide level1">
+<h1>TensorFlow Lite</h1>
+
+</section>
+<section id="what-is-tensorflow-lite" class="slide level2">
+<h2>What is TensorFlow Lite?</h2>
+<ul>
+<li>Framework for deploying ML models on mobile and IoT devices</li>
+<li>Optimized for on-device inference</li>
+<li>Supports Android, iOS, Linux and microcontrollers</li>
+</ul>
+<p><a href="https://www.tensorflow.org/lite/guide"
+class="uri">https://www.tensorflow.org/lite/guide</a></p>
+</section>
+<section id="tensorflow-lite-models" class="slide level2">
+<h2>TensorFlow Lite models</h2>
+<ul>
+<li>Different from TensorFlow models</li>
+<li>Optimized for on-device inference</li>
+<li>Smaller and faster</li>
+<li>Can be converted from TensorFlow models</li>
+</ul>
+</section>
+<section id="tensorflow-model-optimization-toolkit"
+class="slide level2">
+<h2>TensorFlow model optimization toolkit</h2>
+<ul>
+<li>Collection of tools for optimizing TensorFlow models
+<ul>
+<li>Separate from TensorFlow Lite</li>
+</ul></li>
+<li>Includes tools for:
+<ul>
+<li>Quantization</li>
+<li>Pruning</li>
+<li>…</li>
+</ul></li>
+</ul>
+<p><a href="https://www.tensorflow.org/model_optimization/guide"
+class="uri">https://www.tensorflow.org/model_optimization/guide</a></p>
 </section></section>
 <section>
 <section id="get-started-with-the-lab-assignment"
