@@ -200,7 +200,7 @@ date: 2023-2024
 
 ## Kubernetes lab assignment
 
-Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/03-kubernetes.md>
+Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/04-kubernetes.md>
 
 Also keep a cheat sheet of important commands!
 
