@@ -7,12 +7,18 @@ date: 2023-2024
 
 # CI/CD
 
+---
+
 ## Learning goals
 
 - Creating simple actions and workflows
 - Running a pipeline to lint the code, and build and push a Docker image
 
+---
+
 # Intro
+
+---
 
 ## Traditional release
 
@@ -22,6 +28,8 @@ date: 2023-2024
   - Wait for vN.1?
 - Releases are painful, high-risk events
 
+---
+
 ## How e.g. Facebook does it (1)
 
 - "If it hurts, do it more often"
@@ -29,19 +37,27 @@ date: 2023-2024
 - Small, incremental changes go into production
 - ⇒ Reduced risk
 
+---
+
 ## How e.g. Facebook does it (2)
 
-![](assets/02-ci-cd/facebook-cd-at-scale.jpg)
+![](img/02-ci-cd/facebook-cd-at-scale.jpg)
 
 Read more: [Rapid release at massive scale](https://engineering.fb.com/2017/08/31/web/rapid-release-at-massive-scale/)
 
+---
+
 ## Continuous Integration/Delivery
 
-![](./assets/02-ci-cd/ci-cd-flow.png)
+![](./img/02-ci-cd/ci-cd-flow.png)
+
+---
 
 ## Continuous Delivery/Deployment
 
-![](./assets/02-ci-cd/cd-cd-flow.png)
+![](./img/02-ci-cd/cd-cd-flow.png)
+
+---
 
 ## Typical tasks for CI
 
@@ -52,6 +68,8 @@ Read more: [Rapid release at massive scale](https://engineering.fb.com/2017/08/3
 - Code coverage analysis
 - Packaging
 
+---
+
 ## Typical tasks for CD
 
 - Release to package repository
@@ -61,7 +79,11 @@ Read more: [Rapid release at massive scale](https://engineering.fb.com/2017/08/3
 
 **But sometimes a human gives the final go-ahead!**
 
+---
+
 # CI/CD tooling
+
+---
 
 ## Overview
 
@@ -84,6 +106,8 @@ Read more: [Rapid release at massive scale](https://engineering.fb.com/2017/08/3
   - [GitLab CI](https://docs.gitlab.com/ee/ci/)
   - [Travis CI](https://travis-ci.org/)
 
+---
+
 ## Jenkins
 
 <https://www.jenkins.io/>
@@ -96,7 +120,9 @@ Read more: [Rapid release at massive scale](https://engineering.fb.com/2017/08/3
 
 ---
 
-![](assets/02-ci-cd/jenkins-view.png)
+![](img/02-ci-cd/jenkins-view.png)
+
+---
 
 ## GitHub Actions
 
@@ -107,6 +133,8 @@ Read more: [Rapid release at massive scale](https://engineering.fb.com/2017/08/3
 - Free to use (with limitations)
   - Pay-as-you-go after limits are reached
 
+---
+
 ## A GitHub Actions case
 
 This slide deck was built on GitHub Actions & deployed to GitHub Pages!
@@ -115,16 +143,19 @@ Check out the source code:
 
 <https://github.com/HOGENT-MLOps/mlops-slides/blob/main/.github/workflows/compile.yml>
 
+---
+
 ## Working with GitHub Actions
 
 - Go to Actions, New workflow
 - Or create `.github/workflows/workflow-name.yml`
 - [RTFM](https://docs.github.com/en/actions)
 
+---
+
 ## Example workflow
 
 ```yaml
----
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
@@ -143,6 +174,8 @@ jobs:
       - run: echo "This job's status is ${{ job.status }}."
 ```
 
+---
+
 ## Gitlab CI
 
 <https://docs.gitlab.com/ee/ci/>
@@ -152,15 +185,23 @@ jobs:
 - CI/CD code alongside the source code
 - Also free with limits
 
+---
+
 # Deployment techniques
+
+---
 
 ## Canary deployments
 
 ![](https://martinfowler.com/bliki/images/canaryRelease/canary-release-2.png)
 
+---
+
 ## Blue-Green Deployment
 
 ![Acceptance/Production swap places](https://martinfowler.com/bliki/images/blueGreenDeployment/blue_green_deployments.png)
+
+---
 
 ## Trunk-based development
 
@@ -169,17 +210,25 @@ jobs:
 - All work done on `main`
 - Short-lived feature branches
 
+---
+
 ## Feature branches
 
-![](assets/02-ci-cd/feature-branch.png)
+![](img/02-ci-cd/feature-branch.png)
+
+---
 
 # Get started with the lab assignment!
+
+---
 
 ## GitHub actions assignment
 
 Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/02-cicd.md>
 
 Also keep a cheat sheet of important commands!
+
+---
 
 ## Setup
 
@@ -188,7 +237,11 @@ Also keep a cheat sheet of important commands!
 - Build and push a Docker image using GitHub Actions
 - Make change, rebuild & deploy!
 
+---
+
 # Reflection
+
+---
 
 ## Lab setup vs reality
 
@@ -196,6 +249,8 @@ Also keep a cheat sheet of important commands!
   - Physical system or "traditional" VM
   - Worker nodes
 - Central repo + build tools
+
+---
 
 ## Change in discipline needed!
 

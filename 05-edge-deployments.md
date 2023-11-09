@@ -7,6 +7,8 @@ date: 2023-2024
 
 # Edge deployments
 
+---
+
 ## Learning goals
 
 - Get familiar with the TensorFlow Lite framework
@@ -14,7 +16,11 @@ date: 2023-2024
 - Train a quantize aware model
 - Perform weight pruning on a model
 
+---
+
 # Running models on edge devices
+
+---
 
 ## What is edge computing?
 
@@ -22,6 +28,8 @@ date: 2023-2024
   - end user
   - data source
 - Process data locally, instead of sending it to the cloud
+
+---
 
 ## Why edge computing?
 
@@ -31,6 +39,8 @@ date: 2023-2024
 - Privacy
 - ...
 
+---
+
 ## Edge computing in ML
 
 - Run ML models on edge devices, e.g.
@@ -38,6 +48,8 @@ date: 2023-2024
   - Raspberry Pi
   - NVIDIA Jetson
   - ...
+
+---
 
 ## Challenges
 
@@ -48,13 +60,19 @@ date: 2023-2024
   - bandwidth
   - ...
 
-<b>Think about model size and resource needs</b>
+**Think about model size and resource needs**
+
+---
 
 ## References
 
 - Red Hat. (2022, October 22). [What is edge machine learning?](https://www.redhat.com/en/topics/edge-computing/what-is-edge-machine-learning)
 
+---
+
 # Model compression
+
+---
 
 ## Model compression
 
@@ -65,6 +83,8 @@ Some techniques:
 - Pruning
 - Knowledge distillation
 
+---
+
 ## Dimensionality reduction
 
 - Reduce the number of features
@@ -74,12 +94,16 @@ Some techniques:
   - Linear Discriminant Analysis (LDA)
   - ...
 
+---
+
 ## Quantization
 
 - Reduce the number of bits used to represent a number
 - i.e. represent weights and activations with fewer bits
   - e.g. 8-bit int instead of 32-bit float
 - Can be done during training or after training
+
+---
 
 ## Pruning
 
@@ -89,18 +113,26 @@ Some techniques:
 - Followed by retraining to reduce accuracy loss
 - Can also be done during training
 
+---
+
 ## Pruning
 
-![Pruning (Souvik, 2020)](./assets/05-edge-deployments/pruning.webp)
+![Pruning (Souvik, 2020)](./img/05-edge-deployments/pruning.webp)
+
+---
 
 ## Knowledge distillation
 
 - Train a smaller model to mimic the behaviour of a larger model
 - Student model learns from teacher model
 
+---
+
 ## Knowledge distillation
 
-![Knowledge distillation (Teki, 2023)](./assets/05-edge-deployments/knowledge-distillation.webp)
+![Knowledge distillation (Teki, 2023)](./img/05-edge-deployments/knowledge-distillation.webp)
+
+---
 
 ## References
 
@@ -109,7 +141,11 @@ Some techniques:
 - Souvik, P. (2020, June 9). [Pruning in Deep Learning Models](https://medium.com/@souvik.paul01/pruning-in-deep-learning-models-1067a19acd89)
 - Teki, S. (2023, September 23). [Knowledge Distillation: Principles, Algorithms, Applications](https://neptune.ai/blog/knowledge-distillation)
 
+---
+
 # TensorFlow Lite
+
+---
 
 ## What is TensorFlow Lite?
 
@@ -119,12 +155,16 @@ Some techniques:
 
 <https://www.tensorflow.org/lite/guide>
 
+---
+
 ## TensorFlow Lite models
 
 - Different from TensorFlow models
 - Optimized for on-device inference
 - Smaller and faster
 - Can be converted from TensorFlow models
+
+---
 
 ## TensorFlow model optimization toolkit
 
@@ -137,7 +177,11 @@ Some techniques:
 
 <https://www.tensorflow.org/model_optimization/guide>
 
+---
+
 # Get started with the lab assignment!
+
+---
 
 ## Quantization and pruning
 

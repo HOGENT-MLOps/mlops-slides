@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  slides:
+    image: webpronl/reveal-md
+    command: ["/slides", "--watch"]
+    volumes:
+      - .:/slides
+    ports:
+      - "1948:1948"
+      - "35729:35729"
+
+  slides-generator:
+    image: webpronl/reveal-md
+    command: ["--static"]
+    volumes:
+      - .:/slides

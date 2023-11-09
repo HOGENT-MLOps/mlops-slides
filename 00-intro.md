@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: "0. Introduction"
 subtitle: "Machine Learning Operations<br/>HOGENT applied computer science"
 author: "Thomas Aelbrecht & Martijn Saelens"
 date: 2023-2024
@@ -7,15 +7,19 @@ date: 2023-2024
 
 # Introduction
 
-## Why MLOps?
-
-![MLOps only became popular fairly recently](./assets/00-intro/mlops-google-trends.png)
+---
 
 ## Why MLOps?
 
-![ML code is only a fraction of the code in an ML system](./assets/00-intro/hidden-tech-dept-ml.png)
+![MLOps only became popular fairly recently](./img/00-intro/mlops-google-trends.png)
 
-::: notes
+---
+
+## Why MLOps?
+
+![ML code is only a fraction of the code in an ML system](./img/00-intro/hidden-tech-dept-ml.png)
+
+Note:
 
 One of the biggest challenges in ML is to get the model into production. D. Sculley et al. (2015)
 found that the code for the ML code is only a fraction of the code in an ML system. The rest of
@@ -25,17 +29,21 @@ model evaluation, model deployment, model monitoring, and model retraining.
 Many companies struggle with deploying and monitoring ML models in production. This is why MLOps
 is becoming a critical component of successful ML projects.
 
-:::
+---
 
 ## Why MLOps?
 
-![If Elon says so, it's true...](./assets/00-intro/tweet-elon.webp)
+![If Elon says so, it's true...](./img/00-intro/tweet-elon.webp)
+
+---
 
 ## Why MLOps?
 
 - **New field**, daily evolution
 - ML model design is *relatively* easy
 - ML model in production is *much* harder, time-consuming
+
+---
 
 ## More than deploying models
 
@@ -46,6 +54,8 @@ is becoming a critical component of successful ML projects.
 - Availability
 - ...
 
+---
+
 ## Best practices
 
 - Modularity of ML steps
@@ -53,6 +63,8 @@ is becoming a critical component of successful ML projects.
 - Versioning (data and models)
 - Mixed, autonomous teams (~ DevOps)
 - Peer reviews, peer reviews, peer reviews...
+
+---
 
 ## References
 
@@ -63,16 +75,24 @@ is becoming a critical component of successful ML projects.
 Advances in neural information processing systems, 28.
 - Degroote, S. (2021). [MLOps 101 - What, why and how to get started today](https://blog.ml6.eu/mlops-101-what-why-and-how-to-get-started-today-1f2d4038662c)
 
+---
+
 # ML lifecycle
+
+---
 
 ## ML lifecycle
 
-![<small><em>Source: <https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html></em></small>](./assets/00-intro/ml-lifecycle-aws.png)
+![<small><em>Source: <https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html></em></small>](./img/00-intro/ml-lifecycle-aws.png)
+
+---
 
 ## Business goal
 
 - Solve a real problem
 - Goal: create real (business) value
+
+---
 
 ## ML problem framing
 
@@ -86,6 +106,8 @@ How could ML help? Is ML needed at all?
   - Multi-modal problem?
   - ...
 
+---
+
 ## Data processing
 
 We need data, but
@@ -97,6 +119,8 @@ We need data, but
 - ...
 
 Once we have the data, we need to think about what we'll do with it (exploration, annotation...)
+
+---
 
 ## Model development
 
@@ -110,6 +134,8 @@ Once we have the data, we need to think about what we'll do with it (exploration
 
 **The model is only a small part of the ML system!**
 
+---
+
 ## Deployment
 
 We have a model, now what? Let's deploy it!
@@ -121,6 +147,8 @@ We have a model, now what? Let's deploy it!
   - Serverless?
 - What usage do we expect?
 - ...
+
+---
 
 ## Monitoring
 
@@ -134,6 +162,8 @@ The model is deployed, but we're not done yet!
 - How do we know if the model is used correctly?
 - Does the model solve the business problem?
 
+---
+
 ## Conclusion
 
 - It is complex
@@ -144,7 +174,11 @@ The model is deployed, but we're not done yet!
   - All used at the same time
 - = **MLOps**
 
+---
+
 # Machine Learning Operations
+
+---
 
 ## Machine Learning Operations
 
@@ -156,7 +190,7 @@ The model is deployed, but we're not done yet!
 - Aka **MLOps**
 - Don't confuse with ModelOps or AIOps
 
-::: notes
+Note:
 
 - ModelOps:
   - is a more general term than MLOps
@@ -166,17 +200,23 @@ The model is deployed, but we're not done yet!
   - solve operational issues with AI
   - e.g. predict network problems so that a DevOps team can act faster or even before the problem occurs
 
-:::
+---
 
 # Study Guide
+
+---
 
 ## Study Guide
 
 See Chamilo course for detailed information.
 
+---
+
 ## Course within the curriculum
 
-![](./assets/00-intro/olod-in-curriculum.jpg)
+![](./img/00-intro/olod-in-curriculum.jpg)
+
+---
 
 ## Learning goals and competences
 
@@ -187,8 +227,10 @@ limited computing power
 - Run a ML model on a device with **limited computing power**, e.g. using Tensorflow Lite
 
 <br/>
-<br/>
-<center>**Remark: this is a new course**</center>
+
+**Remark: this is a new course**
+
+---
 
 ## Course contents
 
@@ -198,6 +240,8 @@ limited computing power
 - Metadata and artifacts
 - Monitoring and logging
 
+---
+
 ## Learning materials
 
 - Start with the overview in the Chamilo course
@@ -205,6 +249,8 @@ limited computing power
 - Online manuals of software used
 - Video recordings of classroom instruction (Dutch)
 - (Books - see study guide on Chamilo)
+
+---
 
 ## Software needed
 
@@ -217,6 +263,8 @@ PS> choco install vagrant
 
 (macOS, Linux: see course overview on Chamilo)
 
+---
+
 ## Software (continuation)
 
 - VSCode: install recommended plugins (see course overview)
@@ -224,11 +272,15 @@ PS> choco install vagrant
 - Git client: also install Git Bash!
 - Ansible: only Linux and macOS
 
+---
+
 ## Azure for Students
 
 Who still has an Azure for Students subscription?
 
 ![If not, let us know!](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHZ2bXJnNmY0dWlzYnplYnRnMHFlazViZzE0cXNtYmxjb2ZzOXUyZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VStxBrCyssRPO/giphy.gif)
+
+---
 
 ## Teaching methods
 
@@ -236,12 +288,16 @@ Who still has an Azure for Students subscription?
 - Lab assignments
 - Guest lecture
 
+---
+
 ## Tutoring
 
 - Individual guidance for lab assignments
 - Ask questions *during class sessions*
 - Outside class: *general Teams channel*
 - Only for personal questions: *e-mail/Teams chat*
+
+---
 
 ## Semester schedule
 
@@ -251,6 +307,8 @@ Who still has an Azure for Students subscription?
 4. M3. The ML Workflow (guest lecture)
 5. (continued)
 6. (continued)
+
+---
 
 ## Semester schedule
 
@@ -264,6 +322,8 @@ Who still has an Azure for Students subscription?
 13. Optional: catch-up session
 <!-- markdownlint-enable ol-prefix -->
 
+---
+
 ## Assessment
 
 - **Portfolio**:
@@ -272,12 +332,16 @@ Who still has an Azure for Students subscription?
   - During the semester (at least 3x)
   - End result (exam period or W13)
 
+---
+
 ## Resit
 
 Personal assignment, no support
 
 - finish lab assignments
 - extra assignment
+
+---
 
 ## Questions?
 

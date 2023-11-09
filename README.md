@@ -10,19 +10,29 @@ Gerelateerde repositories:
 
 ## Slides genereren
 
-Om zelf de slides te genereren heb je een Linux (of UN*X) omgeving nodig, met (GNU) make en [Pandoc (v2.19.x)](https://pandoc.org/). Windows gebruikers kunnen gebruik maken van de Git bash shell die bij [Git for Windows](https://gitforwindows.org/) geleverd wordt.
+Om zelf de slides te genereren heb je [Docker](https://docs.docker.com/engine/install/) nodig.
 
-Haal deze repository binnen en genereer vervolgens de slides:
+Haal deze repository binnen en genereer de slides met dit commando
 
 ```console
-make all
+docker compose up -d slides-generator
 ```
 
-Je kan nu de slides bekijken door de html-bestanden in de `gh-pages` map te openen in een webbrowser.
+Dit maakt een map `html` met alle slides in. Je kan de slides bekijken door hierin een html-bestand te openen.
+
+## Slides aanpassen
+
+Indien je de slides wil aanpassen, kan je het volgende commando gebruiken om een server met live reload te krijgen:
+
+```console
+docker compose up -d slides
+```
+
+Je kan nu de slides bekijken door naar <http://localhost:35729> te navigeren.
 
 ## Bijdragen
 
-Bijdragen aan het hier gepubliceerde lesmateriaal zijn van harte welkom! Het verbeteren van tikfouten, het maken van toevoegingen, het melden van onduidelijkheden, enz. kan eenvoudig via een issue of een pull request.
+Bijdragen aan het hier gepubliceerde lesmateriaal zijn van harte welkom! Het verbeteren van schrijffouten, het maken van toevoegingen, het melden van onduidelijkheden... kan eenvoudig via een issue of een pull request.
 
 ## Licentie-informatie
 

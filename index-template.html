@@ -140,7 +140,7 @@
       Machine Learning Operations
     </h1>
     <div class="subtitle">
-      Latest update: TIMESTAMP
+      Latest update: {{date}}
     </div>
   </header>
 
@@ -168,46 +168,23 @@
       </h2>
 
       <ul>
+        {{#files}}
         <li>
-          <a href="00-intro.html?navigationMode=linear">
-            0. Course intro
+          <a href="{{filePath}}" title="{{title}}" target="_blank">
+            <!-- prettier-ignore -->
+            {{#title}}
+            {{.}}
+            {{/title}}
+            {{^title}}
+            {{filePath}}
+            {{/title}}
           </a>
         </li>
-        <li>
-          <a href="01-docker.html?navigationMode=linear">
-            1. Docker
-          </a>
-        </li>
-        <li>
-          <a href="02-ci-cd.html?navigationMode=linear">
-            2. CI/CD
-          </a>
-        </li>
-        <li>
-          <a href="03-ml-workflow.pdf">
-            3. The ML workflow
-          </a>
-          <p class="subtitle">
-            Guest lecture by Tim De Smet, Co-founder of <a href="https://www.captic.com/" target="_blank">Captic</a>
-          </p>
-        </li>
-        <li>
-          <a href="04-kubernetes.html?navigationMode=linear">
-            4. Kubernetes
-          </a>
-        </li>
-        <li>
-          5. Kubeflow & edge deployments (WIP)
-          <p class="subtitle">
-            ETA: <time datetime="2023-11-19">19/11/2023</time>
-          </p>
-        </li>
-        <li>
-          6. Monitoring and logging (WIP)
-          <p class="subtitle">
-            ETA: <time datetime="2023-12-03">03/12/2023</time>
-          </p>
-        </li>
+        <!-- prettier-ignore -->
+        {{/files}}
+        {{^files}}
+        There are no slides.
+        {{/files}}
       </ul>
     </section>
 
@@ -249,12 +226,12 @@
     <div class="partners">
       <div class="partner">
         <a href="https://www.hogent.be/" target="_blank">
-          <img class="logo" src="assets/HOGENT.png" alt="Logo HOGENT" />
+          <img class="logo" src="img/HOGENT.png" alt="Logo HOGENT" />
         </a>
       </div>
       <div class="partner">
         <a href="https://www.captic.com/" target="_blank">
-          <img class="logo" src="assets/Captic.png" alt="Logo Captic" />
+          <img class="logo" src="img/Captic.png" alt="Logo Captic" />
         </a>
       </div>
     </div>

@@ -7,6 +7,8 @@ date: 2023-2024
 
 # Container virtualization: Docker
 
+---
+
 ## Learning goals
 
 - Understanding the concept of container virtualization
@@ -17,11 +19,17 @@ date: 2023-2024
 - Being able to manage multiple containers using Docker Compose
 - Being able to push Docker images to a Docker registry
 
+---
+
 # Docker
+
+---
 
 ## Deployment (r)evolution
 
-![<small><em>Source: <https://kubernetes.io/docs/concepts/overview/></em></small>](assets/03-kubernetes/container_evolution.svg)
+![<small><em>Source: <https://kubernetes.io/docs/concepts/overview/></em></small>](img/03-kubernetes/container_evolution.svg)
+
+---
 
 ## What is Docker?
 
@@ -29,6 +37,8 @@ date: 2023-2024
 - Container virtualization platform
   - Build, run and manage containers
 - Uses host OS kernel
+
+---
 
 ## What is a container?
 
@@ -40,6 +50,8 @@ date: 2023-2024
 - Uses kernel namespaces, cgroups...
 - Runs everywhere the same
 
+---
+
 ## What is a container image?
 
 - Read-only template
@@ -47,6 +59,8 @@ date: 2023-2024
   - Configurations, scripts, binaries...
 - Contains metadata:
   - Name, version, environment variables...
+
+---
 
 ## Why are containers so popular?
 
@@ -57,7 +71,11 @@ date: 2023-2024
 - resource utilization: high efficiency and density
 - ...
 
+---
+
 # Docker building blocks
+
+---
 
 ## Port bindings
 
@@ -69,9 +87,15 @@ date: 2023-2024
 docker run -p 8080:80 nginx
 ```
 
+---
+
 ## Volumes
 
-![<small><em>Source: <https://docs.docker.com/storage/volumes/></em></small>](https://docs.docker.com/storage/images/types-of-mounts-volume.png)
+![](img/01-docker/types-of-mounts-volume.png)
+
+<em>Source: <https://docs.docker.com/storage/volumes/></em>
+
+---
 
 ## Volumes: volume
 
@@ -82,6 +106,8 @@ docker run -p 8080:80 nginx
 docker run -v volume_name:/path/in/container nginx
 ```
 
+---
+
 ## Volumes: bind mount
 
 - Folder on host mounted in container
@@ -90,6 +116,8 @@ docker run -v volume_name:/path/in/container nginx
 ```bash
 docker run -v /path/on/host:/path/in/container nginx
 ```
+
+---
 
 ## Volumes: tmpfs mount
 
@@ -101,10 +129,14 @@ docker run -v /path/on/host:/path/in/container nginx
 docker run --mount type=tmpfs,destination=/path/in/container nginx
 ```
 
+---
+
 ## Docker Compose
 
 - Define and run multi-container Docker applications
 - Config: `docker-compose.yml`
+
+---
 
 ## Example: `docker-compose.yml`
 
@@ -127,7 +159,11 @@ services:
       - ./models.py:/code/models.py
 ```
 
+---
+
 # Get started with the lab assignment!
+
+---
 
 ## Set-up work environment
 
@@ -138,6 +174,8 @@ Walk through the steps in the course overview on Chamilo:
 - [General guidelines](https://chamilo.hogent.be/index.php?application=Chamilo%5CApplication%5CWeblcms&go=CourseViewer&course=58936&tool=LearningPath&tool_action=ComplexDisplay&publication=2196532&preview_content_object_id=7521644&learning_path_action=Viewer&child_id=357826)
 
 Then move on to the Docker assignment
+
+---
 
 ## Docker lab assignment
 
@@ -152,6 +190,8 @@ Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/b
 
 Also keep a cheat sheet of important commands!
 
+---
+
 ## Portainer
 
 - Web UI for Docker
@@ -159,6 +199,8 @@ Also keep a cheat sheet of important commands!
   - Just like in SELab, remember?
 
 Portainer UI resides at <https://192.168.56.20:9443/>
+
+---
 
 ## Setup
 
@@ -170,13 +212,19 @@ Portainer UI resides at <https://192.168.56.20:9443/>
 - Optimize the Docker image
 - Push the Docker image to Docker Hub
 
+---
+
 # Reflection
+
+---
 
 ## Lab setup vs reality
 
 - Oversimplification
 - Selfhosted vs managed database
 - CI/CD pipeline for deployment and testing
+
+---
 
 ## Best practices in the lab
 

@@ -1,4 +1,4 @@
 # .gitignore
 
 # Ignore output directory
-gh-pages/
+html/

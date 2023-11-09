@@ -7,6 +7,8 @@ date: 2023-2024
 
 # Container orchestration: Kubernetes
 
+---
+
 ## Learning goals
 
 - Understanding the concept of container orchestration
@@ -19,11 +21,17 @@ date: 2023-2024
   - Organising applications: Labels, Selectors
 - Deploying a multi-tier application on a Kubernetes cluster
 
+---
+
 # A little history
+
+---
 
 ## Deployment (r)evolution
 
-![<small><em>Source: <https://kubernetes.io/docs/concepts/overview/></em></small>](assets/03-kubernetes/container_evolution.svg)
+![<small><em>Source: <https://kubernetes.io/docs/concepts/overview/></em></small>](img/03-kubernetes/container_evolution.svg)
+
+---
 
 ## Why are containers so popular?
 
@@ -33,6 +41,8 @@ date: 2023-2024
 - resource isolation: predictable application performance
 - resource utilization: high efficiency and density
 - ...
+
+---
 
 ## Requirements for containers in production
 
@@ -46,6 +56,8 @@ date: 2023-2024
 
 **It's complicated!**
 
+---
+
 ## Container orchestration
 
 = tool that allows container management at scale
@@ -56,7 +68,11 @@ date: 2023-2024
 - Nomad
 - Kubernetes - has become "market leader"
 
+---
+
 # Container orchestration: Kubernetes
+
+---
 
 ## Kubernetes by Google
 
@@ -66,15 +82,21 @@ date: 2023-2024
 >
 > -- Jo Beda (Google)
 
+---
+
 ## Kubernetes architecture
 
-![](assets/03-kubernetes/k8s-architecture.png)
+![](img/03-kubernetes/k8s-architecture.png)
+
+---
 
 ## "Management node"
 
 - Sysadmin interacts with Master Node through `kubectl`
 - Settings (host name, credentials, etc): `kubeconfig`
 - For example: your pc
+
+---
 
 ## Master Node
 
@@ -87,6 +109,8 @@ date: 2023-2024
   - Service account & token controller: access management
 - etcd: key/value store, e.g. scheduling info, node details
 
+---
+
 ## Worker node
 
 - `kubelet`: communicate with Master Node
@@ -97,6 +121,8 @@ date: 2023-2024
 - Network routing (`kube-proxy`)
 - ...
 
+---
+
 ## Basic building blocks
 
 - Pods
@@ -106,6 +132,8 @@ date: 2023-2024
 - Organise applications:
   - Labels, Selectors, Namespaces
 
+---
+
 ## Pods
 
 - Smallest unit of deployment
@@ -114,12 +142,16 @@ date: 2023-2024
 - Unique network IP
 - Options that govern how container(s) should run
 
+---
+
 ## Pods properties
 
 - Ephemeral, disposable
 - Never self-heal, not restarted by scheduler by itself
 - Never create pods just by themselves
 - Pro-tip: don't use pods directly, but controllers like a deployment
+
+---
 
 ## Pod states
 
@@ -129,6 +161,8 @@ date: 2023-2024
 - Failed - all containers exited, at least one with exit status != 0
 - CrashLoopBackOff - container fails to start, k8s tries over and over
 
+---
+
 ## Controllers
 
 - Running applications in controllers has some benefits:
@@ -136,15 +170,21 @@ date: 2023-2024
   - Scaling
   - Load balancing
 
+---
+
 ## Controllers: ReplicaSets
 
 - Ensure specified number of replicas for a pod are running
 - Used within a Deployment
 
+---
+
 ## Controllers: Deployments
 
 - Declarative updates for pods & ReplicaSets
 - Desired state in YAML file, k8s will bring pods to that state
+
+---
 
 ## Controllers: Services
 
@@ -155,11 +195,15 @@ date: 2023-2024
   - External: endpoint available through ip:port (called NodePort)
   - Load Balancer: expose app to internet with LB
 
+---
+
 ## Controllers: Jobs
 
 - Supervisor process for pods carrying out batch jobs
 - Individual processes that run once and complete successfully
 - Creates a pod to do the work
+
+---
 
 ## Controllers: CronJobs
 
@@ -168,10 +212,14 @@ date: 2023-2024
 - Creates a job to do the work (which creates a pod)
 - E.g. backup, sending emails, report generation, etc.
 
+---
+
 ## Organising applications: labels
 
 - key/value pairs, attached to objects (pods, services, deployments)
 - e.g. `"environment": "prod"`, `"tier": "backend"`, etc.
+
+---
 
 ## Organising applications: Selectors
 
@@ -180,13 +228,19 @@ date: 2023-2024
   - equality-based: value = or !=
   - set-based: value in, not in, specific set, or value exists
 
+---
+
 ## Organising applications: namespaces
 
 - isolate different groups of resources on the same hardware
 - manage access control for different users
 - default namespace is used when cluster is started
 
+---
+
 # Get started with the lab assignment!
+
+---
 
 ## Setup
 
@@ -198,17 +252,25 @@ date: 2023-2024
   - Install metrics server and dashboard plugins
 - Optionally, add one or two extra nodes
 
+---
+
 ## Kubernetes lab assignment
 
 Follow the steps in the assignment <https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignment/04-kubernetes.md>
 
 Also keep a cheat sheet of important commands!
 
+---
+
 # Reflection
+
+---
 
 ## Beware of the golden hammer
 
-![](assets/03-kubernetes/golden-hammer.jpeg)
+![](img/03-kubernetes/golden-hammer.jpeg)
+
+---
 
 ## Beware!
 
@@ -221,12 +283,3 @@ Also keep a cheat sheet of important commands!
 - Team organisation
   - DevOps!
   - CI/CD!
-
-## kubeflow
-
-- Open source
-- Machine learning toolkit for k8s
-- Deploy ML workflows on k8s
-- Supports Jupyter notebooks, TensorFlow, PyTorch, etc.
-
-**More on this in a later chapter!**
