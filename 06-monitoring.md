@@ -55,7 +55,7 @@ Do you know if ...
 
 > "Assumption is the mother of all screw ups"
 > ~ Eugene Lewis Fordsworthe
-
+>
 > "To measure is to know"
 > ~ Lord Kelvin (rephrased)
 
@@ -141,6 +141,9 @@ There are a lot of metric monitoring tools available:
   - scrapes, stores TS data
 - [Client libraries](https://prometheus.io/docs/instrumenting/clientlibs/):
   - for instrumenting application code
+
+---
+
 - [Exporters](https://prometheus.io/docs/instrumenting/exporters/)
   - for exposing metrics so Prometheus can scrape them
   - e.g.
@@ -227,7 +230,7 @@ When do you want to trigger an alert?
 - E.g.
   - CPU is above 90% for 10 minutes
   - Disk is reading more than 50 MB/s for 5 minutes
-  - Physical hardware component is too hot (> 95 C)
+  - Physical hardware component is too hot (> 95°C)
   - A container has disappeared
   - More than 80% of MySQL connections are in use for 2 minutes
   - ...
@@ -291,7 +294,10 @@ To where should we send the alerts?
   - Grouping: combining alerts of similar nature into a single notification
   - Inhibition: suppressing notifications for certain alerts if certain other alerts are already firing
   - Silences: mute alerts for a given time
-- A great collection of community vetted rules can be found at https://samber.github.io/awesome-prometheus-alerts/rules.html
+
+---
+
+- A great collection of community vetted rules can be found at <https://samber.github.io/awesome-prometheus-alerts/rules.html>
 - Has default support for various receivers (e.g. email, Discord, Teams, Slack, ...)
 
 ---
@@ -308,11 +314,11 @@ To where should we send the alerts?
 
 ## Monitoring a mocked model
 
-- Create a mock model that provides out metrics
+- Create a mock model that provides metrics
 - Set up Prometheus
 - Set up Grafana
   - Create a dashboard
-- Set up Alertmanager
+- Set up AlertManager
   - Create alerting rules
 - Set up Discord
   - Receive alerts from Discord
@@ -328,5 +334,3 @@ To where should we send the alerts?
 - Stresstest the VM to test the alert
   - Receive alerts when the rules are triggered
   - Receive a resolve alert when the CPU usage is back to normal
-
----
