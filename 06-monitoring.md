@@ -23,11 +23,7 @@ date: 2023-2024
 - Being able to set up visualization dashboards using Grafana
 - Being able to set up alerting using Alert Manager and a receiver such as Discord
 
----
-
 # Intro
-
----
 
 ## Why?
 
@@ -49,8 +45,6 @@ Do you know if ...
 
 ![](./assets/06-monitoring/github-down.jpeg)
 
----
-
 ## Knowing is everything
 
 > "Assumption is the mother of all screw ups"
@@ -58,8 +52,6 @@ Do you know if ...
 >
 > "To measure is to know"
 > ~ Lord Kelvin (rephrased)
-
----
 
 ## Knowing is everything
 
@@ -71,8 +63,6 @@ Do you know if ...
   - If you know the error, you can fix it
   - Monitoring gathers the clues for you
 
----
-
 ## Metrics logging
 
 - Gather metrics
@@ -81,11 +71,7 @@ Do you know if ...
   - e.g. CPU load, RAM usage, bandwidth consumption, disk storage, ...
 - Often stored in a time series database
 
----
-
 ![](./assets/06-monitoring/example-time-series.jpg)
-
----
 
 ## Tools
 
@@ -100,13 +86,9 @@ There are a lot of metric monitoring tools available:
 
 <https://github.com/awesome-foss/awesome-sysadmin#monitoring>
 
----
+# Prometheus
 
-## Prometheus
-
----
-
-### Prometheus overview
+## Prometheus overview
 
 <https://prometheus.io/>
 
@@ -124,18 +106,14 @@ There are a lot of metric monitoring tools available:
 
 <https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/>
 
----
-
-### Features
+## Features
 
 - Time series collections via pull model over HTTP
 - PromQL query language
 - Service discovery or static configuration
 - No reliance on distributed storage
 
----
-
-### Components
+## Components
 
 - Prometheus server:
   - scrapes, stores TS data
@@ -161,19 +139,13 @@ There are a lot of metric monitoring tools available:
 
 ![](./assets/06-monitoring/prometheus-exporters.png)
 
----
-
 # Visualization
-
----
 
 ## Dashboard
 
 Most datacenters have a dashboard to visualize metrics.
 
 ![](./assets/06-monitoring/datacenter.jpg)
-
----
 
 ## Tools
 
@@ -182,8 +154,6 @@ Often builtin, but external tools are available:
 - Grafana
 - Kibana
 - ...
-
----
 
 ## Grafana
 
@@ -200,8 +170,6 @@ Often builtin, but external tools are available:
 
 ![](./assets/06-monitoring/grafana-node-exporter.png)
 
----
-
 ## Tips
 
 Make sure that ...
@@ -211,17 +179,15 @@ Make sure that ...
 - ... the dashboard doesn't burn into the screen
   - Set it up to cycle
 
----
-
 # Alerting
+
+## Alerting
 
 - A dashboard is a passive way to let you now if things go wrong.
   - You can't constantly keep looking at the dashboard
 - How about you get notified is something suspicious happens?
 
 ![](./assets/06-monitoring/alert-slack.png)
-
----
 
 ## Alert rules
 
@@ -235,8 +201,6 @@ When do you want to trigger an alert?
   - More than 80% of MySQL connections are in use for 2 minutes
   - ...
 
----
-
 ## Receivers
 
 To where should we send the alerts?
@@ -249,16 +213,12 @@ To where should we send the alerts?
   - Discord
 - Often done by webhooks
 
----
-
 ## Resolving
 
 - How do you know when the problem is fixed?
   - Again, it is not handy to constantly look at the metrics or dashboards
 - Solution: alert again when a previous alert is no longer valid.
   - E.g. the CPU load has dropped to 10 %, send a notification that the CPU is no longer at 100%
-
----
 
 ## Alerting fatigue
 
@@ -276,16 +236,12 @@ To where should we send the alerts?
   - Too much false positives: alerting fatigue
   - Too much false negatives: you have no clue that something is happening
 
----
-
 ## Tools
 
 - Manual (scripts)
 - Built in (e.g. Grafana)
 - AlertManager
 - ...
-
----
 
 ## AlertManager
 
@@ -300,17 +256,11 @@ To where should we send the alerts?
 - A great collection of community vetted rules can be found at <https://samber.github.io/awesome-prometheus-alerts/rules.html>
 - Has default support for various receivers (e.g. email, Discord, Teams, Slack, ...)
 
----
-
-# Prometheus + Grafana + AlertManager
+## Prometheus + Grafana + AlertManager
 
 ![](./assets/06-monitoring/prometheus-architecture.webp)
 
----
-
 # Get started with the lab assignment!
-
----
 
 ## Monitoring a mocked model
 
@@ -322,8 +272,6 @@ To where should we send the alerts?
   - Create alerting rules
 - Set up Discord
   - Receive alerts from Discord
-
----
 
 ## Monitoring a VM
 
