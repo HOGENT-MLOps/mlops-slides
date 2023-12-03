@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Thomas Aelbrecht &amp; Martijn Saelens">
+  <title>6. Monitoring</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="reveal.js/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/dist/theme/hogent.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">6. Monitoring</h1>
+  <p class="subtitle">Machine Learning Operations<br/>HOGENT applied
+computer science</p>
+  <p class="author">Thomas Aelbrecht &amp; Martijn Saelens</p>
+  <p class="date">2023-2024</p>
+</section>
+
+<section id="monitoring" class="slide level1">
+<h1>Monitoring</h1>
+<h2 id="learning-goals">Learning goals</h2>
+<ul>
+<li>Understanding the concept of monitoring</li>
+<li>Understanding the concept of alerting</li>
+<li>Understanding how Prometheus, Grafana, AlertManager, a receiver, and
+Node Exporter work together</li>
+<li>Being able to set up monitoring using Prometheus
+<ul>
+<li>Monitoring of an application or the result of an ML pipeline</li>
+<li>Monitoring of a VM or host</li>
+</ul></li>
+<li>Being able to set up visualization dashboards using Grafana</li>
+<li>Being able to set up alerting using Alert Manager and a receiver
+such as Discord</li>
+</ul>
+</section>
+<section id="monitoring-1" class="slide level1">
+<h1>Monitoring</h1>
+<h2 id="why">Why?</h2>
+<p>Do you know if …</p>
+<ul>
+<li>… a new version of an AI model has regressed?</li>
+<li>… a new model uses too much resources?</li>
+<li>… a VM/container is down?</li>
+<li>… a VM/container/application uses too much resources?</li>
+<li>… the network is saturated?</li>
+<li>… the temperature of hardware components is too high?</li>
+<li>… ?</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p><img data-src="./assets/06-monitoring/google-down.png" /></p>
+</section>
+<section class="slide level1">
+
+<p><img data-src="./assets/06-monitoring/github-down.jpeg" /></p>
+<h2 id="knowing-is-everything">Knowing is everything</h2>
+<dl>
+<dt class="fragment">“Assumption is the mother of all screw ups”</dt>
+<dd class="fragment">
+Eugene Lewis Fordsworthe
+</dd>
+</dl>
+<dl>
+<dt class="fragment">“To measure is to know”</dt>
+<dd class="fragment">
+Lord Kelvin (rephrased)
+</dd>
+</dl>
+<h2 id="knowing-is-everything-1">Knowing is everything</h2>
+<ul>
+<li>Monitoring reduces downtime
+<ul>
+<li>If you don’t monitor, how do you even know if/when it goes
+down?</li>
+</ul></li>
+<li>Sometimes allows to predict errors in advance
+<ul>
+<li>e.g. disk space is filling up</li>
+</ul></li>
+<li>Metrics tell a story
+<ul>
+<li>If you know the error, you can fix it</li>
+<li>Monitoring gathers the clues for you</li>
+</ul></li>
+</ul>
+<h2 id="metrics-logging">Metrics logging</h2>
+<ul>
+<li>Gather metrics</li>
+<li>Often numbers, percentages, …
+<ul>
+<li>Things you can measure</li>
+<li>e.g. CPU load, RAM usage, bandwidth consumption, disk storage,
+…</li>
+</ul></li>
+<li>Often stored in a time series database</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p><img data-src="./assets/06-monitoring/example-time-series.jpg" /></p>
+<h2 id="tools">Tools</h2>
+<p>There are a lot of metric monitoring tools available:</p>
+<ul>
+<li>Prometheus</li>
+<li>Nagios</li>
+<li>Zabbix</li>
+<li>Sensu</li>
+<li>Datadog</li>
+<li>…</li>
+</ul>
+<p>https://github.com/awesome-foss/awesome-sysadmin#monitoring</p>
+<h2 id="prometheus">Prometheus</h2>
+<h3 id="prometheus-overview">Prometheus overview</h3>
+<p>https://prometheus.io/</p>
+<ul>
+<li>Open source</li>
+<li>Originally from SoundCloud</li>
+<li>Now part of Cloud Native Computing Foundation
+<ul>
+<li>Home of Kubernetes</li>
+</ul></li>
+<li>Collects and stores metrics as time series data
+<ul>
+<li>time stamp</li>
+<li>key-value pairs called labels</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p><img
+data-src="./assets/06-monitoring/prometheus-jobs-instances.png" /></p>
+<blockquote>
+<p>https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/</p>
+</blockquote>
+<h3 id="features">Features</h3>
+<ul>
+<li>Time series collections via pull model over HTTP</li>
+<li>PromQL query language</li>
+<li>Service discovery or static configuration</li>
+<li>No reliance on distributed storage</li>
+</ul>
+<h3 id="components">Components</h3>
+<ul>
+<li>Prometheus server:
+<ul>
+<li>scrapes, stores TS data</li>
+</ul></li>
+<li><a
+href="https://prometheus.io/docs/instrumenting/clientlibs/">Client
+libraries</a>:
+<ul>
+<li>for instrumenting application code</li>
+</ul></li>
+<li><a
+href="https://prometheus.io/docs/instrumenting/exporters/">Exporters</a>
+<ul>
+<li>for exposing metrics so Prometheus can scrape them</li>
+<li>e.g.
+<ul>
+<li>Node exporter for basic system metrics</li>
+<li>Mysqld exporter for MySQL</li>
+<li>Kubernetes</li>
+<li>SNMP</li>
+<li>…</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p><img
+data-src="./assets/06-monitoring/prometheus-ways-gather-metrics.png" /></p>
+</section>
+<section class="slide level1">
+
+<p><img
+data-src="./assets/06-monitoring/prometheus-exporters.png" /></p>
+</section>
+<section id="visualization" class="slide level1">
+<h1>Visualization</h1>
+<h2 id="dashboard">Dashboard</h2>
+<p>Most datacenters have a dashboard to visualize metrics.</p>
+<p><img data-src="./assets/06-monitoring/datacenter.jpg" /></p>
+<h2 id="tools-1">Tools</h2>
+<p>Often builtin, but external tools are available:</p>
+<ul>
+<li>Grafana</li>
+<li>Kibana</li>
+<li>…</li>
+</ul>
+<h2 id="grafana">Grafana</h2>
+<p>https://grafana.com/</p>
+<ul>
+<li>Open source</li>
+<li>Originally from Orbitz</li>
+<li>Visualizes time series data</li>
+<li>Allows for basic alerting</li>
+<li>Has a <a href="https://grafana.com/grafana/dashboards/">public
+repository</a> for dashboards
+<ul>
+<li>You can export and import existing databases to this library</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p><img
+data-src="./assets/06-monitoring/grafana-node-exporter.png" /></p>
+<h2 id="tips">Tips</h2>
+<p>Make sure that …</p>
+<ul>
+<li>… the refresh interval on the dashboards is acceptable
+<ul>
+<li>Don’t forget that the interval on the metrics server / monitoring
+tool must also match</li>
+</ul></li>
+<li>… the dashboard doesn’t burn into the screen
+<ul>
+<li>Set it up to cycle</li>
+</ul></li>
+</ul>
+</section>
+<section id="alerting" class="slide level1">
+<h1>Alerting</h1>
+<ul>
+<li>A dashboard is a passive way to let you now if things go wrong.
+<ul>
+<li>You can’t constantly keep looking at the dashboard</li>
+</ul></li>
+<li>How about you get notified is something suspicious happens?</li>
+</ul>
+<p><img data-src="./assets/06-monitoring/alert-slack.png" /></p>
+<h2 id="alert-rules">Alert rules</h2>
+<p>When do you want to trigger an alert?</p>
+<ul>
+<li>E.g.
+<ul>
+<li>CPU is above 90% for 10 minutes</li>
+<li>Disk is reading more than 50 MB/s for 5 minutes</li>
+<li>Physical hardware component is too hot (&gt; 95 C)</li>
+<li>A container has disappeared</li>
+<li>More than 80% of MySQL connections are in use for 2 minutes</li>
+<li>…</li>
+</ul></li>
+</ul>
+<h2 id="receivers">Receivers</h2>
+<p>To where should we send the alerts?</p>
+<ul>
+<li>E.g.
+<ul>
+<li>E-mail</li>
+<li>Teams</li>
+<li>Slack</li>
+<li>Matrix.org</li>
+<li>Discord</li>
+</ul></li>
+<li>Often done by webhooks</li>
+</ul>
+<h2 id="resolving">Resolving</h2>
+<ul>
+<li>How do you know when the problem is fixed?
+<ul>
+<li>Again, it is not handy to constantly look at the metrics or
+dashboards</li>
+</ul></li>
+<li>Solution: alert again when a previous alert is no longer valid.
+<ul>
+<li>E.g. the CPU load has dropped to 10 %, send a notification that the
+CPU is no longer at 100%</li>
+</ul></li>
+</ul>
+<h2 id="alerting-fatigue">Alerting fatigue</h2>
+<p><img data-src="./assets/06-monitoring/false-true-pos-neg.webp" /></p>
+</section>
+<section class="slide level1">
+
+<p><img
+data-src="./assets/06-monitoring/false-postives-schema.png" /></p>
+</section>
+<section class="slide level1">
+
+<ul>
+<li>The most work of setting up monitoring and alerting is adjusting the
+rules</li>
+<li>Looking for a nice balance between false positives and false
+negatives
+<ul>
+<li>Balance is unique for each case/situation</li>
+<li>Too much false positives: alerting fatigue</li>
+<li>Too much false negatives: you have no clue that something is
+happening</li>
+</ul></li>
+</ul>
+<h2 id="tools-2">Tools</h2>
+<ul>
+<li>Manual (scripts)</li>
+<li>Built in (e.g. Grafana)</li>
+<li>AlertManager</li>
+<li>…</li>
+</ul>
+<h2 id="alertmanager">AlertManager</h2>
+<ul>
+<li>Also developed by the Prometheus project</li>
+<li>Has 3 core concepts:
+<ul>
+<li>Grouping: combining alerts of similar nature into a single
+notification</li>
+<li>Inhibition: suppressing notifications for certain alerts if certain
+other alerts are already firing</li>
+<li>Silences: mute alerts for a given time</li>
+</ul></li>
+<li>A great collection of community vetted rules can be found at
+https://samber.github.io/awesome-prometheus-alerts/rules.html</li>
+<li>Has default support for various receivers (e.g. email, Discord,
+Teams, Slack, …)</li>
+</ul>
+</section>
+<section id="prometheus-grafana-alertmanager" class="slide level1">
+<h1>Prometheus + Grafana + AlertManager</h1>
+<p><img
+data-src="./assets/06-monitoring/prometheus-architecture.webp" /></p>
+</section>
+<section id="get-started-with-the-lab-assignment" class="slide level1">
+<h1>Get started with the lab assignment!</h1>
+<h2 id="monitoring-a-mocked-model">Monitoring a mocked model</h2>
+<ul>
+<li>Create a mock model that provides out metrics</li>
+<li>Set up Prometheus</li>
+<li>Set up Grafana
+<ul>
+<li>Create a dashboard</li>
+</ul></li>
+<li>Set up Alertmanager
+<ul>
+<li>Create alerting rules</li>
+</ul></li>
+<li>Set up Discord
+<ul>
+<li>Receive alerts from Discord</li>
+</ul></li>
+</ul>
+<h2 id="monitoring-a-vm">Monitoring a VM</h2>
+<ul>
+<li>Create a VM</li>
+<li>Set up Node Exporter on the VM</li>
+<li>Import a dashboard for Node Exporter in Grafana</li>
+<li>Create an alert for CPU load</li>
+<li>Stresstest the VM to test the alert
+<ul>
+<li>Receive alerts when the rules are triggered</li>
+<li>Receive a resolve alert when the CPU usage is back to normal</li>
+</ul></li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="reveal.js/plugin/notes/notes.js"></script>
+  <script src="reveal.js/plugin/search/search.js"></script>
+  <script src="reveal.js/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
