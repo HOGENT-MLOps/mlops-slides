@@ -41,12 +41,13 @@ computer science</p>
   <p class="date">2023-2024</p>
 </section>
 
-<section id="monitoring" class="slide level1">
+<section>
+<section id="monitoring" class="title-slide slide level1">
 <h1>Monitoring</h1>
-</section>
-<section class="slide level1">
 
-<h2 id="learning-goals">Learning goals</h2>
+</section>
+<section id="learning-goals" class="slide level2">
+<h2>Learning goals</h2>
 <ul>
 <li>Understanding the concept of monitoring</li>
 <li>Understanding the concept of alerting</li>
@@ -54,7 +55,7 @@ computer science</p>
 Node Exporter work together</li>
 </ul>
 </section>
-<section class="slide level1">
+<section class="slide level2">
 
 <ul>
 <li>Being able to set up monitoring using Prometheus
@@ -66,13 +67,14 @@ Node Exporter work together</li>
 <li>Being able to set up alerting using Alert Manager and a receiver
 such as Discord</li>
 </ul>
-</section>
-<section id="intro" class="slide level1">
+</section></section>
+<section>
+<section id="intro" class="title-slide slide level1">
 <h1>Intro</h1>
-</section>
-<section class="slide level1">
 
-<h2 id="why">Why?</h2>
+</section>
+<section id="why" class="slide level2">
+<h2>Why?</h2>
 <p>Do you know if …</p>
 <ul>
 <li>… a new version of an AI model has regressed?</li>
@@ -84,33 +86,29 @@ such as Discord</li>
 <li>… ?</li>
 </ul>
 </section>
-<section class="slide level1">
+<section class="slide level2">
 
 <p><img data-src="./assets/06-monitoring/google-down.png" /></p>
 </section>
-<section class="slide level1">
+<section class="slide level2">
 
 <p><img data-src="./assets/06-monitoring/github-down.jpeg" /></p>
 </section>
-<section class="slide level1">
-
-<h2 id="knowing-is-everything">Knowing is everything</h2>
+<section id="knowing-is-everything" class="slide level2">
+<h2>Knowing is everything</h2>
 <dl>
 <dt class="fragment">“Assumption is the mother of all screw ups”</dt>
 <dd class="fragment">
 Eugene Lewis Fordsworthe
 </dd>
-</dl>
-<dl>
 <dt class="fragment">“To measure is to know”</dt>
 <dd class="fragment">
 Lord Kelvin (rephrased)
 </dd>
 </dl>
 </section>
-<section class="slide level1">
-
-<h2 id="knowing-is-everything-1">Knowing is everything</h2>
+<section id="knowing-is-everything-1" class="slide level2">
+<h2>Knowing is everything</h2>
 <ul>
 <li>Monitoring reduces downtime
 <ul>
@@ -128,9 +126,8 @@ down?</li>
 </ul></li>
 </ul>
 </section>
-<section class="slide level1">
-
-<h2 id="metrics-logging">Metrics logging</h2>
+<section id="metrics-logging" class="slide level2">
+<h2>Metrics logging</h2>
 <ul>
 <li>Gather metrics</li>
 <li>Often numbers, percentages, …
@@ -141,14 +138,10 @@ down?</li>
 </ul></li>
 <li>Often stored in a time series database</li>
 </ul>
-</section>
-<section class="slide level1">
-
 <p><img data-src="./assets/06-monitoring/example-time-series.jpg" /></p>
 </section>
-<section class="slide level1">
-
-<h2 id="tools">Tools</h2>
+<section id="tools" class="slide level2">
+<h2>Tools</h2>
 <p>There are a lot of metric monitoring tools available:</p>
 <ul>
 <li>Prometheus</li>
@@ -160,14 +153,14 @@ down?</li>
 </ul>
 <p><a href="https://github.com/awesome-foss/awesome-sysadmin#monitoring"
 class="uri">https://github.com/awesome-foss/awesome-sysadmin#monitoring</a></p>
-</section>
-<section class="slide level1">
+</section></section>
+<section>
+<section id="prometheus" class="title-slide slide level1">
+<h1>Prometheus</h1>
 
-<h2 id="prometheus">Prometheus</h2>
 </section>
-<section class="slide level1">
-
-<h3 id="prometheus-overview">Prometheus overview</h3>
+<section id="prometheus-overview" class="slide level2">
+<h2>Prometheus overview</h2>
 <p><a href="https://prometheus.io/"
 class="uri">https://prometheus.io/</a></p>
 <ul>
@@ -184,7 +177,7 @@ class="uri">https://prometheus.io/</a></p>
 </ul></li>
 </ul>
 </section>
-<section class="slide level1">
+<section class="slide level2">
 
 <p><img
 data-src="./assets/06-monitoring/prometheus-jobs-instances.png" /></p>
@@ -192,9 +185,8 @@ data-src="./assets/06-monitoring/prometheus-jobs-instances.png" /></p>
 href="https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/"
 class="uri">https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/</a></p>
 </section>
-<section class="slide level1">
-
-<h3 id="features">Features</h3>
+<section id="features" class="slide level2">
+<h2>Features</h2>
 <ul>
 <li>Time series collections via pull model over HTTP</li>
 <li>PromQL query language</li>
@@ -202,9 +194,8 @@ class="uri">https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/
 <li>No reliance on distributed storage</li>
 </ul>
 </section>
-<section class="slide level1">
-
-<h3 id="components">Components</h3>
+<section id="components" class="slide level2">
+<h2>Components</h2>
 <ul>
 <li>Prometheus server:
 <ul>
@@ -216,6 +207,11 @@ libraries</a>:
 <ul>
 <li>for instrumenting application code</li>
 </ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
 <li><a
 href="https://prometheus.io/docs/instrumenting/exporters/">Exporters</a>
 <ul>
@@ -231,28 +227,28 @@ href="https://prometheus.io/docs/instrumenting/exporters/">Exporters</a>
 </ul></li>
 </ul>
 </section>
-<section class="slide level1">
+<section class="slide level2">
 
 <p><img
 data-src="./assets/06-monitoring/prometheus-ways-gather-metrics.png" /></p>
 </section>
-<section class="slide level1">
+<section class="slide level2">
 
 <p><img
 data-src="./assets/06-monitoring/prometheus-exporters.png" /></p>
-</section>
-<section id="visualization" class="slide level1">
+</section></section>
+<section>
+<section id="visualization" class="title-slide slide level1">
 <h1>Visualization</h1>
-</section>
-<section class="slide level1">
 
-<h2 id="dashboard">Dashboard</h2>
+</section>
+<section id="dashboard" class="slide level2">
+<h2>Dashboard</h2>
 <p>Most datacenters have a dashboard to visualize metrics.</p>
 <p><img data-src="./assets/06-monitoring/datacenter.jpg" /></p>
 </section>
-<section class="slide level1">
-
-<h2 id="tools-1">Tools</h2>
+<section id="tools-1" class="slide level2">
+<h2>Tools</h2>
 <p>Often builtin, but external tools are available:</p>
 <ul>
 <li>Grafana</li>
@@ -260,9 +256,8 @@ data-src="./assets/06-monitoring/prometheus-exporters.png" /></p>
 <li>…</li>
 </ul>
 </section>
-<section class="slide level1">
-
-<h2 id="grafana">Grafana</h2>
+<section id="grafana" class="slide level2">
+<h2>Grafana</h2>
 <p><a href="https://grafana.com/"
 class="uri">https://grafana.com/</a></p>
 <ul>
@@ -277,14 +272,13 @@ repository</a> for dashboards
 </ul></li>
 </ul>
 </section>
-<section class="slide level1">
+<section class="slide level2">
 
 <p><img
 data-src="./assets/06-monitoring/grafana-node-exporter.png" /></p>
 </section>
-<section class="slide level1">
-
-<h2 id="tips">Tips</h2>
+<section id="tips" class="slide level2">
+<h2>Tips</h2>
 <p>Make sure that …</p>
 <ul>
 <li>… the refresh interval on the dashboards is acceptable
@@ -297,9 +291,14 @@ tool must also match</li>
 <li>Set it up to cycle</li>
 </ul></li>
 </ul>
-</section>
-<section id="alerting" class="slide level1">
+</section></section>
+<section>
+<section id="alerting" class="title-slide slide level1">
 <h1>Alerting</h1>
+
+</section>
+<section id="alerting-1" class="slide level2">
+<h2>Alerting</h2>
 <ul>
 <li>A dashboard is a passive way to let you now if things go wrong.
 <ul>
@@ -309,25 +308,23 @@ tool must also match</li>
 </ul>
 <p><img data-src="./assets/06-monitoring/alert-slack.png" /></p>
 </section>
-<section class="slide level1">
-
-<h2 id="alert-rules">Alert rules</h2>
+<section id="alert-rules" class="slide level2">
+<h2>Alert rules</h2>
 <p>When do you want to trigger an alert?</p>
 <ul>
 <li>E.g.
 <ul>
 <li>CPU is above 90% for 10 minutes</li>
 <li>Disk is reading more than 50 MB/s for 5 minutes</li>
-<li>Physical hardware component is too hot (&gt; 95 C)</li>
+<li>Physical hardware component is too hot (&gt; 95°C)</li>
 <li>A container has disappeared</li>
 <li>More than 80% of MySQL connections are in use for 2 minutes</li>
 <li>…</li>
 </ul></li>
 </ul>
 </section>
-<section class="slide level1">
-
-<h2 id="receivers">Receivers</h2>
+<section id="receivers" class="slide level2">
+<h2>Receivers</h2>
 <p>To where should we send the alerts?</p>
 <ul>
 <li>E.g.
@@ -341,9 +338,8 @@ tool must also match</li>
 <li>Often done by webhooks</li>
 </ul>
 </section>
-<section class="slide level1">
-
-<h2 id="resolving">Resolving</h2>
+<section id="resolving" class="slide level2">
+<h2>Resolving</h2>
 <ul>
 <li>How do you know when the problem is fixed?
 <ul>
@@ -357,17 +353,16 @@ CPU is no longer at 100%</li>
 </ul></li>
 </ul>
 </section>
-<section class="slide level1">
-
-<h2 id="alerting-fatigue">Alerting fatigue</h2>
+<section id="alerting-fatigue" class="slide level2">
+<h2>Alerting fatigue</h2>
 <p><img data-src="./assets/06-monitoring/false-true-pos-neg.webp" /></p>
 </section>
-<section class="slide level1">
+<section class="slide level2">
 
 <p><img
 data-src="./assets/06-monitoring/false-postives-schema.png" /></p>
 </section>
-<section class="slide level1">
+<section class="slide level2">
 
 <ul>
 <li>The most work of setting up monitoring and alerting is adjusting the
@@ -382,9 +377,8 @@ happening</li>
 </ul></li>
 </ul>
 </section>
-<section class="slide level1">
-
-<h2 id="tools-2">Tools</h2>
+<section id="tools-2" class="slide level2">
+<h2>Tools</h2>
 <ul>
 <li>Manual (scripts)</li>
 <li>Built in (e.g. Grafana)</li>
@@ -392,9 +386,8 @@ happening</li>
 <li>…</li>
 </ul>
 </section>
-<section class="slide level1">
-
-<h2 id="alertmanager">AlertManager</h2>
+<section id="alertmanager" class="slide level2">
+<h2>AlertManager</h2>
 <ul>
 <li>Also developed by the Prometheus project</li>
 <li>Has 3 core concepts:
@@ -405,31 +398,39 @@ notification</li>
 other alerts are already firing</li>
 <li>Silences: mute alerts for a given time</li>
 </ul></li>
-<li>A great collection of community vetted rules can be found at
-https://samber.github.io/awesome-prometheus-alerts/rules.html</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>A great collection of community vetted rules can be found at <a
+href="https://samber.github.io/awesome-prometheus-alerts/rules.html"
+class="uri">https://samber.github.io/awesome-prometheus-alerts/rules.html</a></li>
 <li>Has default support for various receivers (e.g. email, Discord,
 Teams, Slack, …)</li>
 </ul>
 </section>
-<section id="prometheus-grafana-alertmanager" class="slide level1">
-<h1>Prometheus + Grafana + AlertManager</h1>
+<section id="prometheus-grafana-alertmanager" class="slide level2">
+<h2>Prometheus + Grafana + AlertManager</h2>
 <p><img
 data-src="./assets/06-monitoring/prometheus-architecture.webp" /></p>
-</section>
-<section id="get-started-with-the-lab-assignment" class="slide level1">
+</section></section>
+<section>
+<section id="get-started-with-the-lab-assignment"
+class="title-slide slide level1">
 <h1>Get started with the lab assignment!</h1>
-</section>
-<section class="slide level1">
 
-<h2 id="monitoring-a-mocked-model">Monitoring a mocked model</h2>
+</section>
+<section id="monitoring-a-mocked-model" class="slide level2">
+<h2>Monitoring a mocked model</h2>
 <ul>
-<li>Create a mock model that provides out metrics</li>
+<li>Create a mock model that provides metrics</li>
 <li>Set up Prometheus</li>
 <li>Set up Grafana
 <ul>
 <li>Create a dashboard</li>
 </ul></li>
-<li>Set up Alertmanager
+<li>Set up AlertManager
 <ul>
 <li>Create alerting rules</li>
 </ul></li>
@@ -439,9 +440,8 @@ data-src="./assets/06-monitoring/prometheus-architecture.webp" /></p>
 </ul></li>
 </ul>
 </section>
-<section class="slide level1">
-
-<h2 id="monitoring-a-vm">Monitoring a VM</h2>
+<section id="monitoring-a-vm" class="slide level2">
+<h2>Monitoring a VM</h2>
 <ul>
 <li>Create a VM</li>
 <li>Set up Node Exporter on the VM</li>
@@ -453,10 +453,7 @@ data-src="./assets/06-monitoring/prometheus-architecture.webp" /></p>
 <li>Receive a resolve alert when the CPU usage is back to normal</li>
 </ul></li>
 </ul>
-</section>
-<section class="slide level1">
-
-</section>
+</section></section>
     </div>
   </div>
 
