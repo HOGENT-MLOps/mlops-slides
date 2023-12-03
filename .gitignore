@@ -2,3 +2,6 @@
 
 # Ignore output directory
 gh-pages/
+
+# Ignore Visual Studio Code settings
+.vscode/
