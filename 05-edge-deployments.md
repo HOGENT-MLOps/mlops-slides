@@ -48,7 +48,7 @@ date: 2023-2024
   - bandwidth
   - ...
 
-<b>Think about model size and resource needs</b>
+**Think about model size and resource needs.**
 
 ## References
 
