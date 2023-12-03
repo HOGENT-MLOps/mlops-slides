@@ -195,8 +195,9 @@
             </a>
           </li>
           <li>
-            <a href="06-monitoring.html?navigationMode=linear"></a>
-            6. Monitoring
+            <a href="06-monitoring.html?navigationMode=linear">
+              6. Monitoring
+            </a>
           </li>
         </ul>
       </section>
