@@ -7,18 +7,27 @@ date: 2023-2024
 
 # Monitoring
 
+---
+
 ## Learning goals
 
 - Understanding the concept of monitoring
 - Understanding the concept of alerting
 - Understanding how Prometheus, Grafana, AlertManager, a receiver, and Node Exporter work together
+
+---
+
 - Being able to set up monitoring using Prometheus
   - Monitoring of an application or the result of an ML pipeline
   - Monitoring of a VM or host
 - Being able to set up visualization dashboards using Grafana
 - Being able to set up alerting using Alert Manager and a receiver such as Discord
 
-# Monitoring
+---
+
+# Intro
+
+---
 
 ## Why?
 
@@ -40,6 +49,8 @@ Do you know if ...
 
 ![](./assets/06-monitoring/github-down.jpeg)
 
+---
+
 ## Knowing is everything
 
 > "Assumption is the mother of all screw ups"
@@ -47,6 +58,8 @@ Do you know if ...
 
 > "To measure is to know"
 > ~ Lord Kelvin (rephrased)
+
+---
 
 ## Knowing is everything
 
@@ -57,6 +70,8 @@ Do you know if ...
 - Metrics tell a story
   - If you know the error, you can fix it
   - Monitoring gathers the clues for you
+
+---
 
 ## Metrics logging
 
@@ -70,6 +85,8 @@ Do you know if ...
 
 ![](./assets/06-monitoring/example-time-series.jpg)
 
+---
+
 ## Tools
 
 There are a lot of metric monitoring tools available:
@@ -81,13 +98,17 @@ There are a lot of metric monitoring tools available:
 - Datadog
 - ...
 
-https://github.com/awesome-foss/awesome-sysadmin#monitoring
+<https://github.com/awesome-foss/awesome-sysadmin#monitoring>
+
+---
 
 ## Prometheus
 
+---
+
 ### Prometheus overview
 
-https://prometheus.io/
+<https://prometheus.io/>
 
 - Open source
 - Originally from SoundCloud
@@ -101,7 +122,9 @@ https://prometheus.io/
 
 ![](./assets/06-monitoring/prometheus-jobs-instances.png)
 
-> https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/
+<https://devconnected.com/the-definitive-guide-to-prometheus-in-2019/>
+
+---
 
 ### Features
 
@@ -109,6 +132,8 @@ https://prometheus.io/
 - PromQL query language
 - Service discovery or static configuration
 - No reliance on distributed storage
+
+---
 
 ### Components
 
@@ -133,13 +158,19 @@ https://prometheus.io/
 
 ![](./assets/06-monitoring/prometheus-exporters.png)
 
+---
+
 # Visualization
+
+---
 
 ## Dashboard
 
 Most datacenters have a dashboard to visualize metrics.
 
 ![](./assets/06-monitoring/datacenter.jpg)
+
+---
 
 ## Tools
 
@@ -149,9 +180,11 @@ Often builtin, but external tools are available:
 - Kibana
 - ...
 
+---
+
 ## Grafana
 
-https://grafana.com/
+<https://grafana.com/>
 
 - Open source
 - Originally from Orbitz
@@ -164,6 +197,8 @@ https://grafana.com/
 
 ![](./assets/06-monitoring/grafana-node-exporter.png)
 
+---
+
 ## Tips
 
 Make sure that ...
@@ -173,6 +208,8 @@ Make sure that ...
 - ... the dashboard doesn't burn into the screen
   - Set it up to cycle
 
+---
+
 # Alerting
 
 - A dashboard is a passive way to let you now if things go wrong.
@@ -180,6 +217,8 @@ Make sure that ...
 - How about you get notified is something suspicious happens?
 
 ![](./assets/06-monitoring/alert-slack.png)
+
+---
 
 ## Alert rules
 
@@ -193,6 +232,8 @@ When do you want to trigger an alert?
   - More than 80% of MySQL connections are in use for 2 minutes
   - ...
 
+---
+
 ## Receivers
 
 To where should we send the alerts?
@@ -205,12 +246,16 @@ To where should we send the alerts?
   - Discord
 - Often done by webhooks
 
+---
+
 ## Resolving
 
 - How do you know when the problem is fixed?
   - Again, it is not handy to constantly look at the metrics or dashboards
 - Solution: alert again when a previous alert is no longer valid.
   - E.g. the CPU load has dropped to 10 %, send a notification that the CPU is no longer at 100%
+
+---
 
 ## Alerting fatigue
 
@@ -228,12 +273,16 @@ To where should we send the alerts?
   - Too much false positives: alerting fatigue
   - Too much false negatives: you have no clue that something is happening
 
+---
+
 ## Tools
 
 - Manual (scripts)
 - Built in (e.g. Grafana)
 - AlertManager
 - ...
+
+---
 
 ## AlertManager
 
@@ -245,11 +294,17 @@ To where should we send the alerts?
 - A great collection of community vetted rules can be found at https://samber.github.io/awesome-prometheus-alerts/rules.html
 - Has default support for various receivers (e.g. email, Discord, Teams, Slack, ...)
 
+---
+
 # Prometheus + Grafana + AlertManager
 
 ![](./assets/06-monitoring/prometheus-architecture.webp)
 
+---
+
 # Get started with the lab assignment!
+
+---
 
 ## Monitoring a mocked model
 
@@ -262,6 +317,8 @@ To where should we send the alerts?
 - Set up Discord
   - Receive alerts from Discord
 
+---
+
 ## Monitoring a VM
 
 - Create a VM
@@ -271,3 +328,5 @@ To where should we send the alerts?
 - Stresstest the VM to test the alert
   - Receive alerts when the rules are triggered
   - Receive a resolve alert when the CPU usage is back to normal
+
+---
