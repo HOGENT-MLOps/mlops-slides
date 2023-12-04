@@ -71,6 +71,8 @@ Do you know if ...
   - e.g. CPU load, RAM usage, bandwidth consumption, disk storage, ...
 - Often stored in a time series database
 
+---
+
 ![](./assets/06-monitoring/example-time-series.jpg)
 
 ## Tools
