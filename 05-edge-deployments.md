@@ -48,7 +48,9 @@ date: 2023-2024
   - bandwidth
   - ...
 
-<b>Think about model size and resource needs</b>
+**Think about model size and resource needs!**
+
+---
 
 ## References
 
@@ -88,6 +90,7 @@ Some techniques:
 - Usually done after training
 - Followed by retraining to reduce accuracy loss
 - Can also be done during training
+- **Only reduces size after compression**
 
 ## Pruning
 
