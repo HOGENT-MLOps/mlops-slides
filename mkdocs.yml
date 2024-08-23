@@ -1,0 +1,60 @@
+site_name: Machine Learning Operations
+site_url: https://hogent.be
+repo_url: https://github.com/HOGENT-MLOps/mlops-slides # Change this to your own Git repository (or leave it out).
+copyright: Copyright &copy; HOGENT (<a href="https://hogent.be">https://hogent.be</a>)
+# If you want MkDocs to automatically generate a table of contents, then remove the complete `nav` section.
+# See https://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation for more information.
+# Use `index.md` as the default file for the homepage. MkDocs will automatically pick this file up.
+# See https://www.mkdocs.org/user-guide/writing-your-docs/#index-pages for more information.
+theme:
+  name: material # https://squidfunk.github.io/mkdocs-material/setup/
+  favicon: https://hogent.be/themes/hogent/images/ico/favicon.ico
+  features:
+    - content.code.copy
+    - navigation.path
+    - navigation.top
+    - navigation.tracking
+    - toc.integrate
+    - toc.follow
+  font:
+    text: Montserrat
+    code: Inconsolata
+  logo: https://www.hogent.be/sites/hogent/assets/Image/logo-1.jpg
+markdown_extensions:
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.caret
+  - pymdownx.emoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      auto_title: true
+      linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.saneheaders
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - toc:
+      permalink: true
+plugins:
+  - git-authors:
+      show_email_address: false # Disabled to prevent spam when your non-HOGENT e-mail address is used.
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+      # Don't forget to adjust your CI pipeline to get all the info necessary:
+      # https://github.com/timvink/mkdocs-git-revision-date-localized-plugin?tab=readme-ov-file#note-when-using-build-environments
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      num_workers: 8
+  - search
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
