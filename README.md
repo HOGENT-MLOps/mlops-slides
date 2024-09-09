@@ -1,17 +1,13 @@
-# Machine Learning Operations: slides
+# Machine Learning Operations: learning path
 
-In deze repository vind je de slides die gebruikt wordt in de lessen van het olod Machine Learning Operations (3e jaar bachelor Toegepaste Informatica aan Hogeschool Gent).
+In this repository you will find the learning path and materials used in the lessons of the course Machine Learning Operations (3rd year bachelor Applied Informatics at Hogeschool Gent).
 
-Gerelateerde repositories:
+You can view the content at https://hogent-mlops.github.io/mlops-slides/.
 
--   Slides van de lessen: <https://github.com/HOGENT-MLOps/mlops-slides>
-    -   Te bekijken op: <https://hogent-mlops.github.io/mlops-slides/>
--   Opgave labo-opdrachten: <https://github.com/HOGENT-MLOps/mlops-labs>
+## Contributions
 
-## Bijdragen
+Contributions to the teaching material published here are welcome! Improving typos, making additions, reporting unclear points, etc. can easily be done through an issue or a pull request.
 
-Bijdragen aan het hier gepubliceerde lesmateriaal zijn van harte welkom! Het verbeteren van tikfouten, het maken van toevoegingen, het melden van onduidelijkheden, enz. kan eenvoudig via een issue of een pull request.
+## License Information
 
-## Licentie-informatie
-
-Deze syllabus is samengesteld door [Thomas Aelbrecht](https://github.com/thomasaelbrecht) en [Martijn Saelens](mailto:martijn.saelens@hogent.be) valt onder de [Creative Commons Naamsvermelding-GelijkDelen 4.0 Internationale Publieke Licentie](https://creativecommons.org/licenses/by-sa/4.0/).
+This syllabus is compiled by [Thomas Aelbrecht](https://github.com/thomasaelbrecht) and [Martijn Saelens](mailto:martijn.saelens@hogent.be) and is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-sa/4.0/).
