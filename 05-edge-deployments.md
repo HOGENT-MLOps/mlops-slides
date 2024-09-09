@@ -48,7 +48,9 @@ date: 2023-2024
   - bandwidth
   - ...
 
-**Think about model size and resource needs.**
+**Think about model size and resource needs!**
+
+---
 
 ## References
 
@@ -80,6 +82,7 @@ Some techniques:
 - i.e. represent weights and activations with fewer bits
   - e.g. 8-bit int instead of 32-bit float
 - Can be done during training or after training
+- **Immediate reduction of model size**
 
 ## Pruning
 
@@ -88,6 +91,7 @@ Some techniques:
 - Usually done after training
 - Followed by retraining to reduce accuracy loss
 - Can also be done during training
+- **Only reduces size after compression**
 
 ## Pruning
 

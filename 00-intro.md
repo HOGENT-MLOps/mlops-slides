@@ -222,7 +222,6 @@ PS> choco install vagrant
 - VSCode: install recommended plugins (see course overview)
 - VirtualBox: Extension Pack!
 - Git client: also install Git Bash!
-- Ansible: only Linux and macOS
 
 ## Azure for Students
 
