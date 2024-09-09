@@ -2,13 +2,17 @@ site_name: Machine Learning Operations
 site_url: https://hogent.be
 repo_url: https://github.com/HOGENT-MLOps/mlops-slides # Change this to your own Git repository (or leave it out).
 copyright: Copyright &copy; HOGENT (<a href="https://hogent.be">https://hogent.be</a>)
-# If you want MkDocs to automatically generate a table of contents, then remove the complete `nav` section.
-# See https://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation for more information.
-# Use `index.md` as the default file for the homepage. MkDocs will automatically pick this file up.
-# See https://www.mkdocs.org/user-guide/writing-your-docs/#index-pages for more information.
+nav:
+  - Study guide: 00-study-guide.md
+  - "Lesson 1: docker": 01-docker.md
+  - "Lesson 2: CI/CD": 02-ci-cd.md
+  - "Lesson 3: ML workflow": 03-ml-workflow.pdf
+  - "Lesson 4: kubernetes": 04-kubernetes.md
+  - "Lesson 5: edge deployments": 05-edge-deployments.md
+  - "Lesson 6: monitoring": 06-monitoring.md
 theme:
   name: material # https://squidfunk.github.io/mkdocs-material/setup/
-  favicon: https://hogent.be/themes/hogent/images/ico/favicon.ico
+  favicon: https://hogenttin.github.io/cdn/favicon/favicon.ico
   features:
     - content.code.copy
     - navigation.path
@@ -19,7 +23,18 @@ theme:
   font:
     text: Montserrat
     code: Inconsolata
-  logo: https://www.hogent.be/sites/hogent/assets/Image/logo-1.jpg
+  logo: https://hogenttin.github.io/cdn/logo/HOGENT_Neg.png
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 markdown_extensions:
   - footnotes
   - pymdownx.arithmatex:

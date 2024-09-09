@@ -10,6 +10,8 @@ When working as an AI & Data Engineer, it is thus essential to have knowledge of
 
 This course came about thanks to an intense collaboration with [Captic](https://www.captic.com), resulting in content well tailored to the field and consisting of labs based on real use cases.
 
+![](./assets/captic.svg)
+
 Within the curriculum, this course is situated in the AI & Data Engineer track of the 3rd year (MT3). In terms of content, it continues on the Linux for Data Scientists and Data Engineering Project I courses from the 2nd year (MT2).
 
 ```mermaid
@@ -108,7 +110,7 @@ Learning materials for this course include:
 ## Software needed
 
 -   VSCode: install recommended plugins (see course overview)
--   VirtualBox: do,n't forget the Extension Pack!
+-   VirtualBox: don't forget the Extension Pack!
 -   Git client: also install Git Bash!
 -   Azure for Students: if you do not have an Azure for Students subscription, **let us know!**
 
