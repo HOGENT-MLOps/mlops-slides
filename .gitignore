@@ -1,6 +1,7 @@
 # MkDocs
 site/
 
+<<<<<<< HEAD
 # Environments
 .env
 .venv
@@ -15,3 +16,6 @@ venv.bak/
 
 # Ignore Visual Studio Code settings
 .vscode/
+
+# Ignore output directory
+site/
