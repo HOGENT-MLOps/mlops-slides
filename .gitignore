@@ -1,7 +1,21 @@
-# .gitignore
+# MkDocs
+site/
 
-# Ignore output directory
-gh-pages/
+<<<<<<< HEAD
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Unknown
+.cache/
 
 # Ignore Visual Studio Code settings
 .vscode/
+
+# Ignore output directory
+site/
