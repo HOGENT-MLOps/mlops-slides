@@ -45,6 +45,7 @@ After successful completion of this course:
 -   You can put an ML model into **production** and **monitor** it using CI/CD principles.
 -   You can describe the challenges and possible solutions for running an ML model on devices with limited computing power.
 -   You run an ML model on a device with **limited computing power**, e.g. using Tensorflow Lite.
+-   You can use virtualization and containerization techniques to **deploy** an ML model.
 
 ## Required prior knowledge
 
@@ -73,11 +74,12 @@ We expect an average proficiency in:
     -   Guest lecture by Captic, a recording will be provided for TIAO.
 -   Module 4: Kubernetes
     -   Introduction to the basic building blocks of Kubernetes.
--   Module 5: Edge Deployments
+-   Module 5: Edge deployments & Hyperparameter tuning
     -   Introduction to the challenges of and techniques for ML models on the edge.
     -   Training a TensorFlow Lite model.
+    -   Introduction to hyperparameter tuning.
 -   Module 6: Monitoring and logging
-    -   Monitoring the ML pipeline, the model in production, the build VM, ... .
+    -   Monitoring the ML pipeline, the model in production, the build VM...
     -   Collecting logs from the ML pipeline and the model in production.
 
 :bulb: Comments and feedback on the course content can be given in class, via email or through an issue/PR on the GitHub repository.
@@ -85,38 +87,24 @@ We expect an average proficiency in:
 ## Learning materials
 
 -   Start with the overview in the Chamilo course
--   GitHub: [lecture slides](https://hogent-mlops.github.io/mlops-slides/), [lab assignments](https://github.com/HOGENT-MLOps/mlops-labs)
+-   GitHub: [lecture notes](https://hogent-mlops.github.io/mlops-slides/), [lab assignments](https://github.com/HOGENT-MLOps/mlops-labs)
 -   Online manuals of software used
 -   Video recordings of classroom instruction (Dutch)
--   (Books - see study guide on Chamilo)
-
-Learning materials for this course include:
-
--   The information on Chamilo
--   [Learning path (theory)](https://hogent-mlops.github.io/mlops-slides/)
--   [Lab assignments](https://github.com/HOGENT-MLOps/mlops-labs)
--   Manuals of the software used (accessible online):
-    -   [Docker](https://docs.docker.com/)
-    -   [GitHub Actions](https://docs.github.com/en/actions)
-    -   [Azure ML](https://learn.microsoft.com/en-us/python/api/overview/azure/ml/?view=azure-ml-py)
-    -   [Kubernetes](https://kubernetes.io/docs/)
-    -   [Minikube](https://minikube.sigs.k8s.io/docs/)
-    -   [Prometheus](https://prometheus.io/docs/introduction/overview/)
-    -   [Grafana](https://grafana.com/docs/)
-    -   ...
+-   (Books - see individual lessons)
 
 :bulb: Although the course content is written in English, the lessons are given in Dutch.
 
 ## Software needed
 
+<!-- TODO: intregrate course overview -->
+
 -   VSCode: install recommended plugins (see course overview)
--   VirtualBox: don't forget the Extension Pack!
 -   Git client: also install Git Bash!
 -   Azure for Students: if you do not have an Azure for Students subscription, **let us know!**
 
 ## Teaching methods
 
--   Classroom instruction, demonstration
+-   Classroom instruction and/or demonstration (only if needed)
 -   Lab assignments
 -   Guest lecture
 
@@ -128,9 +116,7 @@ During regular contact moments, the lecturer provides classroom instruction, aft
 
 ### TIAO
 
-TIAO students process the material at their own pace, using the study materials provided, and complete the lab assignments. The learning pathway with the overview of the learning content provides initial guidance.
-
-They can make an appointment with the lecturer at the contact moments for TIAO students for an individual progress discussion and follow-up. TIAO students show interim results in a Panopto video.
+TIAO students process the material at their own pace, using the study materials provided, and complete the lab assignments. They can make an appointment with the lecturer at the contact moments for TIAO students for an individual progress discussion and follow-up. TIAO students show interim results in a Panopto video.
 
 ## Working and learning instructions
 
@@ -146,8 +132,8 @@ Help each other in this: working together and sharing knowledge is encouraged. T
 
 Requirements for Panopto submission of a lab:
 
--   Use the acceptance criteria to guide the demo. We can't ask additional information as with a demo during contact times. What we don't see or hear, we can't take into account. be thorough!
--   Demonstrate the use of software, don't just go over your lab rapport. We want to see the lab in action.
+-   Use the acceptance criteria to guide the demo. We can't ask additional information as with a demo during contact times. What we don't see or hear, we can't take into account. Be thorough!
+-   Demonstrate the use of software, don't just go over your lab report. We want to see the lab in action!
 -   Send the link within the given time frame.
 
 ## Tutoring
@@ -166,7 +152,7 @@ Contact information lecturers:
 -   Thomas Aelbrecht (titular): thomas.aelbrecht@hogent.be
 -   Martijn Saelens: martijn.saelens@hogent.be
 
-:bulb: It always gives a bad impression when you don't seem to know which lecturer you are assigned to ... .
+:bulb: It always gives a bad impression when you don't seem to know which lecturer you are assigned to...
 
 ## Semester schedule
 
@@ -180,7 +166,7 @@ Following weekly schedule is just an approximation! If classes are dropped, for 
 6. (continued)
 7. M4. Kubernetes
 8. (continued)
-9. M5. Edge deployments
+9. M5. Edge deployments & hyperparameter tuning
 10. (continued)
 11. M6. Monitoring and logging
 12. (continued)
@@ -217,10 +203,7 @@ Students must deliver and personally demonstrate partial deliverables to the lec
 
 ## Resit
 
-Those who fail will be given a second examination opportunity in the form of an individual assignment. The exact assignment will depend on your evaluation and will consist specifically of:
-
--   One new lab assignment that is the same for everyone (subject to be determined)
--   Completing labs from the modules where you have not yet demonstrated your competence.
+Those who fail will be given a second examination opportunity in the form of an individual assignment. The exact assignment will depend on your evaluation and will consist specifically of completing labs from the modules where you have not yet demonstrated your competence.
 
 This individual assignment is immediately recorded and discussed at the final evaluation moment. If you have not yet received an individual assignment at the evaluation moment (for example, because you were absent), you will come to the feedback.
 
