@@ -3,6 +3,7 @@ site_url: https://hogent.be
 repo_url: https://github.com/HOGENT-MLOps/mlops-slides # Change this to your own Git repository (or leave it out).
 copyright: Copyright &copy; HOGENT (<a href="https://hogent.be">https://hogent.be</a>)
 nav:
+  - Home: index.md
   - Study guide: 00-study-guide.md
   - "Lesson 1: docker": 01-docker.md
   - "Lesson 2: CI/CD": 02-ci-cd.md
