@@ -12,3 +12,6 @@ venv.bak/
 
 # Unknown
 .cache/
+
+# Ignore Visual Studio Code settings
+.vscode/
