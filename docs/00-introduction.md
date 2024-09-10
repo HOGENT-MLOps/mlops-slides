@@ -58,7 +58,6 @@ git clone git@github.com:HOGENT-MLOps/REPO_NAME-USERNAME.git
 It is possible that errors may be found in the lab assignments during the semester. These will be published in the [source repository](https://github.com/HOGENT-MLOps/mlops-labs). You can systematically apply these changes to your own personal GitHub repository where you are working on the lab assignments. Simply open your GitHub repository in the browser and click the "Sync" button.
 
 Any errata will be announced via Chamilo.
-Hier is de vertaling van de HTML-pagina naar het Engels en omgezet in Markdown:
 
 ## General Guidelines
 
