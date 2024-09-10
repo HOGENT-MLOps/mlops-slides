@@ -1,4 +1,4 @@
-# Machine Learning Operations: learning path
+# Machine Learning Operations
 
 Welkom to the learning path. here you will find the learning path and materials used in the lessons of the course Machine Learning Operations (3rd year bachelor Applied Informatics at Hogeschool Gent).
 

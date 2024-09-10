@@ -1,7 +1,6 @@
 # MkDocs
 site/
 
-<<<<<<< HEAD
 # Environments
 .env
 .venv
