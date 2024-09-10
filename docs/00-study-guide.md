@@ -84,35 +84,37 @@ We expect an average proficiency in:
 
 :bulb: Comments and feedback on the course content can be given in class, via email or through an issue/PR on the GitHub repository.
 
-## Learning materials
+## Learning mateirials
 
--   Start with the overview in the Chamilo course
--   GitHub: [lecture notes](https://hogent-mlops.github.io/mlops-slides/), [lab assignments](https://github.com/HOGENT-MLOps/mlops-labs)
--   Online manuals of software used
--   Video recordings of classroom instruction (Dutch)
--   (Books - see individual lessons)
+### Theoretical learning materials
+
+The theoretical content is selected from material found all over the world wide web. This can include, but is not limited to material on [YouTube](https://www.youtube.com/), [LinkedIn Learning](https://www.linkedin.com/learning/), videos on [Panopto](https://hogent.cloud.panopto.eu/)...
+
+We provide a well-curated list of resources per module. They provide a ground knowlegde of the domain of Machine Learning Operations. These topics should help as well in tackling the labs by having a theoretical foundation. Do not forget you will be questioned on this theoretical material during the demonstrations of the individual lab assignments. As a study method, you should build up your summary notes after each moment of self-study. Ask yourself enough questions and transition from a traditional student to a life-long-learner.
+
+### Lab assignments
+
+During class hours, you will work on lab assignments. These are practical exercises that allow you to apply the theoretical knowledge you have acquired. The lab assignments are based on real use cases and provide a solid basis to build on in your future career.
+
+Your lecturer is available to help you with the lab assignments. If you get stuck, search on the Internet first. If you still can't find a solution, don't hesitate to ask for help. The lecturer can give you tips or refer you to suitable additional study materials.
 
 :bulb: Although the course content is written in English, the lessons are given in Dutch.
 
-## Software needed
-
-<!-- TODO: intregrate course overview -->
-
--   VSCode: install recommended plugins (see course overview)
--   Git client: also install Git Bash!
--   Azure for Students: if you do not have an Azure for Students subscription, **let us know!**
-
 ## Teaching methods
 
--   Classroom instruction and/or demonstration (only if needed)
+-   Flipped classroom
 -   Lab assignments
 -   Guest lecture
 
 In this course, you will work primarily on lab assignments. The supporting study materials should enable you to complete them successfully.
 
-### Regular students
+### Flipped classroom
 
-During regular contact moments, the lecturer provides classroom instruction, after which students work independently on lab assignments. Students show interim results during a progress meeting to the lector and can then request explanations for specific problems. There is also the opportunity to demonstrate results in a Panopto video.
+This course will use a flipped-classroom approach: the theory is explained using videos and material from external sources. This shall be assessed by every student before coming to the lectures. About 90 minutes of self-lecture materials per week is what you are up for. This will allow us to work hands-on with the concepts that you have learned during class hours. Beware: if you are unprepared, your presence in class will be pretty useless and working on labs will be of no use to you. Contact moments during class hours of course can be used to ask questions on the materials that you have studied, if something would be unclear. Also, the other way round, tutors might ask some questions to you!
+
+### Contact moments (Gent, Aalst & virtual campus)
+
+During regular contact moments students work independently on lab assignments. Students can then request explanations for specific problems or can demonstrate the result in class or through a Panopto video.
 
 ### TIAO
 
@@ -127,7 +129,8 @@ Help each other in this: working together and sharing knowledge is encouraged. T
 ## Demo instructions
 
 -   You can only demo a lab assignment once.
--   You must present a demo within 3 weeks of publication date, otherwise the lab will be marked als "absent".
+-   You must present a demo within 3 weeks after the theoretical session (see [schedule](#semester-schedule)), otherwise the lab will be marked als "absent".
+    -   This short time frame is there to encourage you to present lab assignments during the semester instead of cramming everything in at the end.
 -   You can demo a lab during contact times or by sending us a Panopto video.
 
 Requirements for Panopto submission of a lab:
@@ -206,6 +209,8 @@ Students must deliver and personally demonstrate partial deliverables to the lec
 Those who fail will be given a second examination opportunity in the form of an individual assignment. The exact assignment will depend on your evaluation and will consist specifically of completing labs from the modules where you have not yet demonstrated your competence.
 
 This individual assignment is immediately recorded and discussed at the final evaluation moment. If you have not yet received an individual assignment at the evaluation moment (for example, because you were absent), you will come to the feedback.
+
+This individual assignment is presented during an oral exam in the exam period. Each student will have max. 20 minutes to present the assignment and answer questions from the lecturer. This short time frame is there to encourage you to present lab assignments during the semester instead of cramming everything in at the end.
 
 Distance learning students can also arrange this by email or make an appointment to discuss it through Teams, provided this is done before the start of the intersemester recess.
 
