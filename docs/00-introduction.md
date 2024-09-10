@@ -7,10 +7,9 @@ We use a lot of software packages in this course, but you don't necessarily need
 You will need the following software:
 
 - A good text editor. **Visual Studio Code** is recommended, preferably with the following plugins:
-    - [GitLens - Git supercharged (Eric Amodio)](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
     - [Markdown All in One (Yu Zhang)](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
     - [markdownlint (David Anson)](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-- **Git client** (including Git Bash on Windows). A graphical Git client like Gitkraken is optional (and *not* recommended).
+- **Git client** (including Git Bash on Windows). A graphical Git client like Gitkraken is *not* recommended. You should learn to use Git from the command line.
 - **Docker** (including Docker Compose). You can install Docker Desktop for Windows or Mac, or Docker CE for Linux. Use WSL2 as the backend on Windows.
 
 It is best to install the required software using a package manager, e.g., [Chocolatey](http://chocolatey.org/) on Windows or [Homebrew](https://brew.sh/) for Mac. Linux users are, of course, familiar with this method and use their distribution's package manager, e.g., `apt` (Debian, Ubuntu), `dnf` (Fedora and RHEL family), `pacman` (Arch Linux), etc. Check if you have these tools installed. If so, upgrade to the latest versions. If not, install them through the package manager.
