@@ -28,7 +28,7 @@ Guidelines for starting your Git project:
 
 - Enable [**two-factor authentication**](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) on your GitHub account. This is a security measure that is now required on GitHub.
 
-- **Basic Git configuration**, if you haven't done this before (check in the configuration file `~/.gitconfig`):
+- **Basic Git configuration**, if you haven't done this before (check in the configuration file `$HOME/.config/git/config`):
 
 ```bash
 git config --global user.name ”FIRSTNAME LASTNAME”
