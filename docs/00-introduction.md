@@ -64,7 +64,7 @@ In this section, you will find some general guidelines to help you work more smo
 
 - Before starting a lab assignment, prepare yourself by studying all the provided study materials: manuals, screencasts, etc. There is no need to "memorize" everything, but make sure you are familiar enough with the content so that you can quickly find the correct and relevant information. You can find this through the references in the individual lessons on this page.
 
-- **Work step by step.** Don't write too much code at once. First, try to obtain a minimally working solution and immediately commit it to Git. Make minimal changes and test each change thoroughly. The larger and more significant the changes, the greater the chance of errors and the more difficult they are to debug. As soon as something works and you've made progress, commit it to Git right away with a clear, descriptive commit message.
+- **Work step by step.** Don't write too much code at once. First, try to obtain a minimally working solution and immediately commit it to Git. Make minimal changes and test each change thoroughly. The larger and more significant the changes, the greater the chance of errors and the more difficult they are to debug. As soon as something works and you've made progress, commit it to Git right away with a clear, descriptive commit message using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 - **Learn to use Git from the command line.** Most Git commands provide detailed explanations on how to proceed and how to undo the last step. This will eventually give you a better understanding of how Git works than you would get from using a GUI.
 
