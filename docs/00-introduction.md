@@ -50,7 +50,7 @@ git clone git@github.com:HOGENT-MLOps/REPO_NAME-USERNAME.git
 
 - Review the files in the `assignments` directory. Here you'll find the assignments for all labs.
 - In the `reports` directory, you'll find templates for reports and cheat sheets in [Markdown format](https://guides.github.com/features/mastering-markdown/). Customize the template by adding your name.
-    - There is an example assignment `00-dummy.md` with an example report `00-dummy-report.md`. Have a look at them to see how you are expected to structure your lab reports.
+    - There is an example assignment `00-dummy.md` with an example report `00-dummy-report.md`. Have a look at them to see how you are expected to structure your lab reports. **This is the minimum we expect for a lab report.**
 - Also, immediately add your name and repository URL to the `README.md`.
 
 ## Processing errata
