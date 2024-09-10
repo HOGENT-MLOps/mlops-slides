@@ -17,8 +17,6 @@ It is best to install the required software using a package manager, e.g., [Choc
 
 :information_source: For this course, the use of GitHub Copilot is allowed.
 
-Hier is de vertaling van de HTML-pagina naar het Engels en omgezet in Markdown:
-
 ## Git configuration
 
 All your work for this course is tracked in the version control system Git. On the banner of the intro page of the Chamilo course, you'll find a link that creates a new repository where you save all your work. This repository is visible to you and the instructor. In addition to configuring the systems you set up, you will also maintain your documentation there, such as lab reports and cheat sheets.
