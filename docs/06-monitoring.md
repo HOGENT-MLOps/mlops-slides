@@ -15,7 +15,7 @@
 
 -   You can export metrics from a python script or a virtual machine.
 -   You can set up a Grafana Dashboard to see a live graph of such metrics.
--   You can set up alerting in Alert Manager and push these to a communication software of choice (e.g. Discord, Teams, Matrix.org, ...) when certain situations happen.
+-   You can set up alerting in Alert Manager and push these to a communication software of choice (e.g. Discord, Teams, Matrix.org, etc.) when certain situations happen.
 
 ## Theory
 
