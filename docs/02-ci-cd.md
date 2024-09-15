@@ -30,7 +30,7 @@
 ### Videos
 
 -   DevOps CI/CD Explained in 100 Seconds: DevOps CI/CD Explained in 100 Seconds
--   CI CD Pipeline Explained in 2 minutes With Animation!: https://www.youtube.com/watch?v=jZYrxk2WMbY
+-   CI/CD Pipeline Explained in 2 minutes With Animation!: https://www.youtube.com/watch?v=jZYrxk2WMbY
 -   What is Continuous Integration?: https://www.youtube.com/watch?v=1er2cjUq1UI
 -   What is Continuous Delivery?: https://www.youtube.com/watch?v=2TTU5BB-k9U
 -   Continuous Deployment vs. Continuous Delivery: https://www.youtube.com/watch?v=LNLKZ4Rvk8w
