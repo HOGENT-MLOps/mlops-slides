@@ -42,4 +42,4 @@
 
 ### Online manuals
 
--   https://docs.github.com/en/actions
+-   GitHub Actions: https://docs.github.com/en/actions
