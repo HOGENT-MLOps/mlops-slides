@@ -41,3 +41,21 @@
 -   What Are the Dangers of Alert Fatigue? https://www.youtube.com/watch?v=juitFz2eJHc
     -   Alert fatigue also happens in non-IT branches, such as health care, and can have serious consequences.
 -   The More You Monitor - 9 Steps to Prevent Alert Storms: https://www.youtube.com/watch?v=FfpBGATG_6c
+-   Prometheus: The Documentary: https://www.youtube.com/watch?v=rT4fJNbfe14 
+    - The journey of open-source monitoring system, Prometheus. This explores the story of Prometheus, from inception to adoption as told by the story’s key players.
+
+### Online manuals
+
+-   Prometheus and Alertmanager: https://prometheus.io/docs/introduction/overview/
+-   Grafana: https://grafana.com/docs/
+
+### Online courses
+
+-   DevOps Foundations: Monitoring and Observability, Linkedin Learning:
+https://www.linkedin.com/learning/devops-foundations-monitoring-and-observability/
+    - Students of HOGENT get free access to LinkedIn Learning through [Academic Software](https://academicsoftware.eu/login).
+
+### Books
+
+-   https://link.springer.com/search?query=monitoring&facet-content-type=%22Book%22&facet-discipline=%22Computer+Science%22
+    -   On Springer Link, you can find various books about monitoring. You can download these for free from the campus network or if you turn on your VPN.
