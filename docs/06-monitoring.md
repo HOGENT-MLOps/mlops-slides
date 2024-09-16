@@ -52,4 +52,5 @@
 ### Online courses
 
 -   DevOps Foundations: Monitoring and Observability, Linkedin Learning:
-    https://www.linkedin.com/learning/devops-foundations-monitoring-and-observability/ - Students of HOGENT get free access to LinkedIn Learning through [Academic Software](https://academicsoftware.eu/login).
+    https://www.linkedin.com/learning/devops-foundations-monitoring-and-observability/
+    -   Students of HOGENT get free access to LinkedIn Learning through [Academic Software](https://academicsoftware.eu/login).
