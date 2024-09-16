@@ -24,10 +24,6 @@ Go through the theory sources provided below (or find your own) to achieve the f
 
 ## Theory
 
-### Articles
-
-TODO:
-
 ### Videos
 
 #### Kubernetes concepts
