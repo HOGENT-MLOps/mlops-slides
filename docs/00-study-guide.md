@@ -166,12 +166,12 @@ Following weekly schedule is just an approximation! If classes are dropped, for 
 3. (continued)
 4. M3. The ML Workflow (guest lecture)
 5. (continued)
-6. (continued)
-7. M4. Kubernetes
-8. (continued)
-9. M5. Edge deployments & hyperparameter tuning
+6. M4. Kubernetes
+7. (continued)
+8. M5. Edge deployments
+9. M6. Hyperparameter tuning
 10. (continued)
-11. M6. Monitoring and logging
+11. M7. Monitoring and logging
 12. (continued)
 13. Optional: catch-up session
 
