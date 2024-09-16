@@ -58,6 +58,11 @@ Go through the theory sources provided below (or find your own) to achieve the f
 -   Docker Compose: https://docs.docker.com/compose/
 -   Portainer: https://documentation.portainer.io/
 
+### Online courses
+
+-   Learning Docker, LinkedIn Learning: https://www.linkedin.com/learning/learning-docker-17236240
+    - Students of HOGENT get free access to LinkedIn Learning through [Academic Software](https://academicsoftware.eu/login).
+
 ### Books
 
 -   McKendrick, R. & Gallagher, S. (2020) _Mastering Docker._ 4th Edition. Packt Publishing. Retrieved on 2023-09-18 from https://www.packtpub.com/product/mastering-docker-fourth-edition/9781839216572
