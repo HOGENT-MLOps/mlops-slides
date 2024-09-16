@@ -18,8 +18,10 @@ nav:
     - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/04-kubernetes.md
   - "Lesson 5: Edge deployments":
     - Theory: 05-edge-deployments.md
+    - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/05-quantization-and-pruning.md
   - "Lesson 6: Hyperparemeter tuning":
     - Theory: 06-hyperparameter-tuning.md
+    - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/06-hyperparameter-tuning.md
   - "Lesson 7: Monitoring":
     - Theory: 07-monitoring.md
 theme:
