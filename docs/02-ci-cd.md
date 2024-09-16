@@ -49,10 +49,12 @@
 
 ### Online courses
 
+Students of HOGENT get free access to LinkedIn Learning through [Academic Software](https://academicsoftware.eu/login).
+
 -   GitHub Actions for CI/CD, LinkedIn Learning: https://www.linkedin.com/learning/github-actions-for-ci-cd
-    -   Students of HOGENT get free access to LinkedIn Learning through [Academic Software](https://academicsoftware.eu/login).
 -   Learning Github Actions, LinkedIn Learning: https://www.linkedin.com/learning/learning-github-actions-2
 
 ### Books
 
 -   Chandrasekara, C. & Herath, P. (2021). _Hands-on GitHub Actions._ Apress. Retrieved at 2023-09-18 from https://link.springer.com/book/10.1007/978-1-4842-6464-5.
+    -   HOGENT staff and students have free access to this ebook from campus or via VPN.
