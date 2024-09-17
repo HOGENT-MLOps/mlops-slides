@@ -6,17 +6,29 @@ TODO: add requirements
 
 ## Theory
 
+### Articles
+
+-   Machine Learning on Edge Devices: https://medium.com/@vishwajeet.haralkar20/machine-learning-on-edge-devices-34e1085fa894
+-   Quantization: https://huggingface.co/docs/optimum/concept_guides/quantization
+-   Pruning in Deep Learning Model: https://medium.com/@souvik.paul01/pruning-in-deep-learning-models-1067a19acd89
+-   Knowledge Distillation: Principles, Algorithms, Applications: https://neptune.ai/blog/knowledge-distillation
+
 ### Video
 
 -   TensorFlow in 100 seconds: https://www.youtube.com/watch?v=i8NETqtGHms
+-   Quantization in deep learning: https://www.youtube.com/watch?v=v1oHf1KV6kM
+-   Pruning a neural Network for faster training times: https://www.youtube.com/watch?v=tUWnOz0c4pU
+-   TensorFlow model optimization: Quantization and pruning (TF World '19): https://www.youtube.com/watch?v=3JWRVx1OKQQ
+-   Inside TensorFlow: TF Model Optimization Toolkit (Quantization and Pruning): https://www.youtube.com/watch?v=4iq-d2AmfRU
+-   Inside TensorFlow: Quantization aware training: https://www.youtube.com/watch?v=Q1oBXdizXwI
 
 TODO: add more videos
 
 ### Manuals
 
--   TensorFlow Lite Guide: https://www.tensorflow.org/lite/guide
--   TensorFlow Lite Models: https://www.tensorflow.org/lite/models
--   TensorFlow Lite Examples: https://www.tensorflow.org/lite/examples
+-   TensorFlow Lite: https://www.tensorflow.org/lite/guide
+-   TensorFlow Lite examples: https://www.tensorflow.org/lite/examples
+-   TensorFlow model optimization: https://www.tensorflow.org/model_optimization/guide
 
 ### Online Courses
 
