@@ -23,7 +23,7 @@ TODO: add videos
 
 ### Manuals
 
-TODO: add manuals
+-   Prefect: https://docs.prefect.io/
 
 ### Online courses
 
