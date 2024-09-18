@@ -7,14 +7,24 @@ nav:
   - Study guide: 00-study-guide.md
   - Introduction: 00-introduction.md
   - Prerequisites: 00-prerequisites.md
-  - "Lesson 1: docker": 01-docker.md
-  - "Lesson 2: CI/CD": 02-ci-cd.md
+  - "Lesson 1: Docker":
+    - Theory: 01-docker.md
+  - "Lesson 2: CI/CD":
+    - Theory: 02-ci-cd.md
   - "Lesson 3: ML workflow":
-    - Theory: 03-ml-workflow.md
+    - Theory: 03-ml-workflow.pdf
     - "Lab assignment": https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/03-ml-workflow.md
-  - "Lesson 4: kubernetes": 04-kubernetes.md
-  - "Lesson 5: edge deployments": 05-edge-deployments.md
-  - "Lesson 6: monitoring": 06-monitoring.md
+  - "Lesson 4: Kubernetes":
+    - Theory: 04-kubernetes.md
+    - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/04-kubernetes.md
+  - "Lesson 5: Edge deployments":
+    - Theory: 05-edge-deployments.md
+    - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/05-quantization-and-pruning.md
+  - "Lesson 6: Hyperparemeter tuning":
+    - Theory: 06-hyperparameter-tuning.md
+    - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/06-hyperparameter-tuning.md
+  - "Lesson 7: Monitoring":
+    - Theory: 07-monitoring.md
 theme:
   name: material # https://squidfunk.github.io/mkdocs-material/setup/
   favicon: https://hogenttin.github.io/cdn/favicon/favicon.ico
