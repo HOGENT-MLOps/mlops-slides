@@ -2,7 +2,13 @@
 
 ## Requirements
 
-TODO: add requirements
+-   You understand the basic concepts of a machine learning pipeline.
+-   You know which components are minimally required in a machine learning pipeline.
+-   You are able to translate a Jupyter notebook into a machine learning pipeline.
+-   You understand what a virtual environment is and how to use it.
+-   You understand what Prefect and MLFlow are and what they are used for.
+-   You are able to run a machine learning pipeline with Prefect.
+-   You are able to log metrics and artifacts with MLFlow.
 
 ## Theory
 
