@@ -19,7 +19,15 @@ The slides of the guest lecture on the ML workflow can be found [here](./assets/
 
 ### Videos
 
-TODO: add videos
+-   What Is a Machine Learning Pipeline?: https://www.youtube.com/watch?v=HWWxtVL-D9k
+-   Prefect 3.0: A Framework to Build Resilient Pipelines: https://www.youtube.com/watch?v=cW18kscqAaw
+-   An Introduction to Your First Prefect Flow: https://www.youtube.com/watch?v=4yIW34WcmBQ
+-   Getting Started with Prefect | Task Orchestration & Data Workflows: https://www.youtube.com/watch?v=D5DhwVNHWeU
+    -   Very in depth video about Prefect, only the first 6 sections are relevant for this course.
+    -   Feel free to watch the entire video if you are interested in Prefect.
+-   MLFlow: A Quickstart Guide: https://www.youtube.com/watch?v=cjeCAoW83_U
+-   MLFlow Tutorial | ML Ops Tutorial: https://www.youtube.com/watch?v=6ngxBkx05Fs
+    -   Skip the last section about Dagshub.
 
 ### Manuals
 
