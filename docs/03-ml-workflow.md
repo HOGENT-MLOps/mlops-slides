@@ -31,7 +31,9 @@ The slides of the guest lecture on the ML workflow can be found [here](./assets/
 
 ### Manuals
 
+-   Python virtual environments: https://docs.python.org/3/tutorial/venv.html
 -   Prefect: https://docs.prefect.io/
+-   MLFlow: https://mlflow.org/docs/latest/index.html
 
 ### Online courses
 
