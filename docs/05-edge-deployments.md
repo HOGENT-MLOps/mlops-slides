@@ -16,8 +16,12 @@
 
 ### Articles
 
--   Machine Learning on Edge Devices: https://medium.com/@vishwajeet.haralkar20/machine-learning-on-edge-devices-34e1085fa894
+-   Deep Learning on the Edge: https://www.kdnuggets.com/2018/09/deep-learning-edge.html
+-   Why Machine Learning on the Edge?: https://towardsdatascience.com/why-machine-learning-on-the-edge-92fac32105e6
+-   Gemini Nano lets you complete helpful AI tasks without a network connection: https://store.google.com/intl/en/ideas/articles/gemini-nano-google-pixel/
+    -   Gemini Nano (product page): https://deepmind.google/technologies/gemini/nano/
 -   Quantization: https://huggingface.co/docs/optimum/concept_guides/quantization
+-   8-Bit Quantization and TensorFlow Lite: Speeding up mobile inference with low precision: https://fritz.ai/8-bit-quantization-and-tensorflow-lite/
 -   Pruning in Deep Learning Model: https://medium.com/@souvik.paul01/pruning-in-deep-learning-models-1067a19acd89
 -   Knowledge Distillation: Principles, Algorithms, Applications: https://neptune.ai/blog/knowledge-distillation
 
