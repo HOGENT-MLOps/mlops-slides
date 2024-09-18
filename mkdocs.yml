@@ -13,6 +13,7 @@ nav:
     - Theory: 02-ci-cd.md
   - "Lesson 3: ML workflow":
     - Theory: 03-ml-workflow.pdf
+    - "Lab assignment": https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/03-ml-workflow.md
   - "Lesson 4: Kubernetes":
     - Theory: 04-kubernetes.md
     - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/04-kubernetes.md
