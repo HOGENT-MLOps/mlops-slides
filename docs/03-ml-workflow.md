@@ -45,3 +45,4 @@ The slides of the guest lecture on the ML workflow can be found [here](./assets/
 
 -   Microsoft Azure Machine Learning Fundamentals, LinkedIn Learning: https://www.linkedin.com/learning/microsoft-azure-machine-learning-fundamentals/microsoft-azure-machine-learning-fundamentals-introduction
     -   HOGENT students have free access to LinkedIn Learning via [Academic Software](http://academicsoftware.eu/).
+    -   _While Prefect is excellent for academic use, Azure ML is a widely adopted technology in the industry for managing ML pipelines. If you're looking to deepen your understanding of a widely utilized ML pipeline technology, it would be beneficial to explore the following resources._
