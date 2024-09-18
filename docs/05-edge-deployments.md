@@ -2,7 +2,15 @@
 
 ## Requirements
 
-TODO: add requirements
+-   You should understand the difficulties of deploying machine learning models on edge devices (e.g. smartphones, raspberry pi's, etc.).
+-   You should understand the following model optimization techniques and their benefits and drawbacks:
+    -   Quantization
+    -   Pruning
+    -   Knowledge distillation
+-   You should be able to create a TensorFlow Lite model from a TensorFlow model.
+-   You should be able to apply the following model optimization techniques to a TensorFlow model:
+    -   Quantization
+    -   Pruning
 
 ## Theory
 
@@ -21,8 +29,6 @@ TODO: add requirements
 -   TensorFlow model optimization: Quantization and pruning (TF World '19): https://www.youtube.com/watch?v=3JWRVx1OKQQ
 -   Inside TensorFlow: TF Model Optimization Toolkit (Quantization and Pruning): https://www.youtube.com/watch?v=4iq-d2AmfRU
 -   Inside TensorFlow: Quantization aware training: https://www.youtube.com/watch?v=Q1oBXdizXwI
-
-TODO: add more videos
 
 ### Manuals
 
