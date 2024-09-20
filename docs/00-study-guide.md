@@ -196,6 +196,8 @@ To pass this course, you must demonstrate that you are at least "proficient" for
 
 Note that you must deliver both a working product (= source code) and submit the reports as well as the demos. If any of the deliverables are missing, the assignment will be considered unrealized.
 
+If you demonstrated all lab assignments during the semester, you don't have to do anything during the exam period. If you couldn't demonstrate all lab assignments during the semester, you will have to demonstrate the missing ones during the exam period. You get at most 20 minutes to present the missing lab assignments.
+
 ## Deadlines
 
 Students must deliver and personally demonstrate partial deliverables to the lecturer within allotted time frames during the semester. These time frames are considered interim deadlines under [HOGENT regulations](https://www.hogent.be/student/een-vlotte-start/onderwijs-en-examenregeling/). Failure to deliver partial results on time is thus considered failure to meet interim deadlines and is sanctioned as such. A student will then receive the assessment "not yet proficient" for the lab assignments that were not delivered on time and consequently cannot pass.
