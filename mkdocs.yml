@@ -9,11 +9,13 @@ nav:
   - Prerequisites: 00-prerequisites.md
   - "Lesson 1: Docker":
     - Theory: 01-docker.md
+    - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/01-docker.md
   - "Lesson 2: CI/CD":
     - Theory: 02-ci-cd.md
+    - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/02-cicd.md
   - "Lesson 3: ML workflow":
     - Theory: 03-ml-workflow.pdf
-    - "Lab assignment": https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/03-ml-workflow.md
+    - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/03-ml-workflow.md
   - "Lesson 4: Kubernetes":
     - Theory: 04-kubernetes.md
     - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/04-kubernetes.md
@@ -25,6 +27,7 @@ nav:
     - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/06-hyperparameter-tuning.md
   - "Lesson 7: Monitoring":
     - Theory: 07-monitoring.md
+    - Lab assignment: https://github.com/HOGENT-MLOps/mlops-labs/blob/main/assignments/07-monitoring.md
 theme:
   name: material # https://squidfunk.github.io/mkdocs-material/setup/
   favicon: https://hogenttin.github.io/cdn/favicon/favicon.ico
