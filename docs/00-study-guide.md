@@ -70,7 +70,7 @@ We expect an average proficiency in:
     -   Setting up a CI/CD pipeline with GitHub Actions.
 -   Module 3: The ML workflow
     -   Introduction to the flow of an ML project.
-    -   Setting up an ML pipeline in Azure ML.
+    -   Setting up an ML pipeline in Prefect.
     -   Guest lecture by Captic, a recording will be provided for TIAO.
 -   Module 4: Kubernetes
     -   Introduction to the basic building blocks of Kubernetes.
