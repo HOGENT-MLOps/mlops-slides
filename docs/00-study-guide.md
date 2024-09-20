@@ -74,11 +74,12 @@ We expect an average proficiency in:
     -   Guest lecture by Captic, a recording will be provided for TIAO.
 -   Module 4: Kubernetes
     -   Introduction to the basic building blocks of Kubernetes.
--   Module 5: Edge deployments & Hyperparameter tuning
+-   Module 5: Edge deployments
     -   Introduction to the challenges of and techniques for ML models on the edge.
     -   Training a TensorFlow Lite model.
+-   Module 6: Hyperparameter tuning
     -   Introduction to hyperparameter tuning.
--   Module 6: Monitoring and logging
+-   Module 7: Monitoring and logging
     -   Monitoring the ML pipeline, the model in production, the build VM...
     -   Collecting logs from the ML pipeline and the model in production.
 
