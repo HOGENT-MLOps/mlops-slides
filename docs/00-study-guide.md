@@ -85,7 +85,7 @@ We expect an average proficiency in:
 
 :bulb: Comments and feedback on the course content can be given in class, via email or through an issue/PR on the GitHub repository.
 
-## Learning mateirials
+## Learning materials
 
 ### Theoretical learning materials
 
@@ -132,6 +132,8 @@ Help each other in this: working together and sharing knowledge is encouraged. T
 -   You can only demo a lab assignment once.
 -   You must present a demo within 3 weeks after the theoretical session (see [schedule](#semester-schedule)), otherwise the lab will be marked als "absent".
     -   This short time frame is there to encourage you to present lab assignments during the semester instead of cramming everything in at the end.
+    -   Note for TIAO: there is no deadline for the demo, but it is recommended to do it as soon as possible.
+-   You are limited to performing one demo per week.
 -   You can demo a lab during contact times or by sending us a Panopto video.
 
 Requirements for Panopto submission of a lab:
