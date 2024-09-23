@@ -62,6 +62,7 @@ Go through the theory sources provided below (or find your own) to achieve the f
 
 -   Learning Docker, LinkedIn Learning: https://www.linkedin.com/learning/learning-docker-17236240
     - Students of HOGENT get free access to LinkedIn Learning through [Academic Software](https://academicsoftware.eu/login).
+-   Introduction to Docker (slides only): https://hogenttin.github.io/docker-intro
 
 ### Books
 
