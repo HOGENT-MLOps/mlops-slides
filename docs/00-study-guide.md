@@ -66,9 +66,9 @@ We expect an average proficiency in:
 -   Module 1: Docker
     -   Building and publishing a container image.
     -   Managing multiple containers using Docker Compose.
--   Module 2: continuous integration/delivery
+-   Module 2: Continuous integration/delivery
     -   Setting up a CI/CD pipeline with GitHub Actions.
--   Module 3: The ML workflow
+-   Module 3: ML workflow
     -   Introduction to the flow of an ML project.
     -   Setting up an ML pipeline in Prefect.
     -   Guest lecture by Captic, a recording will be provided for TIAO.
