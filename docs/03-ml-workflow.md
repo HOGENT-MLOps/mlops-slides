@@ -12,7 +12,10 @@
 
 ## Theory
 
-The slides of the guest lecture on the ML workflow can be found [here](./assets/03/03-ml-workflow.pdf).
+### Guest lecture
+
+-   [Slides](./assets/03/03-ml-workflow.pdf)
+-   [Recording](https://hogent.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0f6fe5ff-562a-43bd-b356-b20900878950)
 
 ### Articles
 
