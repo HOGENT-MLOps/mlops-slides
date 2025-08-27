@@ -1,18 +1,23 @@
 # Expected prerequisites
 
-The skills you can acquire in this course build on those you should already have mastered from previous courses in the program,specifically:
+The skills you will acquire in this course build on those you should already have mastered from previous courses in the program, specifically:
 
 -   Basic knowledge of Linux (_Linux for Data Scientists_)
 -   Container virtualization/Docker (_Computer Systems, System Engineering Lab, and Linux for Data Scientists_)
 
-In this chapter, you will find some references to resources you can use if you want to refresh or review these topics.
+This chapter provides references to resources you can use to refresh or review these topics if needed.
 
 ## Linux for Data Scientists
 
-### Slides
+Refer to the following resources from the Linux for Data Scientists course:
 
-See the slides from the Linux for Data Scientists course: [https://hogenttin.github.io/linux-slides/datalinux.html](https://hogenttin.github.io/linux-slides/datalinux.html).
+-   Slides: <https://hogenttin.github.io/linux-slides/datalinux.html>
+-   E-book: Cobbaut, P. (2015). _Linux Fundamentals_. Retrieved on 2023-09-18 from <https://linux-training.be/linuxfun.pdf> or <http://linux-training.be/index.php>.
 
-### E-books
+## Operating Systems
 
--   Cobbaut, P. (2015) _Linux Fundamentals_. Retrieved on 2023-09-18 from [https://linux-training.be/linuxfun.pdf](https://linux-training.be/linuxfun.pdf), or [http://linux-training.be/index.php](http://linux-training.be/index.php)
+Refer to the slides and lab assignments from the Operating Systems course: <https://hogenttin.github.io/operating-systems/>
+
+## System Engineering Lab
+
+Refer to the assignments from the System Engineering Lab course: <https://github.com/HOGENT-SELab/selab-labs>.
