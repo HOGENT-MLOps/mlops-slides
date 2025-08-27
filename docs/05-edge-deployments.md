@@ -22,6 +22,7 @@
     -   Gemini Nano (product page): https://deepmind.google/technologies/gemini/nano/
 -   Quantization: https://huggingface.co/docs/optimum/concept_guides/quantization
 -   8-Bit Quantization and TensorFlow Lite: Speeding up mobile inference with low precision: https://fritz.ai/8-bit-quantization-and-tensorflow-lite/
+-   A Visual Guide to Quantization: https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization
 -   Pruning in Deep Learning Model: https://medium.com/@souvik.paul01/pruning-in-deep-learning-models-1067a19acd89
 -   Knowledge Distillation: Principles, Algorithms, Applications: https://neptune.ai/blog/knowledge-distillation
 
@@ -39,6 +40,9 @@
 -   TensorFlow Lite: https://www.tensorflow.org/lite/guide
 -   TensorFlow Lite examples: https://www.tensorflow.org/lite/examples
 -   TensorFlow model optimization: https://www.tensorflow.org/model_optimization/guide
+-   Post-training quantization: https://ai.google.dev/edge/litert/models/post_training_quantization
+-   Quantization aware training comprehensive guide: https://www.tensorflow.org/model_optimization/guide/quantization/training_comprehensive_guide
+-   Pruning comprehensive guide: https://www.tensorflow.org/model_optimization/guide/pruning/comprehensive_guide
 
 ### Online Courses
 
