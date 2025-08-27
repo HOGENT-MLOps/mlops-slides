@@ -62,6 +62,8 @@ We expect an average proficiency in:
 
 ## Course contents
 
+<!-- TODO: update the course contents -->
+
 -   Introduction, setting up working environment.
 -   Module 1: Docker
     -   Building and publishing a container image.
@@ -72,14 +74,12 @@ We expect an average proficiency in:
     -   Introduction to the flow of an ML project.
     -   Setting up an ML pipeline in Prefect.
     -   Guest lecture by Captic, a recording will be provided for TIAO.
--   Module 4: Kubernetes
-    -   Introduction to the basic building blocks of Kubernetes.
--   Module 5: Edge deployments
+-   Module 4: Quantization and pruning
     -   Introduction to the challenges of and techniques for ML models on the edge.
-    -   Training a TensorFlow Lite model.
--   Module 6: Hyperparameter tuning
+    -   Training a TensorFlow Lite model using quantization and pruning techniques.
+-   Module 5: Hyperparameter tuning
     -   Introduction to hyperparameter tuning.
--   Module 7: Monitoring and logging
+-   Module 6: Monitoring and logging
     -   Monitoring the ML pipeline, the model in production, the build VM...
     -   Collecting logs from the ML pipeline and the model in production.
 
