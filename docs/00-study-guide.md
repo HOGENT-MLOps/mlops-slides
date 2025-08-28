@@ -230,6 +230,6 @@ Students must deliver and personally demonstrate partial deliverables to the lec
 
 Students who do not pass the course will have a second examination opportunity (resit) to complete only the lab assignments for which competence was not demonstrated. You must complete and present these outstanding labs.
 
-During the resit exam period, you will have up to 20 minutes to demonstrate a maximum of 2 lab assignments and answer questions from the lecturer. If you need to present more than 2 labs, you must submit Panopto videos for the additional labs before the resit exam period begins.
+During the resit exam period, you will have up to 20 minutes to demonstrate a maximum of 2 lab assignments and answer questions from the lecturer. If you need to present more than 2 labs, you must submit Panopto videos for the additional labs before a given deadline in the resit exam period.
 
 :warning: If you do not schedule an appointment to discuss the labs you need to resit by the end of the feedback period, you will be considered as not participating in the second exam opportunity.
