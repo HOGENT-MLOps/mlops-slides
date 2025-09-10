@@ -2,13 +2,13 @@
 
 ## Course within the curriculum
 
-This course provides an introduction to the field of Machine Learning Operations, i.e., deploying, maintaining and monitoring Machine Learning models in production.
+This course provides an introduction to the field of Machine Learning Operations (MLOps), which encompasses deploying, maintaining, and monitoring machine learning models in production environments.
 
-It is often thought that the ML code is the largest part of an ML project, but nothing could be further from the truth. The code is only a small fraction of the entire project. Other components to consider include data collection, model analysis, configuration, automation, serving infrastructure, metadata management, monitoring, and more. This is nicely illustrated in the paper by [Sculley et al. (2015)](https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf).
+It is commonly assumed that the ML code constitutes the largest component of an ML project, but this is far from the truth. The code represents only a small fraction of the entire project. Other critical components include data collection, model analysis, configuration, automation, serving infrastructure, metadata management, monitoring, and more. This reality is effectively illustrated in the paper by [Sculley et al. (2015)](https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf).
 
-When working as an AI & Data Engineer, it is thus essential to have knowledge of the best practices in Machine Learning Operations. Of course, this subject area is too large to cover entirely. This course focuses on the most important topics and tools, leaving room in each lab for experiments on your own initiative.
+When working as an AI & Data Engineer, it is essential to have knowledge of best practices in Machine Learning Operations. Due to the breadth of this subject area, this course focuses on the most important topics and tools while leaving room in each lab for independent experimentation and exploration.
 
-This course came about thanks to an intense collaboration with [Captic](https://www.captic.com), resulting in content well tailored to the field and consisting of labs based on real use cases.
+This course was developed through intensive collaboration with [Captic](https://www.captic.com), resulting in content that is well-tailored to industry needs and labs based on real-world use cases.
 
 ![](./assets/captic.svg)
 
@@ -37,51 +37,51 @@ flowchart LR
 
 ## Learning goals and competences
 
-The knowledge and skills you gain in Machine Learning Operations can also be applied in the course Data Engineering Project II.
+The knowledge and skills you acquire in Machine Learning Operations can also be applied in the course Data Engineering Project II.
 
-After successful completion of this course:
+Upon successful completion of this course, you will be able to:
 
--   You can describe **CI/CD principles** in the context of ML.
--   You can put an ML model into **production** and **monitor** it using CI/CD principles.
--   You can describe the challenges and possible solutions for running an ML model on devices with limited computing power.
--   You run an ML model on a device with **limited computing power**, e.g. using Tensorflow Lite.
--   You can use virtualization and containerization techniques to **deploy** an ML model.
+-   Describe **CI/CD principles** in the context of ML.
+-   Deploy an ML model into **production** and **monitor** it using CI/CD principles.
+-   Describe the challenges and possible solutions for running ML models on devices with limited computing power.
+-   Deploy and run ML models on devices with **limited computing power**, e.g., using TensorFlow Lite.
+-   Use virtualization and containerization techniques to **deploy** ML models.
 
 ## Required prior knowledge
 
-We expect an average proficiency in:
+We expect average proficiency in the following areas:
 
--   Linux:
-    -   Installation of software
+-   **Linux:**
+    -   Software installation
     -   Basic commands
     -   Bash scripting
--   Docker
+-   **Docker:**
     -   Building container images
-    -   Managing containers, volumes and port bindings
--   Git and GitHub
+    -   Managing containers, volumes, and port bindings
+-   **Git and GitHub**
 
 ## Course contents
 
--   Introduction, setting up working environment.
--   Module 1: Docker
-    -   Building and publishing a container image.
-    -   Managing multiple containers using Docker Compose.
--   Module 2: Continuous integration/delivery
-    -   Setting up a CI/CD pipeline with GitHub Actions.
--   Module 3: ML workflow
-    -   Introduction to the flow of an ML project.
-    -   Setting up an ML pipeline in Prefect.
-    -   Guest lecture by Captic, a recording will be provided for TIAO.
--   Module 4: Kubernetes
-    -   Introduction to the basic building blocks of Kubernetes.
--   Module 5: Edge deployments
-    -   Introduction to the challenges of and techniques for ML models on the edge.
-    -   Training a TensorFlow Lite model.
--   Module 6: Hyperparameter tuning
-    -   Introduction to hyperparameter tuning.
--   Module 7: Monitoring and logging
-    -   Monitoring the ML pipeline, the model in production, the build VM...
-    -   Collecting logs from the ML pipeline and the model in production.
+<!-- TODO: update the course contents -->
+
+-   **Introduction:** Setting up the working environment
+-   **Module 1: Docker**
+    -   Building and publishing container images
+    -   Managing multiple containers using Docker Compose
+-   **Module 2: Continuous Integration/Delivery**
+    -   Setting up CI/CD pipelines with GitHub Actions
+-   **Module 3: ML Workflow**
+    -   Introduction to ML project workflows
+    -   Setting up ML pipelines in Prefect
+    -   Guest lecture by Captic (recording provided for TIAO students)
+-   **Module 4: Quantization and Pruning**
+    -   Introduction to challenges and techniques for ML models on edge devices
+    -   Training TensorFlow Lite models using quantization and pruning techniques
+-   **Module 5: Hyperparameter Tuning**
+    -   Introduction to hyperparameter optimization
+-   **Module 6: Monitoring and Logging**
+    -   Monitoring ML pipelines, models in production, and build VMs
+    -   Collecting logs from ML pipelines and production models
 
 :bulb: Comments and feedback on the course content can be given in class, via email or through an issue/PR on the GitHub repository.
 
@@ -89,17 +89,19 @@ We expect an average proficiency in:
 
 ### Theoretical learning materials
 
-The theoretical content is selected from material found all over the world wide web. This can include, but is not limited to material on [YouTube](https://www.youtube.com/), [LinkedIn Learning](https://www.linkedin.com/learning/), videos on [Panopto](https://hogent.cloud.panopto.eu/)...
+The theoretical content is curated from materials found across the web, including resources from [YouTube](https://www.youtube.com/), [LinkedIn Learning](https://www.linkedin.com/learning/), and videos on [Panopto](https://hogent.cloud.panopto.eu/).
 
-We provide a well-curated list of resources per module. They provide a ground knowlegde of the domain of Machine Learning Operations. These topics should help as well in tackling the labs by having a theoretical foundation. Do not forget you will be questioned on this theoretical material during the demonstrations of the individual lab assignments. As a study method, you should build up your summary notes after each moment of self-study. Ask yourself enough questions and transition from a traditional student to a life-long-learner.
+We provide a carefully curated list of resources for each module. These resources provide foundational knowledge in the domain of Machine Learning Operations and serve as theoretical support for tackling the lab assignments. You will be questioned on this theoretical material during the demonstrations of individual lab assignments. As a study method, you should build summary notes after each self-study session. Ask yourself questions and transition from a traditional student mindset to that of a lifelong learner.
 
 ### Lab assignments
 
-During class hours, you will work on lab assignments. These are practical exercises that allow you to apply the theoretical knowledge you have acquired. The lab assignments are based on real use cases and provide a solid basis to build on in your future career.
+During class hours, you will work on lab assignments. These are practical exercises that allow you to apply the theoretical knowledge you have acquired. The lab assignments are based on real use cases and provide a solid foundation for your future career.
 
-Your lecturer is available to help you with the lab assignments. If you get stuck, search on the Internet first. If you still can't find a solution, don't hesitate to ask for help. The lecturer can give you tips or refer you to suitable additional study materials.
+Most lab assignments are performed in a local environment on your personal computer. It is important to understand that the concepts and tools you learn are transferable to other platforms and cloud services (such as AWS, Azure, or Google Cloud). You are encouraged to explore how these principles apply in different environments and to experiment with translating your solutions to other cloud providers as part of your learning process.
 
-:bulb: Although the course content is written in English, the lessons are given in Dutch.
+Your lecturer is available to help you with the lab assignments. If you encounter difficulties, search the internet first. If you still cannot find a solution, do not hesitate to ask for help. The lecturer can provide guidance or direct you to suitable additional study materials.
+
+:bulb: Although the course content is written in English, all guidance and support is provided in Dutch.
 
 ## Teaching methods
 
@@ -111,112 +113,123 @@ In this course, you will work primarily on lab assignments. The supporting study
 
 ### Flipped classroom
 
-This course will use a flipped-classroom approach: the theory is explained using videos and material from external sources. This shall be assessed by every student before coming to the lectures. About 90 minutes of self-lecture materials per week is what you are up for. This will allow us to work hands-on with the concepts that you have learned during class hours. Beware: if you are unprepared, your presence in class will be pretty useless and working on labs will be of no use to you. Contact moments during class hours of course can be used to ask questions on the materials that you have studied, if something would be unclear. Also, the other way round, tutors might ask some questions to you!
+This course employs a flipped classroom approach: theory is explained through videos and materials from external sources. Students must review these materials before attending lectures. Approximately 90 minutes of self-study materials per week are required. This approach allows us to work hands-on with the concepts you have learned during class hours.
 
-### Contact moments (Gent, Aalst & virtual campus)
+**Important:** If you come unprepared, your presence in class will be largely unproductive, and working on labs will be of little benefit to you. Contact moments during class hours can be used to ask questions about the materials you have studied if anything is unclear. Conversely, instructors may also ask you questions about the material!
 
-During regular contact moments students work independently on lab assignments. Students can then request explanations for specific problems or can demonstrate the result in class or through a Panopto video.
+### Contact moments
 
-### TIAO
+#### Gent, Aalst & virtual campus
 
-TIAO students process the material at their own pace, using the study materials provided, and complete the lab assignments. They can make an appointment with the lecturer at the contact moments for TIAO students for an individual progress discussion and follow-up. TIAO students show interim results in a Panopto video.
+During regular contact moments, students work independently on lab assignments. Students can request explanations for specific problems or demonstrate their results in class or through a Panopto video. Be aware of the deadlines (see further below).
+
+#### TIAO
+
+TIAO students process the material at their own pace using the provided study materials and complete the lab assignments. They can schedule appointments with the lecturer during TIAO contact moments for individual progress discussions and follow-up.
+
+There are no fixed deadlines for TIAO students, but it is strongly recommended to complete assignments as early as possible.
 
 ## Working and learning instructions
 
-Working with lab assignments requires a certain degree of independence from you as a student, but that is precisely also an attitude expected of a IT professional. Thus, you take the initiative yourself to acquire the necessary knowledge and look for solutions to the problems you will undoubtedly encounter.
+Working with lab assignments requires a degree of independence from you as a student, which is precisely the attitude expected of an IT professional. You must take the initiative to acquire the necessary knowledge and seek solutions to the problems you will undoubtedly encounter.
 
-Help each other in this: working together and sharing knowledge is encouraged. The lecturer is available to assist you if you get stuck and can give you tips or refer you to suitable additional study materials. Be sure to stop by if you get stuck somewhere so the lecturer can help you get back on track!
+Help each other in this process: collaboration and knowledge sharing are encouraged. The lecturer is available to assist you if you encounter difficulties and can provide guidance or direct you to suitable additional study materials. Be sure to seek help if you get stuck so the lecturer can help you get back on track!
 
 ## Demo instructions
 
+Throughout the semester, you are required to demonstrate your lab assignments. These demos are a key component of the learning process, providing you with the opportunity to present your work, confirm your understanding, and receive valuable feedback. To help you make the most of this opportunity, please prepare carefully and follow the guidelines below:
+
 -   You can only demo a lab assignment once.
--   You must present a demo within 3 weeks after the theoretical session (see [schedule](#semester-schedule)), otherwise the lab will be marked als "absent".
-    -   This short time frame is there to encourage you to present lab assignments during the semester instead of cramming everything in at the end.
-    -   Note for TIAO: there is no deadline for the demo, but it is recommended to do it as soon as possible.
+-   You must present your work within 3 weeks after the announced start date for the assignment (see [semester schedule](#semester-schedule)); otherwise, the lab will be marked as "absent".
+    -   Deadlines are intentionally strict to encourage you to present lab assignments throughout the semester rather than postponing everything until the end.
+    -   **Note for TIAO:** While there is no fixed deadline for demos, it is strongly recommended to complete them as early as possible.
 -   You are limited to performing one demo per week.
--   You can demo a lab during contact times or by sending us a Panopto video.
+-   Demos may not exceed 15 minutes.
+-   You can demo a lab during contact times or by submitting a Panopto video.
 
-Requirements for Panopto submission of a lab:
+**Requirements for Panopto submission of a lab:**
 
--   Use the acceptance criteria to guide the demo. We can't ask additional information as with a demo during contact times. What we don't see or hear, we can't take into account. Be thorough!
--   Demonstrate the use of software, don't just go over your lab report. We want to see the lab in action!
--   Send the link within the given time frame.
+-   Use the acceptance criteria to guide the demo.
+-   Demonstrate the use of software; don't just review your lab report. We want to see the lab in action!
+-   We cannot ask additional questions as we would during an in-person demo. What we don't see or hear, we cannot take into account. Be thorough!
+-   Submit the link within the given timeframe.
 
 ## Tutoring
 
-If you have questions about the course content, or are unsure about/stuck on an exercise, ask for help!
+If you have questions about the course content or are unsure about or stuck on an exercise, ask for help!
 
--   Regular and virtual campus students are best to speak to their supervising lecturer during contact times.
--   TIAO students can make an appointment. Depending on the availability of the lecturer, this may take place on campus or through Teams.
--   Contacting the lecturers personally (via email) is only done if you have a personal question that is confidential or not relevant to other students.
-    -   Do not use Teams, email only.
--   Under no circumstances is it ok to call the lecturers via Teams for a voice or video call. If necessary, the lecturers will schedule a Teams call with you at a pre-arranged time.
--   Keep in mind that the lecturers cannot answer questions on a daily basis! Even during a vacation or recess, you may not count on an answer.
+-   Regular and virtual campus students should speak to their supervising lecturer during contact times.
+-   TIAO students can schedule appointments. Depending on the lecturer's availability, this may take place on campus or through Teams.
+-   Contact lecturers personally (via email) only if you have a personal question that is confidential or not relevant to other students.
+    -   Do not use Teams; email only.
+-   Under no circumstances should you call the lecturers via Teams for a voice or video call. If necessary, your lecturer will schedule a Teams call with you at a pre-arranged time.
+-   Keep in mind that lecturers cannot answer questions on a daily basis! Even during vacation or recess, you may not expect an immediate answer.
 
-Contact information lecturers:
+**Contact information lecturers:**
 
--   Thomas Aelbrecht (titular): thomas.aelbrecht@hogent.be
+-   Simon De Gheselle (titular): simon.degheselle@hogent.be
+-   Thomas Aelbrecht: thomas.aelbrecht@hogent.be
 -   Martijn Saelens: martijn.saelens@hogent.be
 
-:bulb: It always gives a bad impression when you don't seem to know which lecturer you are assigned to...
+:bulb: It always gives a poor impression when you don't seem to know which lecturer you are assigned to...
 
 ## Semester schedule
 
-Following weekly schedule is just an approximation! If classes are dropped, for example due to furloughs, shifts may occur.
+The following schedule provides suggested start dates for each module. Actual dates may shift due to holidays, unforeseen events, or changes in the academic calendar. Please use this as a guideline and stay updated on any announcements regarding schedule adjustments.
 
-1. Introduction, software install, M1. Docker
-2. M2. CI/CD pipelines
+<!-- TODO: update the schedule when the new labs are ready -->
+
+1. **Introduction:** Software installation / **Lab 1:** Docker
+2. **Lab 2:** CI/CD pipelines
 3. (continued)
-4. M3. The ML Workflow (guest lecture)
+4. **Lab 3:** The ML Workflow (guest lecture)
 5. (continued)
-6. M4. Kubernetes
-7. (continued)
-8. M5. Edge deployments
-9. M6. Hyperparameter tuning
-10. (continued)
-11. M7. Monitoring and logging
+6. (continued)
+7. **Lab 4:** Edge deployments
+8. **Lab 5:** Hyperparameter tuning
+9. (continued)
+10. **Lab 6:** Monitoring and logging
+11. (continued)
 12. (continued)
-13. Optional: catch-up session
+13. **Optional:** Catch-up session
 
 ## Assessment
 
-The evaluation of this course is done entirely through permanent evaluation. More specifically, you will be evaluated on the way you performed the given lab assignments.
+The evaluation of this course is conducted entirely through continuous assessment. Specifically, you will be evaluated based on your performance on the assigned lab assignments.
 
-You are evaluated on the basis of a portfolio that you put together during the semester and that you defend at an evaluation moment during the exam period. Specifically, that portfolio consists of the following elements:
+You are evaluated based on a portfolio that you compile during the semester and defend throughout the semester and optionally during an evaluation moment in the exam period. Specifically, that portfolio consists of the following elements:
 
--   The source code, maintained by each student in an assigned GitHub repository
+-   Source code maintained by each student in an assigned GitHub repository
 -   Detailed lab reports, also maintained in an assigned GitHub repository
 -   Demonstration of partial results to the lecturer during the semester
 -   Demonstration of final results to the lecturer during the exam period
--   The assignment of the exam grade is based on "rubrics" described in the evaluation card published on Chamilo.
+-   Grade assignment is based on "rubrics" described in the evaluation card published on Chamilo
 
-A table lists a number of criteria that you must meet. You can "meet" at different levels, specifically "proficient", "advanced", "expert", or at worst "not yet proficient". The evaluation chart describes exactly what you need to do to achieve each level.
+A table lists a number of criteria that you must meet. You can "meet" these at different levels: "proficient", "advanced", "expert", or at worst "not yet proficient". The evaluation chart describes exactly what you need to do to achieve each level.
 
-To pass this course, you must demonstrate that you are at least "proficient" for all technical criteria. In other words, even if you are found "not yet proficient" for only one criterion, you cannot pass, no matter how well you have completed the other modules. The non-technical criteria (e.g. reporting) can still positively or negatively influence the exam grade depending on the level achieved (and possibly even cause you to drop below 10/20!).
+To pass this course, you must successfully complete and pass each individual lab assignment. If you fail to meet the minimum requirements for any lab, you cannot pass the course, regardless of your performance on other labs. Non-technical criteria (such as reporting) also impact your final grade and may lower your score below the passing threshold (10/20) if not adequately addressed.
 
-Note that you must deliver both a working product (= source code) and submit the reports as well as the demos. If any of the deliverables are missing, the assignment will be considered unrealized.
+Note that you must deliver a working product (source code), submit the reports, and provide the required demos. If any deliverable is missing, the assignment will be considered incomplete and you will receive a score of 0 for that assignment.
 
-If you demonstrated all lab assignments during the semester, you don't have to do anything during the exam period. If you couldn't demonstrate all lab assignments during the semester, you will have to demonstrate the missing ones during the exam period. You get at most 20 minutes to present the missing lab assignments.
+If you have successfully demonstrated all lab assignments during the semester, no further action is required during the exam period. If any lab assignments remain undemonstrated, you must present these during the exam period. You will have a maximum of 20 minutes to demonstrate the outstanding lab assignments.
+
+:warning: The exam period can only be used to demonstrate lab assignments for which the deadline has not yet passed. Labs for which the interim deadline has expired cannot be presented during the exam period and will be marked as "not yet proficient" according to HOGENT regulations. It is therefore essential to respect all interim deadlines throughout the semester to ensure eligibility for final demonstration during the exam period.
 
 ## Deadlines
 
-Students must deliver and personally demonstrate partial deliverables to the lecturer within allotted time frames during the semester. These time frames are considered interim deadlines under [HOGENT regulations](https://www.hogent.be/student/een-vlotte-start/onderwijs-en-examenregeling/). Failure to deliver partial results on time is thus considered failure to meet interim deadlines and is sanctioned as such. A student will then receive the assessment "not yet proficient" for the lab assignments that were not delivered on time and consequently cannot pass.
+Students must deliver and personally demonstrate partial deliverables to the lecturer within allotted timeframes during the semester. These timeframes are considered interim deadlines under [HOGENT regulations](https://www.hogent.be/student/een-vlotte-start/onderwijs-en-examenregeling/). Failure to deliver partial results on time is considered failure to meet interim deadlines and is sanctioned accordingly. A student will then receive the assessment "not yet proficient" for the lab assignments that were not delivered on time and consequently cannot pass.
 
--   Regular students regularly visit the lecturer during the contact moments for individual follow-up and for the delivery of partial results. Even if you have realized little or nothing, you come along. After all, that is a sign that you are stuck somewhere, and the lecturer can then help you get back on track.
+-   **Regular students** regularly visit the lecturer during contact moments for individual follow-up and delivery of partial results. Even if you have accomplished little or nothing, you should attend. After all, this indicates that you are stuck somewhere, and the lecturer can then help you get back on track.
 
--   Student distance learning can provide partial results in several ways:
-    -   By screencast via Panopto (forward link to lecturer),
-    -   Via videoconferencing (Microsoft Teams, by appointment),
-    -   During contact moments for TIAO students, if the lecturer is present there (and only by appointment)
+-   **Distance learning students** can provide partial results in several ways:
+    -   By screencast via Panopto (forward link to lecturer)
+    -   Via videoconferencing (Microsoft Teams, by appointment)
+    -   During contact moments for TIAO students, if the lecturer is present (by appointment only)
 
 ## Resit
 
-Those who fail will be given a second examination opportunity in the form of an individual assignment. The exact assignment will depend on your evaluation and will consist specifically of completing labs from the modules where you have not yet demonstrated your competence.
+Students who do not pass the course will have a second examination opportunity (resit) to complete only the lab assignments for which competence was not demonstrated. You must complete and present these outstanding labs.
 
-This individual assignment is immediately recorded and discussed at the final evaluation moment. If you have not yet received an individual assignment at the evaluation moment (for example, because you were absent), you will come to the feedback.
+During the resit exam period, you will have up to 20 minutes to demonstrate a maximum of 2 lab assignments and answer questions from the lecturer. If you need to present more than 2 labs, you must submit Panopto videos for the additional labs before a given deadline in the resit exam period.
 
-This individual assignment is presented during an oral exam in the exam period. Each student will have max. 20 minutes to present the assignment and answer questions from the lecturer. This short time frame is there to encourage you to present lab assignments during the semester instead of cramming everything in at the end.
-
-Distance learning students can also arrange this by email or make an appointment to discuss it through Teams, provided this is done before the start of the intersemester recess.
-
-:warning: Anyone who has not made an appointment for an individual assignment by the end of the feedback is thereby indicating that they do not wish to participate in the 2nd exam opportunity.
+:warning: If you do not schedule an appointment to discuss the labs you need to resit by the end of the feedback period, you will be considered as not participating in the second exam opportunity.
