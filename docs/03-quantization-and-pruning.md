@@ -1,4 +1,4 @@
-# Edge deployments
+# Quantization and pruning
 
 ## Requirements
 
