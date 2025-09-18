@@ -180,15 +180,15 @@ The following schedule provides suggested start dates for each module. Actual da
 <!-- TODO: update the schedule when the new labs are ready -->
 
 1. **Introduction:** Software installation / **Lab 1:** Docker
-2. **Lab 2:** CI/CD pipelines
-3. (continued)
-4. **Lab 3:** The ML Workflow (guest lecture)
+2. (continued)
+3. **Lab 2:** The ML Workflow (guest lecture)
+4. (continued)
 5. (continued)
-6. (continued)
-7. **Lab 4:** Edge deployments
-8. **Lab 5:** Hyperparameter tuning
+6. **Lab 3:** Quantization and pruning
+7. (continued)
+8. **Lab 4:** Hyperparameter tuning
 9. (continued)
-10. **Lab 6:** Monitoring and logging
+10. **Lab 5:** Monitoring and alerting
 11. (continued)
 12. (continued)
 13. **Optional:** Catch-up session
