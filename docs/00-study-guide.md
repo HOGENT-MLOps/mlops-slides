@@ -66,20 +66,20 @@ We expect average proficiency in the following areas:
 
 -   **Introduction:** Setting up the working environment
 -   **Module 1: Docker**
-    -   Building and publishing container images
+    -   Building and publishing container images for ML model hosting
     -   Managing multiple containers using Docker Compose
--   **Module 2: Continuous Integration/Delivery**
-    -   Setting up CI/CD pipelines with GitHub Actions
--   **Module 3: ML Workflow**
+    -   Deploying models through Triton containers
+    -   Working with public model repositories (NGC, Hugging Face...)
+-   **Module 2: ML Workflow**
     -   Introduction to ML project workflows
     -   Setting up ML pipelines in Prefect
     -   Guest lecture by Captic (recording provided for TIAO students)
--   **Module 4: Quantization and Pruning**
+-   **Module 3: Quantization and Pruning**
     -   Introduction to challenges and techniques for ML models on edge devices
     -   Training TensorFlow Lite models using quantization and pruning techniques
--   **Module 5: Hyperparameter Tuning**
+-   **Module 4: Hyperparameter Tuning**
     -   Introduction to hyperparameter optimization
--   **Module 6: Monitoring and Logging**
+-   **Module 5: Monitoring and Logging**
     -   Monitoring ML pipelines, models in production, and build VMs
     -   Collecting logs from ML pipelines and production models
 
