@@ -202,7 +202,7 @@ You are evaluated based on a portfolio that you compile during the semester and 
 -   Source code maintained by each student in an assigned GitHub repository
 -   Detailed lab reports, also maintained in an assigned GitHub repository
 -   Demonstration of partial results to the lecturer during the semester
--   Demonstration of final results to the lecturer during the exam period
+-   Demonstration of final results to the lecturer during the semester (and optionally during the exam period)
 -   Grade assignment is based on "rubrics" described in the evaluation card published on Chamilo
 
 A table lists a number of criteria that you must meet. You can "meet" these at different levels: "proficient", "advanced", "expert", or at worst "not yet proficient". The evaluation chart describes exactly what you need to do to achieve each level.
